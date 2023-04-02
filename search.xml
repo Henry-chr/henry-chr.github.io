@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hexo之Next主题配置</title>
+      <link href="/2023/03/23/hexo/Hexo%E4%B9%8BNext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
+      <url>/2023/03/23/hexo/Hexo%E4%B9%8BNext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo之Next主题配置"><a href="#Hexo之Next主题配置" class="headerlink" title="Hexo之Next主题配置"></a>Hexo之Next主题配置</h1><h2 id="为什么是Next"><a href="#为什么是Next" class="headerlink" title="为什么是Next"></a>为什么是Next</h2><p>​以下是基于GitHub做的Hexo各大主题Star、下载量分析，仅供参考</p><table><thead><tr><th>Name</th><th>Star</th><th>Downloads</th><th>Proportion</th></tr></thead><tbody><tr><td>NexT</td><td>12k</td><td>200k</td><td>40%</td></tr><tr><td>Landscape</td><td>8k</td><td>120k</td><td>20%</td></tr><tr><td>Light</td><td>4k</td><td>80k</td><td>10%</td></tr><tr><td>Minos</td><td>2k</td><td>40k</td><td>5%</td></tr><tr><td>Apollo</td><td>1k</td><td>20k</td><td>3%</td></tr><tr><td>Others</td><td>5k</td><td>100k</td><td>22%</td></tr></tbody></table><h2 id="Next主题简介"><a href="#Next主题简介" class="headerlink" title="Next主题简介"></a>Next主题简介</h2><p>​Hexo NexT主题是一款非常受欢迎、功能强大的Hexo主题，由Next.Mistaken大神开发。该主题具有响应式设计、多种布局、多种配色方案、多种插件等特点，使得它非常适合用于个人博客、技术博客、科技博客等各类博客网站。同时，Hexo NexT主题还支持多种第三方评论系统、社交分享、代码高亮等功能，为用户提供了更好的使用体验。因此，该主题受到了广大用户的喜爱和追捧。</p><hr><blockquote><p> 以下整理均源自：<a href="https://theme-next.js.org/">NexT - Theme for Hexo (theme-next.js.org)</a></p></blockquote><h2 id="安装Next"><a href="#安装Next" class="headerlink" title="安装Next"></a>安装Next</h2><p>下载 NexT 有两种推荐的方法任选其一即可。<br>首先在命令行中将 dir 更改为博客根目录，然后继续执行以下步骤。</p><ol><li>NPM<br><code>npm install hexo-theme-next@latest</code></li><li>Git<br><code>git clone https://github.com/next-theme/hexo-theme-next themes/next</code></li></ol><h2 id="Next配置"><a href="#Next配置" class="headerlink" title="Next配置"></a>Next配置</h2><ol><li><p>建议将node_modules&#x2F;hexo-theme-next&#x2F;_config.yml 文件复制到站点根目录并重命名为 _config.next.yml<br>原因：通过 git 或 npm 升级 NexT 主题时，配置文件会被覆盖，这给主题的配置带来不便，但是此方法需确保您使用的是 Hexo 5.0 或更高版本</p></li><li><p>启用Next<br>修改站点目录下的 _config.yml(以下均是)文件，将 theme: landscape 修改为 theme: next</p></li><li><p>设置缓存支持<br>NexT v6+允许缓存内容生成。将 NexT 配置文件(站点根目录下的 _config.next.yml)中的值设置为 true</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Allow to cache content generation.</span><br><span class="line"># 缓存支持</span><br><span class="line">cache:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure></li><li><p>方案选择<br>方案是NexT支持的一项功能，通过使用Scheme，NexT为您提供不同的视图。几乎所有的配置都可以被这些方案使用。到目前为止，NexT支持4种方案，它们是：</p><ul><li>Muse→默认方案，这是NexT的初始版本。使用黑白色调，主要看起来干净。</li><li><code>Mist</code>→ Muse的紧凑版本，具有整洁的单列视图。</li><li><code>Pisces</code>→双列方案，像邻居的女儿一样新鲜。</li><li><code>Gemini</code>→ 看起来像双鱼座，但具有带有阴影的不同列块，以显示对视图更敏感。</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure></li><li><p>配置菜单项<br>菜单设置项的格式包含 3 个值：<code>Key: /link/ || icon</code></p><table><thead><tr><th>Values</th><th>Notes</th></tr></thead><tbody><tr><td>Key</td><td>菜单名称(区分大小写)</td></tr><tr><td>link</td><td>网站对应的文件夹</td></tr><tr><td>icon</td><td>图标</td></tr></tbody></table><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br><span class="line">  Docs:</span><br><span class="line">    default: /docs/ || fa fa-book</span><br><span class="line">    Getting Started:</span><br><span class="line">      default: /getting-started/ || fa fa-flag</span><br><span class="line">      Installation: /installation.html || fa fa-download</span><br><span class="line">      Configuration: /configuration.html || fa fa-wrench</span><br><span class="line">    Third Party Plugins:</span><br><span class="line">      default: /third-party-services/ || fa fa-puzzle-piece</span><br><span class="line">      Math Equations: /math-equations.html || fa fa-square-root-alt</span><br><span class="line">      Comment Systems: /comments.html || fa fa-comment-alt</span><br></pre></td></tr></table></figure><blockquote><p>每个子菜单项都需要一个<code>default</code>页面。</p></blockquote><p>默认情况下，NexT 显示不带徽章的菜单项的图标，如需要请做如下配置。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  # 将值设置为以显示 NexT 配置文件部分中菜单项中的帖子/类别/标签计数</span><br><span class="line">  badges: true</span><br></pre></td></tr></table></figure></li><li><p>侧边栏样式<br>默认情况下，侧边栏仅显示在帖子中（具有目录），并放置在左侧。您可以通过编辑 NexT 配置文件中设置下的值来更改它。<code>sidebar</code><br><code>position</code>:设置侧边栏位置，left-左侧，right-右侧<br><code>width</code>:通过以像素为单位指定设置来更改侧边栏宽度，width: 300<br><code>display</code>:具体什么时候显示侧边栏</p><ul><li><code>post</code>→具有索引的帖子中显示侧边栏。</li><li><code>always</code>→ 在所有页面中显示侧边栏。</li><li><code>hide</code>→ 在所有页面中隐藏它（但可以由用户手动打开）。</li><li><code>remove</code>→ 完全删除侧边栏。</li></ul><p><code>padding</code>:通过更改以下值来设置侧边栏填充（以像素为单位），padding: 18<br><code>offset</code>:通过更改以下值来设置侧边栏与顶部菜单栏的偏移量（以像素为单位），offset: 12</p></li><li><p>配置头像<br>默认情况下，NexT 不会在侧边栏中显示头像。可以通过编辑 NexT 配置文件中<code>avatar</code>的值来配置它。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">avatar:</span><br><span class="line">  url: /images/avatar.gif # 头像位置，支持网路链接</span><br><span class="line">  rounded: true # true-圆形，false-方形</span><br><span class="line">  rotated: true# true-头像在鼠标悬停下旋转，false-不旋转</span><br></pre></td></tr></table></figure></li><li><p>其他站点<br>默认情况下，NexT 在侧边栏中显示帖子&#x2F;类别&#x2F;标签的类别和计数。您可以通过编辑 NexT 配置文件中的值来配置它。<code>site_state</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">site_state: true</span><br></pre></td></tr></table></figure></li><li><p>侧边栏社交链接<br>默认情况下，NexT在侧边栏中显示社交链接的图标。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/yourname || fab fa-github</span><br><span class="line">  E-Mail: mailto:yourname@gmail.com || fa fa-envelope</span><br><span class="line">  Weibo: https://weibo.com/yourname || fab fa-weibo</span><br><span class="line">  #Twitter: https://twitter.com/yourname || fab fa-twitter</span><br><span class="line">  #FB Page: https://www.facebook.com/yourname || fab fa-facebook</span><br><span class="line">  #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span><br><span class="line">  #YouTube: https://youtube.com/yourname || fab fa-youtube</span><br><span class="line">  #Instagram: https://instagram.com/yourname || fab fa-instagram</span><br><span class="line">  #Skype: skype:yourname?call|chat || fab fa-skype</span><br></pre></td></tr></table></figure></li><li><p>页脚图标<br>默认情况下，NexT 在页脚中显示带有年份和版权信息之间的动画的红色图标。您可以通过编辑 NexT 配置文件部分中的值来配置它。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">footer:</span><br><span class="line">  icon:</span><br><span class="line">    name: fa fa-user # 图标名称</span><br><span class="line">    animated: false # 图标动画</span><br><span class="line">    color: &quot;#808080&quot; # 图标颜色</span><br></pre></td></tr></table></figure></li><li><p>发布字数统计<br>安装插件：在站点根目录目录中执行以下命令进行安装<br><code>npm install hexo-word-counter</code><br>激活：修改Hexo配置文件(_config.yml)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 字数统计</span><br><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true # 字数统计</span><br><span class="line">  time: true  # 阅读时间建议</span><br><span class="line">  total_symbols: true # 所有文章的字数</span><br><span class="line">  total_time: true  # 所有帖子的估计阅读时间</span><br><span class="line">  awl: 4  # 平均字长（字符数以字为单位）</span><br><span class="line">  wpm: 275  # 每分钟的平均字数</span><br></pre></td></tr></table></figure><p>Next主题文件配置：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  # 默认情况下，NexT 以单独的行显示单词计数和估计阅读时间。您可以通过在 NexT 配置文件中设置 value 将它们添加到一行中</span><br><span class="line">  separated_meta: true</span><br><span class="line">  # 默认情况下，NexT 不会在页脚部分中显示字数和估计阅读时间的文本说明。您可以通过在 NexT 配置文件中将值设置为来启用它。</span><br><span class="line">  item_text_total: false</span><br></pre></td></tr></table></figure></li><li><p>热门文章<br>安装插件：在站点根目录目录中执行以下命令进行安装<br><code>npm install hexo-related-posts</code><br>修改主题配置文件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">related_posts:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure></li><li><p>代码块样式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  # Code Highlight theme</span><br><span class="line">  # All available themes: https://theme-next.js.org/highlight/</span><br><span class="line">  theme:</span><br><span class="line">    light: default</span><br><span class="line">    dark: stackoverflow-dark</span><br><span class="line">  prism:</span><br><span class="line">    light: prism</span><br><span class="line">    dark: prism-dark</span><br></pre></td></tr></table></figure></li><li><p>返回首页</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">back2top:</span><br><span class="line">  enable: true</span><br><span class="line">  sidebar: true#将值设置为 将按钮放在边栏中</span><br><span class="line">  scrollpercent: true#按钮中显示滚动百分比标签</span><br></pre></td></tr></table></figure></li><li><p>阅读进度<br>NexT支持页面滚动阅读进度指示器。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">reading_progress:</span><br><span class="line">  enable: true</span><br><span class="line">  # Available values: left | right</span><br><span class="line">  start_at: left</span><br><span class="line">  # Available values: top | bottom</span><br><span class="line">  position: top</span><br><span class="line">  reversed: false</span><br><span class="line">  color: &quot;#37c6c0&quot;</span><br><span class="line">  height: 2px</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Next主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo操作手册</title>
+      <link href="/2023/03/23/hexo/Hexo%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/"/>
+      <url>/2023/03/23/hexo/Hexo%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo操作手册"><a href="#Hexo操作手册" class="headerlink" title="Hexo操作手册"></a>Hexo操作手册</h1><h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><ul><li><p>Hexo官网：<a href="https://hexo.io/zh-cn/">Hexo</a></p></li><li><p>Hexo是一款基于Node.js的静态网站生成器，可用于快速搭建个人博客或静态网站。</p></li></ul><h2 id="安装前配置"><a href="#安装前配置" class="headerlink" title="安装前配置"></a>安装前配置</h2><ol><li><p>Node.js</p><p>Hexo是基于Node.js开发的，因此需要先安装Node.js。</p><p>Node.js官方：<a href="https://nodejs.org/en">Node.js (nodejs.org)</a></p><p>Windows安装Node.js教程</p><iframe src="//player.bilibili.com/player.html?aid=412728509&bvid=BV11V411o7Zh&cid=177010975&page=1" width="100%" height="500" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></li><li><p>Git</p><p>如果您想使用Hexo主题或插件，可能需要使用Git进行下载和管理。</p><p>Git官网：<a href="https://git-scm.com/">Git (git-scm.com)</a></p><p>Windows安装Git教程</p><iframe src="//player.bilibili.com/player.html?aid=426532004&bvid=BV133411A7zU&cid=721246198&page=1" weight = 100% height = "500" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></li></ol><h2 id="操作手册"><a href="#操作手册" class="headerlink" title="操作手册"></a>操作手册</h2><ol><li><p>打开命令行，使用npm安装Hexo<br><code>npm install hexo-cli -g</code></p></li><li><p>初始化Hexo</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init G:\blog\HenryCheney</span><br><span class="line"><span class="built_in">cd</span> G:\blog\HenryCheney</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><p>博客目录：G:\blog\HenryCheney</p></li><li><p>配置Hexo</p><p>进入博客目录，修改<code>_config.yml</code>文件以配置Hexo。在该文件中，你可以设置博客标题、描述、作者信息、主题、链接等内容。<br><img src="https://gitee.com/henry-chr/typora-images/raw/master/202304022029087.png" alt="image-20230402202946973"></p></li><li><p>编写文章<br><code>hexo new &quot;My New Post&quot;</code><br>新创建一个名为My New Post的文章存放在G:\blog\HenryCheney\source\_posts目录下</p></li><li><p>生成静态文件<br><code>hexo generate</code><br>简写：<code>hexo g</code></p></li><li><p>预览网站</p><p><code>hexo server</code><br>简写：<code>hexo s</code><br>然后在浏览器中访问<code>http://localhost:4000</code>，就可以访问到自己的博客了。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Git </tag>
+            
+            <tag> Node.js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SQL执行过程</title>
+      <link href="/2023/03/23/oracle/SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/"/>
+      <url>/2023/03/23/oracle/SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><p><img src="http://rrxa4v9o7.bkt.clouddn.com/blog/SQL%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png?e=1679504334&token=2sBUU8ZwNXaeiCnLxLF_zLI5y1OpVvCEHnwPVchQ:U9jIIgUhnXwZTHPAMlID_FfRM7Y=" alt="在这里插入图片描述"></p><h2 id="执行过程"><a href="#执行过程" class="headerlink" title="执行过程"></a>执行过程</h2><h3 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h3><p>​用户在客户端输入执行SQL，该SQL语句通过session传输到服务器端，服务器通过Server Process接收SQL语句。客户端无需再做其他的操作，只是将SQL语句发送给服务端。</p><h3 id="查看Lib-Cache"><a href="#查看Lib-Cache" class="headerlink" title="查看Lib Cache"></a>查看Lib Cache</h3><p>​服务器进程在接到客户端传送过来的 SQL 语句后，不会直接去数据库查询。服务器进程会把这个 SQL 语句的字符进行转码，将转码后的值传递给一个 HASH 函数，并返回一个 hash 值，然后服务器进程将到 shared pool 的 library cache （高速缓存）中去查找是否存在相同的 hash 值。如果存在，服务器进程将使用这条语句已高速缓存在 library cache 中的已分析过的解析树和执行计划，省去后续的解析工作，这便是软解析。若高速缓存中不存在，则仍需要继续解析SQL、生成最佳执行计划，这便是硬解析，硬解析通常是昂贵的操作，大约占整个 SQL 执行的 70% 左右的时间。<br>​所以，采用高速数据缓存的话，可以提高 SQL 语句的查询效率。其原因有两方面：一方面是从内存中读取数据要比从硬盘中的数据文件中读取数据效率要高，另一方面也是因为避免语句解析而节省了时间。</p><h3 id="语法检查"><a href="#语法检查" class="headerlink" title="语法检查"></a>语法检查</h3><p>​分析SQL语句的语法是否符合规范，如果服务器进程认为这条 SQL 语句不符合语法规则的时候，就会把这个错误信息反馈给客户端。在这个语法检查的过程中，不会对 SQL 语句中所包含的表名、列名等等进行检查，只是检查语法。</p><h3 id="语义检查"><a href="#语义检查" class="headerlink" title="语义检查"></a>语义检查</h3><p>​服务器进程接下去会对语句中涉及的表、索引、视图等对象进行解析，并对照数据字典检查这些对象的名称以及相关结构，看看这些字段、表、视图等是否在数据库中。如果存在问题的话，则数据库就会反馈错误信息给客户端。</p><h3 id="对象解析锁"><a href="#对象解析锁" class="headerlink" title="对象解析锁"></a>对象解析锁</h3><p>​系统会对我们需要查询的对象加锁，主要是为了保障数据的一致性，防止我们在查询的过程中，其他用户对这个对象的结构发生改变。</p><h3 id="权限核对"><a href="#权限核对" class="headerlink" title="权限核对"></a>权限核对</h3><p>​服务器进程还会检查连接用户是否有语句涉及对象的相关权限，若用户不具备相应权限的话则也会返回客户端。</p><h3 id="查询转换"><a href="#查询转换" class="headerlink" title="查询转换"></a>查询转换</h3><p>​视图转换，将涉及视图的查询语句转换为相应的对基表查询语句。<br>​表达式转换， 将复杂的 SQL 表达式转换为较简单的等效连接表达式。</p><h3 id="选定执行计划"><a href="#选定执行计划" class="headerlink" title="选定执行计划"></a>选定执行计划</h3><p>​选择优化器，不同的优化器一般产生不同的“执行计划”。<br>​选择连接方式，ORACLE有四种连接方式，对多表连接ORACLE可选择适当的连接方式。<br>​选择连接顺序，对多表连接ORACLE选择驱动表和被驱动表。<br>​选择数据的搜索路径，根据以上条件选择合适的数据搜索路径，如是选用全表搜索还是利用索引或是其他的方式。<br>​在生成的多个执行计划中，按统计信息带入，找出执行成本最小的执行计划，作为执行此SQL语句的执行计划。<br>​将SQL文本、解析树、执行计划缓存到库缓存，存放地址以及SQL语句的哈希值，以便下次执行该SQL时可直接获取相关信息。</p><h2 id="语句执行"><a href="#语句执行" class="headerlink" title="语句执行"></a>语句执行</h2><h3 id="查询语句（Select）"><a href="#查询语句（Select）" class="headerlink" title="查询语句（Select）"></a>查询语句（Select）</h3><p>​首先服务器进程要判断所需数据是否在 db buffer 存在，如果存在且可用，则直接获取该数据而不是从数据库文件中去查询数据，同时根据 LRU 算法增加其访问计数；</p><p>​若数据不在缓冲区中，则服务器进程将从数据库文件中查询相关数据，并把这些数据放入到数据缓冲区中（ buffer cache ）。</p><p>​其中，判断数据的存在性和可用性检查方式为：查看 db buffer 块的头部是否有事务，如果有事务，则从回滚段中读取数据；如果没有事务，则比较 select 的 scn 和 db buffer 块头部的 scn ，如果前者小于后者，仍然要从回滚段中读取数据；如果前者大于后者，说明这是一非脏缓存，可以直接读取这个 db buffer 块的中内容。<br><strong>SQL Select语句完整的执行顺序</strong></p><ol><li>from子句组装来自不同数据源的数据；</li><li>where子句基于指定的条件对记录行进行筛选；</li><li>group by子句将数据划分为多个分组；</li><li>使用聚集函数进行计算；</li><li>使用having子句筛选分组；</li><li>计算所有的表达式；</li><li>使用order by对结果集进行排序；</li><li>执行select。</li></ol><h3 id="DML语句（Insert、Update、Delete）"><a href="#DML语句（Insert、Update、Delete）" class="headerlink" title="DML语句（Insert、Update、Delete）"></a>DML语句（Insert、Update、Delete）</h3><ol><li><p>检查所需的数据是否已经被读取到缓冲区中。如果已经存在缓冲区，则跳过第2部；</p></li><li><p>若所需的数据库并不在缓冲区缓存中，则服务器将数据块从数据文件读取到缓冲区中缓存；</p></li><li><p>对想要修改的表取得的数据行锁定（ Row Exclusive Lock ），之后对所需要修改的数据行取得独占锁；</p></li><li><p>将数据的 Redo 记录复制到 redo log buffer ；</p></li><li><p>产生数据修改的 undo 数据；</p></li><li><p>修改 db buffer ；</p></li><li><p>dbwr 将修改写入数据文件；</p></li></ol><h2 id="返回客户端"><a href="#返回客户端" class="headerlink" title="返回客户端"></a>返回客户端</h2><p>SQL语句被处理完成后Select语句会将查询结果返回给客户端，DML语句执行完后数据库会将对应的执行结果返回给客户端。最终客户端按照不同的方式呈现给用户。至此该SQL语句的生命周期完毕。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Random类</title>
+      <link href="/2023/03/22/java/Random%E7%B1%BB/"/>
+      <url>/2023/03/22/java/Random%E7%B1%BB/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Random类"><a href="#Random类" class="headerlink" title="Random类"></a>Random类</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Random类时Java中生成随机数的类</p><blockquote><p>虽然Random类产生数字是随机的，但是相同的种子数(seed)下的相同次数产生的随机数是相同的</p></blockquote><h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><ol><li><p>Random()</p><p>创建一个以系统自身的时间为种子数的随机数生成器。</p></li><li><p>Random​(long seed)</p><p>创建一个指定种子数的随机数生成器。</p></li></ol><h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><ol><li><p>public int nextInt()</p><p>随机生成一个int类型的整数</p></li><li><p>public int nextInt​(int bound)</p><p>随机生成一个从0(包含)到bound(不包含)之间且为int类型的整数</p></li><li><p>public int nextInt(int origin, int bound)</p><p>随机生成一个从origin(包含)到bound(不包含)之间且为int类型的整数</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Random </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
