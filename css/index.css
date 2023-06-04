@@ -4845,6 +4845,12 @@ h1.page-title + .tag-cloud-list {
 #waline-wrap .wl-comment-actions > button:not(last-child) {
   padding-right: 4px;
 }
+#vcomment textarea {
+  background: url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F13%2F20200213221747_yoghl.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1683272536&t=66c555c61d6deaa21825d17e8790823a") 100% 100% no-repeat;
+}
+#vcomment textarea:focus {
+  background-image: none;
+}
 .fireworks {
   position: fixed;
   top: 0;
