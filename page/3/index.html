@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>宸汐缘</title><meta name="author" content="Henry Cheney"><meta name="copyright" content="Henry Cheney"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="中年程序猿的自我救赎，记录日常的技术整理和心得分享，涉及技术栈:SQL,Java,Python,Oracle,MySQL,大数据等">
+<meta property="og:type" content="website">
+<meta property="og:title" content="宸汐缘">
+<meta property="og:url" content="https://www.cheneyblog.com/page/3/index.html">
+<meta property="og:site_name" content="宸汐缘">
+<meta property="og:description" content="中年程序猿的自我救赎，记录日常的技术整理和心得分享，涉及技术栈:SQL,Java,Python,Oracle,MySQL,大数据等">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg">
+<meta property="article:author" content="Henry Cheney">
+<meta property="article:tag" content="SQL,Java,Python,Oracle,MySQL,大数据">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg"><link rel="shortcut icon" href="https://www.cdn.cheneyblog.com/blog/202307211052086.png"><link rel="canonical" href="https://www.cheneyblog.com/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Henry Cheney","link":"链接: ","source":"来源: 宸汐缘","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '宸汐缘',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-09-12 17:47:46'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/style.css?1"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="https://npm.elemecdn.com/tzy-blog/lib/css/dl.css"><link rel="stylesheet" href="https://npm.elemecdn.com/tzy-blog/lib/css/function.min.css"><link rel="stylesheet" href="/css/universe.css"><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-toolbox"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Hexo"><i class="fa-fw fa-solid fa-blog"></i><span> Hexo</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/categories/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://5b0988e595225.cdn.sohucs.com/images/20180114/1dec553b2b88499c871b097e299dafcc.gif')"><nav id="nav"><span id="blog-info"><a href="/" title="宸汐缘"><img class="site-icon" src="https://www.cdn.cheneyblog.com/blog/202307211053392.png"/><span class="site-name">宸汐缘</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-toolbox"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Hexo"><i class="fa-fw fa-solid fa-blog"></i><span> Hexo</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/categories/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">宸汐缘</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="mailto:850318517@qq.com" target="_blank" title="Email"><i class="far fa-envelope"></i></a><a class="social-icon" href="https://gitee.com/henry-chr" target="_blank" title="Gitee"><i class="fab fa-github"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/3039.html" title="TDSQL For MySQL认证-单选题"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308291740627.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TDSQL For MySQL认证-单选题"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/3039.html" title="TDSQL For MySQL认证-单选题">TDSQL For MySQL认证-单选题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-29T06:41:17.000Z" title="发表于 2023-07-29 14:41:17">2023-07-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:48:09.388Z" title="更新于 2023-09-08 09:48:09">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/TDSQL/">TDSQL</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/TDSQL/">TDSQL</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/MySQL/">MySQL</a></span></div><div class="content">
+
+TDSQL(mysql)下列关于主键错误的是().
+A. InnoDB表必须指定主键B. 尽量游免更新主键字段C. 如果存在多个唯一健，考虑最常用的唯一键作为主键D. 主键值可以为空
+
+D. 主键值不可以为空，是错误的，应该修改为主键值不允许为空。
+
+在TDSQL中，主键是数据库表中的一个特殊字段，它的值必须是唯一的，且不允许为空，用来唯一标识一条记录。因此，选项D是错误的。选项A是正确的，在使用InnoDB存储引擎的表中，必须指定主键。选项B是正确的，尽量避免对主键字段进行更新操作，以减少索引维护的成本。选项C是合理的建议，根据最常用的唯一键作为主键可以提高查询效率和数据存储的规范性。
+
+
+
+在mysql 中innodb引擎表T1，执行update t1 set a=2 where id =1；语句，id列有索引，下面描述正确的是（）.A. 加表锁B. 不加锁C. 加行锁D. 加字段锁
+
+C. 加行锁。
+
+在MySQL中，InnoDB引擎支持行级锁，当执行类似 update t1 set a=2 where id =1 的语句时，根据id列的索引，InnoDB引擎会为该行加上行锁 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/11880.html" title="Java开发学习路线"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308291737161.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java开发学习路线"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/11880.html" title="Java开发学习路线">Java开发学习路线</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-29T05:48:32.000Z" title="发表于 2023-07-29 13:48:32">2023-07-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:47:31.138Z" title="更新于 2023-09-08 09:47:31">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java/">Java</a></span></div><div class="content">今天，我们将为大家分享自学Java开发的学习路线，助力您步入编程的精彩世界。无论您是对编程感兴趣的新手，还是希望升级自己技能的开发者，本文将为您提供一份简明扼要的指南。让我们一起探索自学Java开发的学习之旅吧！
+掌握Java基础知识Java是一门广泛应用的编程语言，熟练掌握其基础知识是成为合格Java开发者的第一步。以下是您应该着重学习的内容：
+
+语法基础：了解Java的关键词、数据类型、变量、运算符、流程控制等基本语法。
+
+面向对象编程（OOP）：掌握类、对象、继承、多态、封装等OOP的核心概念。
+
+Java集合框架：学习常用的集合类如List、Set、Map等，掌握它们的用法和特性。
+
+异常处理：了解异常的概念、处理机制和异常处理的最佳实践。
+
+
+深入学习Java核心技术除了基础知识外，了解Java核心技术将帮助您更全面地应用和理解Java开发。以下是您应该关注的主题：
+
+IO操作和文件处理：学习Java中的输入输出操作，包括文件读写、流操作、序列化等。
+
+多线程编程：掌握多线程的概念、线程同步、锁机制等，以提高程序的并发性能。
+
+网络编程：了解Socket编程、HTTP协议等， ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/34671.html" title="Hexo操作手册"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308291732275.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo操作手册"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/34671.html" title="Hexo操作手册">Hexo操作手册</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-18T06:18:36.000Z" title="发表于 2023-07-18 14:18:36">2023-07-18</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:44:58.834Z" title="更新于 2023-09-08 09:44:58">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Hexo/">Hexo</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/Git/">Git</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/Node-js/">Node.js</a></span></div><div class="content">Hexo简介
+Hexo官网：Hexo
+
+Hexo是一款基于Node.js的静态网站生成器，可用于快速搭建个人博客或静态网站。
+
+
+安装前配置
+Node.js
+Hexo是基于Node.js开发的，因此需要先安装Node.js。
+Node.js官方：Node.js (nodejs.org)
+Windows安装Node.js教程
+ 
+Git
+如果您想使用Hexo主题或插件，可能需要使用Git进行下载和管理。
+Git官网：Git (git-scm.com)
+Windows安装Git教程
+ 
+
+操作手册
+打开命令行，使用npm安装Hexonpm install hexo-cli -g
+
+初始化Hexo进入需要存放博客的目录，然后右键选择Git Bash Here
+123hexo init HenryCheneycd HenryCheneynpm install
+
+博客目录：G:\blog\HenryCheney
+
+配置Hexo
+进入博客目录，修改_config.yml文件以配置Hexo。在该文件中，你可以设置博客标题、描述、作者信息、主题、链接等内容。
+
+编写文章hexo new &quot;M ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Henry Cheney</div><div class="author-info__description">中年程序猿的自我救赎，记录日常的技术整理和心得分享，涉及技术栈:SQL,Java,Python,Oracle,MySQL,大数据等</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/henry-chr"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:850318517@qq.com" target="_blank" title="Email"><i class="far fa-envelope"></i></a><a class="social-icon" href="https://gitee.com/henry-chr" target="_blank" title="Gitee"><i class="fab fa-github"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Digitalize/"><span class="card-category-list-name">Digitalize</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo/"><span class="card-category-list-name">Hexo</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/HtmlCss/"><span class="card-category-list-name">HtmlCss</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Oracle/"><span class="card-category-list-name">Oracle</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/TDSQL/"><span class="card-category-list-name">TDSQL</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/WebEcology/"><span class="card-category-list-name">WebEcology</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Java/" style="font-size: 1.1em; color: #999">Java</a> <a href="/tags/HtmlCss/" style="font-size: 1.1em; color: #999">HtmlCss</a> <a href="/tags/Git/" style="font-size: 1.1em; color: #999">Git</a> <a href="/tags/TDSQL/" style="font-size: 1.1em; color: #999">TDSQL</a> <a href="/tags/Digitalize/" style="font-size: 1.1em; color: #999">Digitalize</a> <a href="/tags/SQL/" style="font-size: 1.1em; color: #999">SQL</a> <a href="/tags/MySQL/" style="font-size: 1.1em; color: #999">MySQL</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/Node-js/" style="font-size: 1.1em; color: #999">Node.js</a> <a href="/tags/Web%E7%94%9F%E6%80%81/" style="font-size: 1.1em; color: #999">Web生态</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 1.5em; color: #99a9bf">Java基础</a> <a href="/tags/Oracle/" style="font-size: 1.3em; color: #99a1ac">Oracle</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">23</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-07-16T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">21.6k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-09-12T09:47:45.905Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023  <i id="heartbeat" class="fa fas fa-heartbeat"></i> Henry Cheney</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/typed.js/2.0.12/typed.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["程序是为人而写，偶尔也供机器读取。","程序员有两个最大的敌人：计算机和程序员自己。","软件设计就是组织复杂性的艺术。","代码是写给人看的，顺便给机器执行。"])
+  } else {
+    document.getElementById("subtitle").textContent = "程序是为人而写，偶尔也供机器读取。"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script data-pjax defer src="https://npm.elemecdn.com/tzy-blog/lib/js/theme/chocolate.js"></script><script async src="https://npm.elemecdn.com/tzy-blog/lib/js/theme/cursor.js"></script><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script src="/js/script.js?1"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="1024,Java,Python,SQL,Oracle,MySql,Vue,Hexo,Linux,Shell,C++,Html,CSS" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
