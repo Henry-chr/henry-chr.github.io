@@ -33,7 +33,207 @@
       <link href="/posts/50904.html"/>
       <url>/posts/50904.html</url>
       
-        <content type="html"><![CDATA[<p>当涉及到Oracle开发学习，有一些关键的指南可以帮助你更好地掌握这个数据库管理系统。在本文中，我将向大家分享一些有关Oracle开发学习的重要指南。</p><h2 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h2><ul><li><a href="https://cheneyblog.com//posts/65435.html">SQL语句执行过程</a></li></ul><h2 id="执行计划"><a href="#执行计划" class="headerlink" title="执行计划"></a>执行计划</h2><ul><li><a href="https://cheneyblog.com//posts/20895.html">执行计划简介</a></li><li><a href="https://cheneyblog.com//posts/26508.html">Oracle统计信息</a></li><li><a href="https://cheneyblog.com//posts/32449.html">统计信息管理工具：DBMS_STATS包</a></li><li><a href="https://cheneyblog.com//posts/54365.html">获取执行计划</a></li></ul><p>通过以上的指南，你可以更好地学习和掌握Oracle开发技能。无论是作为初学者还是有一定经验的开发者，这些指南都能够为你提供有价值的指导和帮助。祝你在Oracle开发学习的旅程中取得成功！</p>]]></content>
+        <content type="html"><![CDATA[<p>当涉及到Oracle开发学习，有一些关键的指南可以帮助你更好地掌握这个数据库管理系统。在本文中，我将向大家分享一些有关Oracle开发学习的重要指南。</p><h2 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h2><ul><li><a href="https://cheneyblog.com//posts/565.html">物理结构</a></li><li><a href="https://cheneyblog.com//posts/14901.html">内存结构</a></li><li><a href="https://cheneyblog.com//posts/35730.html">进程结构</a></li><li><a href="https://cheneyblog.com//posts/24947.html">逻辑结构</a></li><li><a href="https://cheneyblog.com//posts/47150.html">体系结构</a></li></ul><h2 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h2><ul><li><a href="https://cheneyblog.com//posts/65435.html">SQL语句执行过程</a></li></ul><h2 id="执行计划"><a href="#执行计划" class="headerlink" title="执行计划"></a>执行计划</h2><ul><li><a href="https://cheneyblog.com//posts/20895.html">执行计划简介</a></li><li><a href="https://cheneyblog.com//posts/26508.html">Oracle统计信息</a></li><li><a href="https://cheneyblog.com//posts/32449.html">统计信息管理工具：DBMS_STATS包</a></li><li><a href="https://cheneyblog.com//posts/54365.html">获取执行计划</a></li><li><a href="https://cheneyblog.com//posts/12101.html">看懂执行计划之执行顺序</a></li><li><a href="https://cheneyblog.com//posts/20503.html">如何根据执行计划识别低效SQL</a></li><li><a href="https://cheneyblog.com//posts/24522.html">加速查询优化——深入了解Oracle Hint</a></li></ul><p>通过以上的指南，你可以更好地学习和掌握Oracle开发技能。无论是作为初学者还是有一定经验的开发者，这些指南都能够为你提供有价值的指导和帮助。祝你在Oracle开发学习的旅程中取得成功！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入解析Oracle数据库的综合体系结构与各组成部分的作用</title>
+      <link href="/posts/47150.html"/>
+      <url>/posts/47150.html</url>
+      
+        <content type="html"><![CDATA[<div class="note blue icon-padding simple"><i class="note-icon fas fa-bullhorn"></i><p>Oracle数据库作为一款强大的关系型数据库管理系统，具有复杂而完善的综合体系结构。这个体系结构由物理结构、内存结构、进程结构和逻辑结构组成，它们相互协作，共同为数据库提供高效的数据存储、管理和访问。本文将深入解析Oracle数据库的综合体系结构，探讨各组成部分之间的联系以及它们对数据库的影响与作用。</p></div><h2 id="物理结构"><a href="#物理结构" class="headerlink" title="物理结构"></a>物理结构</h2><p>物理结构是指数据库在磁盘上的存储方式和组织形式。它涉及到数据文件、数据块、操作系统文件系统等层面的存储结构。物理结构的设计和调优对于数据库的性能和性能是至关重要的，它直接影响着数据的读取和写入速度，以及数据库的可靠性和可用性。</p><h2 id="内存结构"><a href="#内存结构" class="headerlink" title="内存结构"></a>内存结构</h2><p>内存结构是指Oracle数据库在内存中分配和管理的存储区域。它包括了共享池、数据库缓存、重做日志缓冲区等重要的内存组件。内存结构的设计和配置对于数据库的性能优化和响应速度具有重要影响。合理配置内存结构可以降低磁盘IO操作的频率，提升数据检索和事务处理的效率。</p><h2 id="进程结构"><a href="#进程结构" class="headerlink" title="进程结构"></a>进程结构</h2><p>进程结构是指Oracle数据库的进程组成和协作方式。它包括了实例进程、后台进程和用户进程等多个进程。不同的进程负责着不同的任务和功能，它们相互配合，保证数据库实例的正常运行和对外服务的可用性。</p><h2 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h2><p>逻辑结构是指数据库中数据的组织方式和访问方法，如表空间、段、区和数据文件等。它决定了数据在数据库中的存储和访问方式。逻辑结构的设计和管理对于数据的安全性、一致性和有效性具有重要影响。有效的逻辑结构设计可以提高数据的查询效率和管理灵活性。</p><h2 id="各组成部分的联系与作用"><a href="#各组成部分的联系与作用" class="headerlink" title="各组成部分的联系与作用"></a>各组成部分的联系与作用</h2><p>这四个组成部分在Oracle数据库中密切联系，相互协作，共同为数据库的运行和管理提供支持。具体来说：</p><ul><li>物理结构和内存结构之间的联系：物理结构决定了数据在磁盘上的存储方式和布局，而内存结构则管理了数据在内存中的缓存和访问。它们之间的协作可以通过减少磁盘IO操作，加快数据的读取和写入速度，提升数据库的性能。</li><li>内存结构和进程结构之间的联系：内存结构中的共享池和数据库缓存等组件被进程共享和访问，进程通过内存结构来读取和处理数据。内存结构的优化和配置可以提升进程的查询和事务处理效率，从而加快数据库的响应速度。</li><li>进程结构和逻辑结构之间的联系：进程通过逻辑结构访问和操纵数据库中的数据，如表空间、段和区等。进程的操作和管理需要依赖于逻辑结构的定义和存在。逻辑结构的设计和管理直接影响着进程的执行和数据的操作。</li></ul><div class="note info simple"><p>综合体系结构是Oracle数据库运行和管理的基石，物理结构、内存结构、进程结构和逻辑结构相互联系、相互作用，为数据库提供了高效的存储、访问和管理能力。深入理解和综合运用各组成部分的知识和技术，可以帮助数据库管理员和开发人员更好地设计、调优和管理Oracle数据库，提升数据库的性能、可靠性和可用性，为企业提供卓越的数据库服务。希望本文的介绍对您理解Oracle数据库的综合体系结构和各组成部分的作用起到了指导和启发的作用。</p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入了解Oracle数据库的逻辑结构与数据组织方式</title>
+      <link href="/posts/24947.html"/>
+      <url>/posts/24947.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="逻辑结构图"><a href="#逻辑结构图" class="headerlink" title="逻辑结构图"></a>逻辑结构图</h2><p><img src="https://www.cdn.cheneyblog.com/blog/202309141411597.png" alt="Oracle逻辑结构图"></p><h2 id="表空间（Tablespace）"><a href="#表空间（Tablespace）" class="headerlink" title="表空间（Tablespace）"></a>表空间（Tablespace）</h2><p>表空间是 Oracle 最大的逻辑存储结构，与物理上的数据文件相对应，但是一个表空间可以拥有多个数据文件。</p><ul><li>数据表空间<br>用于存储用户数据的普通表空间。</li><li>系统表空间<br>默认的表空间，用于保存数据字典（一组保存数据库自身信息的内部系统表和视图，及用于 Oracle 内部使用的其他一些对象），保存所有的 PL/SQL 程序的源代码和解析代码，包括存储过程和函数、包、数据库触发器等，保存数据库对象（表、视图、序列）的定义。</li><li>回滚表空间<br>用于存放回滚段,每个实例最多只能使用一个撤销表空间</li><li>临时表空间<br>存储 SQL 执行过程中产生的临时数据</li></ul><h2 id="段（Segment）"><a href="#段（Segment）" class="headerlink" title="段（Segment）"></a>段（Segment）</h2><p>段是一组盘区，它是一个独立的逻辑存储结构，用于存储具有独立存储结构对象的全部数据。段一般是数据库终端用户处理最小的存储单位，当段的数据区已满，Oracle 为其分配另一个数据区，段的数据区在磁盘上可能是不连续的。</p><ul><li>数据段<br>用来存储表中所有数据；</li><li>索引段<br>用来存储表中索引的所有数据；</li><li>临时段<br>用于存储表排序或汇总时产生的临时数据</li><li>LOB 段<br>LOB 用来存储表中大型数据对象，例如 CLOB 与 BLOB</li><li>回退段<br>用于存储用户数据被修改之前的位置和值；<br>当要对用户的数据进行回退操作时，就要使用回退段。</li></ul><h2 id="区（Extent）"><a href="#区（Extent）" class="headerlink" title="区（Extent）"></a>区（Extent）</h2><p>区是 Oracle 存储分配的最小单位，它是由一个或多个数据块组成的。一个或多个区组成一个段，也就是说段的大小都是由区的个数来决定。当一个段的空间使用完之后，Oracle 会自动为该段分配成一个新的区。</p><p>用户还能够通过执行下面的命令来回收表、索引等对象中未使用的区：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> table_name <span class="keyword">deallocate</span> unused;</span><br></pre></td></tr></table></figure><h2 id="块（Block）"><a href="#块（Block）" class="headerlink" title="块（Block）"></a>块（Block）</h2><p>块是用来管理存储空间的最基本的单位，也是最小的逻辑存储单位。块的大小由初始化参数 db_block_size 来决定，不同的 Oracle 版本的大小是不同的，但是数据库一旦创建，其大小便不可更改。虽然每个数据块可以存储不同类型的数据，但是每个数据块都具有一个相同的结构。<br><img src="https://www.cdn.cheneyblog.com/blog/202309141412149.png" alt="块结构"></p><ul><li>块头<br>包含了该数据块一般的属性信息，如数据块的物理地址、所属段类型等</li><li>表目录<br>如果数据块中存储的数据是某个表的数据，则这里存放该表的信息</li><li>行目录<br>用来存储数据块中有效的行信息</li><li>空余空间<br>指数据块还没有使用的存储空间</li><li>行空间<br>表或者索引的数据存储在行空间中，所以行空间是数据块中已经使用的存储空间</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入了解Oracle数据库的进程结构</title>
+      <link href="/posts/35730.html"/>
+      <url>/posts/35730.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Oracle-进程结构图"><a href="#Oracle-进程结构图" class="headerlink" title="Oracle 进程结构图"></a>Oracle 进程结构图</h2><p><img src="https://www.cdn.cheneyblog.com/blog/202309141407701.png" alt="Oracle 进程结构图"></p><h2 id="用户进程"><a href="#用户进程" class="headerlink" title="用户进程"></a>用户进程</h2><p>&emsp;&emsp;用户进程是一个与 Oracle 服务器进行交互的程序。一般的客户端软件，像 Oracle 的 sqlplus，sql developer,或者是一些驱动程序等等向数据库发送请求时即创建了用户进程。</p><h2 id="服务器进程"><a href="#服务器进程" class="headerlink" title="服务器进程"></a>服务器进程</h2><p>&emsp;&emsp;当监听程序监听到客户端来了一个请求，在创建会话时便会为其分配一个对应的服务器进程。服务器进程的主要作用就是处理连接到当前实例的用户进程的请求，对客户端发来的 sql 进行执行并返回执行结果。</p><h2 id="后台进程"><a href="#后台进程" class="headerlink" title="后台进程"></a>后台进程</h2><p>后台进程是 Oracle 数据库为了保持最佳系统性能和协调多个用户请求而设置的一系列后台进程。</p><h3 id="进程监控（PMON）"><a href="#进程监控（PMON）" class="headerlink" title="进程监控（PMON）"></a>进程监控（PMON）</h3><p>对故障的进程执行恢复操作，负责清理内存存储区和释放该进程所使用的资源<br>周期的检查调度进程和服务器进程的状态，对已死的进程进行重启</p><h3 id="系统监控（SMON）"><a href="#系统监控（SMON）" class="headerlink" title="系统监控（SMON）"></a>系统监控（SMON）</h3><p>当数据库实例出现故障或者系统崩溃的时候，执行恢复操作<br>定期合并字典管理的表空间中的空闲空间<br>在系统重启期间，清理表空间所有临时段<br>安装和打开数据库</p><h3 id="数据写入（DBWn）"><a href="#数据写入（DBWn）" class="headerlink" title="数据写入（DBWn）"></a>数据写入（DBWn）</h3><p>负责的将更新完的缓冲区数据写入磁盘中。以下情况发生时执行：</p><ul><li>没有可以写入的缓存空间</li><li>脏缓存达到限制（会导致搜索时间过长）1/4 满</li><li>最晚三秒钟：最晚三秒会执行一次写入</li><li>遇到检查点：遇到这个 checkpoint 便会执行写程序</li><li>表空间热备份的时候</li><li>表空间离线、只读状态</li><li>执行 Drop 操作的时候</li></ul><h3 id="日志写入（LGWR）"><a href="#日志写入（LGWR）" class="headerlink" title="日志写入（LGWR）"></a>日志写入（LGWR）</h3><p>将日志缓冲区的脏数据写进磁盘中 以下情况发生时执行：</p><ul><li>commit 写入</li><li>日志缓冲区占用率 1/3</li><li>DBWn 要写入脏缓冲区前</li></ul><h3 id="检查点进程（CKPT）"><a href="#检查点进程（CKPT）" class="headerlink" title="检查点进程（CKPT）"></a>检查点进程（CKPT）</h3><p>负责发起检查点信号，让 DBWn 开始工作<br>更新控制文件以及数据文件头</p><h3 id="归档进程（ACRn）"><a href="#归档进程（ACRn）" class="headerlink" title="归档进程（ACRn）"></a>归档进程（ACRn）</h3><p>将日志文件复制到归档日志文件中，来避免日志文件组的循环使用覆盖到已有的日志文件。<br>只有当数据库在 ARCHIVELOG 模式下，且自动归档开启的时候，系统便会启动 ARCn 进程；ARCn 包括归档方式和非归档方式。</p><h3 id="恢复器进程-RECO"><a href="#恢复器进程-RECO" class="headerlink" title="恢复器进程(RECO)"></a>恢复器进程(RECO)</h3><p>是一个用于分布式数据库配置的后台进程，它可以自动解决涉及分布式事务处理的故障。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入了解Oracle数据库的内存结构</title>
+      <link href="/posts/14901.html"/>
+      <url>/posts/14901.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Oracle-内存结构图"><a href="#Oracle-内存结构图" class="headerlink" title="Oracle 内存结构图"></a>Oracle 内存结构图</h2><p><img src="https://www.cdn.cheneyblog.com/blog/202309141111341.png" alt="Oracle 内存结构图"></p><h2 id="System-Global-Aera-（SGA）"><a href="#System-Global-Aera-（SGA）" class="headerlink" title="System Global Aera （SGA）"></a>System Global Aera （SGA）</h2><p><img src="https://www.cdn.cheneyblog.com/blog/202309141111776.png" alt="SGA"></p><p>V$SGASTAT 视图提供有关 SGA 更详细的内存分配信息。</p><p>V$SGA 视图给出了系统全局区(System Global Area，SGA)内存结构的摘要信息。</p><h3 id="数据库缓存区（Database-Buffer-Cache）"><a href="#数据库缓存区（Database-Buffer-Cache）" class="headerlink" title="数据库缓存区（Database Buffer Cache）"></a>数据库缓存区（Database Buffer Cache）</h3><p>&emsp;&emsp;用于缓存当前或最近使用的从磁盘读取的数据块的拷贝，来优化数据库的 I/O 减少物理读/写。Oralce 依据 LRU 算法对该内存区域进行 block-level 的更新。数据高速缓存块又由以下几个缓存块组成：</p><ul><li>脏缓存块（Dirty buffers）<br>保存被修改过并且 commit 但未写入磁盘数据的缓存块，脏缓存块最终被 DBWn 进程写入到硬盘的数据文件中永久保存。</li><li>命中缓存块（Pinned buffers）<br>保存最近正在被访问的缓存块，始终被保留在数据高速缓存中，不会被写入数据文件。</li><li>空闲缓存块（Free buffers）<br>该缓存块中没有数据，等待被写入数据。oracle 从数据文件中读取数据后，寻找空闲缓存块，以便写入其中。</li></ul><h3 id="日志缓冲区（Redo-Log-Buffer）"><a href="#日志缓冲区（Redo-Log-Buffer）" class="headerlink" title="日志缓冲区（Redo Log Buffer）"></a>日志缓冲区（Redo Log Buffer）</h3><p>&emsp;&emsp;日志缓冲区是一块比较小的内存区域，它是用来短期存储将写入到磁盘中的重做日志信息。日志缓冲区也是为了减少磁盘 IO，减少用户的等待时间。</p><h3 id="共享池（Shared-Pool）"><a href="#共享池（Shared-Pool）" class="headerlink" title="共享池（Shared Pool）"></a>共享池（Shared Pool）</h3><ul><li><p>数据字典缓存区（Data Dictionary Cache）<br>用于存放 SQL 语句相关的数据文件、表、索引、列、用户、其他的数据对象的定义和权限信息等。</p></li><li><p>库缓存区（Librabry Cache）<br>共享 SQL 和 PL/SQL 代码。服务器进程在执行语句时，首先会匹配库缓存，如果存在相同语句则无需编译直接使用已编译的执行计划。<br>绑定变量不是在编译阶段赋值的，而是在运行阶段赋值的，因此含有绑定变量的 SQL 语句可以不用重新编译。</p></li><li><p>SQL 和 PL/SQL 结果缓存（Server Result Cache）<br>用于存储 SQL 查询或 PL/SQL 函数的结果，以加快其将来的执行速度。</p></li></ul><h3 id="大池（Large-Pool）"><a href="#大池（Large-Pool）" class="headerlink" title="大池（Large Pool）"></a>大池（Large Pool）</h3><p>&emsp;&emsp;大池是个可选的内存区域，可提供一个大的缓冲区供数据库的备份与恢复操作过程使用。数据库的备份恢复、执行具有大量排序操作的 SQL 语句、并行化的数据库操作时可能需要用到大池。</p><h3 id="Java-池（Java-Pool）"><a href="#Java-池（Java-Pool）" class="headerlink" title="Java 池（Java Pool）"></a>Java 池（Java Pool）</h3><p>&emsp;&emsp;JAVA 池在数据库中支持 JAVA 的运行，存放 JAVA 代码和 JAVA 语句的语法分析表。</p><h3 id="流池（Stream-Pool）"><a href="#流池（Stream-Pool）" class="headerlink" title="流池（Stream Pool）"></a>流池（Stream Pool）</h3><p>&emsp;&emsp;用于缓存流进程在数据库间移动/复制数据时使用的队列消息。一般从重做日志中提取变更记录的进程和应用变更记录的进程会用到流池。</p><h2 id="Program-Global-Aera-（PGA）"><a href="#Program-Global-Aera-（PGA）" class="headerlink" title="Program Global Aera （PGA）"></a>Program Global Aera （PGA）</h2><p>&emsp;&emsp;PGA 是指单个服务器进程或者单个后台进程所需的数据和控制信息。PGA 是在用户进程连接到数据库并创建一个会话时自动分配。该区域内保留每个与 oracle 数据库连接的用户进程所需的内存，当一个用户会话结束，PAG 就会释放。</p><ol><li>Private SQL area：包含绑定信息、运行时的内存结构。每个发出 sql 语句的会话，都有一个 private SQL area（私有 SQL 区）<br><strong>专有服务器连接私有 SQL 区在 PGA 中，共享服务器连接私有 SQL 区在 SGA 中。</strong></li><li>Session memory：为保存会话中的变量以及其他与会话相关的信息，而分配的内存区。</li></ol><ul><li>排序区<br>当用户需要对数据进行排序时，系统会将需要排序的数据保存到 PGA 中的排序区内，然后在这个排序区内对这些数据进行排序。如果发现用户的很多操作都需要用到排序，那么为用户设置比较大的排序区，可以提高用户访问数据的效率。</li><li>会话区<br>会话区保存了会话所具有的权限、角色、性能统计等信息，通常都是由数据库系统自我维护。</li><li>堆栈区<br>保存着绑定变量、会话变量、SQL 语句运行时的内存结构等重要的信息，通常都是由数据库系统自我维护</li><li>游标区<br>游标区是一个动态的区域，当用户执行游标语句打开游标时，系统会在 PGA 中创建游标区，当关闭游标时，这个区域就会被释放。创建与释放需要占用一定的系统资源，花费一定的时间，如果频繁的打开和关闭游标，就会降低语句的执行性能。</li></ul><h2 id="User-Global-Aera-（UGA）"><a href="#User-Global-Aera-（UGA）" class="headerlink" title="User Global Aera （UGA）"></a>User Global Aera （UGA）</h2><p>&emsp;&emsp;为用户进程存储会话状态。UGA 可以作为 SGA 或者 PGA 的一部分，如果通过一个共享服务器连接，UGA 包含在 SAG 中；如果通过一个专有服务器连接，UGA 就包含在专有服务器的 PGA 中。</p><h2 id="Software-code-areas"><a href="#Software-code-areas" class="headerlink" title="Software code areas"></a>Software code areas</h2><p>&emsp;&emsp;Oracle 存放自身软件代码的一部分内存区，不允许其他会话访问。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入了解Oracle数据库的物理结构：文件组织与作用详解</title>
+      <link href="/posts/565.html"/>
+      <url>/posts/565.html</url>
+      
+        <content type="html"><![CDATA[<div class="note blue icon-padding simple"><i class="note-icon fas fa-bullhorn"></i><p>在Oracle数据库中，物理结构是数据库存储的基础，各种文件扮演着重要的角色。本文将为您深入介绍Oracle数据库的物理结构，特别是不同类型的文件以及它们的作用。我们将逐步介绍数据文件、控制文件、重做日志文件和参数文件，并详细解释这些文件在Oracle数据库中的重要性和功能。让我们一起来了解Oracle数据库中的物理结构与文件组织吧！</p></div><h2 id="数据文件（Data-file）"><a href="#数据文件（Data-file）" class="headerlink" title="数据文件（Data file）"></a>数据文件（Data file）</h2><p>数据文件是Oracle数据库中存储实际数据的文件。每个表空间在磁盘上都有一个或多个关联的数据文件，它们保存了表和索引的物理数据。数据文件的扩展名为.dbf。数据文件是Oracle数据库的核心组成部分。</p><h3 id="数据文件特性"><a href="#数据文件特性" class="headerlink" title="数据文件特性"></a>数据文件特性</h3><ol><li>每个数据文件对应一个数据库，一个数据库可以对应多个数据文件</li><li>数据文件可以自动扩展</li><li>数据文件专属于一个表空间，一个表空间可以拥有多个数据文件。</li></ol><h2 id="控制文件（Control-file）"><a href="#控制文件（Control-file）" class="headerlink" title="控制文件（Control file）"></a>控制文件（Control file）</h2><p>控制文件是Oracle数据库的重要组成部分，用于跟踪数据库的结构和状态。它记录了数据库的结构信息，包括数据文件、日志文件和数据库参数的位置和状态信息。控制文件还包含数据库的日志序列号，用于恢复和故障恢复。通常情况下，一个数据库有一个主控制文件和多个备用控制文件。</p><h2 id="重做日志文件（Redo-log-file）"><a href="#重做日志文件（Redo-log-file）" class="headerlink" title="重做日志文件（Redo log file）"></a>重做日志文件（Redo log file）</h2><p>重做日志文件（也称为事务日志文件）是用于保护数据库事务完整性和恢复的关键组件。重做日志文件记录了对数据库所做的所有更改，包括数据修改和结构变化。这些文件存储了对数据库的更改操作，以便在发生故障时进行恢复。重做日志文件通常以循环方式使用，即当一个日志文件被填满后，会切换到下一个日志文件。</p><h2 id="参数文件（Parameter-file）"><a href="#参数文件（Parameter-file）" class="headerlink" title="参数文件（Parameter file）"></a>参数文件（Parameter file）</h2><p>参数文件是Oracle数据库的配置文件，用于存储数据库的初始化参数设置。它包含了数据库的各种配置选项，如内存分配、日志记录级别、网络设置等。参数文件通常具有一个默认名称（如”init.ora”或”spfile.ora”），并且位于数据库实例的启动目录中。参数文件是在启动数据库实例时被读取和加载的。</p><h2 id="归档日志文件（Archived-Log-files）"><a href="#归档日志文件（Archived-Log-files）" class="headerlink" title="归档日志文件（Archived Log files）"></a>归档日志文件（Archived Log files）</h2><p>归档日志文件用来对写满的重做日志文件进行保存复制。其目的是为了长期保存日志以便于恢复。<br>数据库要运行归档模式下,如果数据不运行归档模式下,那么重做日志就循环覆盖写</p><h2 id="告警文件"><a href="#告警文件" class="headerlink" title="告警文件"></a>告警文件</h2><p>告警文件用于记录数据库启动后，用户操作上出现的问题或者数据库本身的问题，它时刻伴随着数据库。</p><div class="note info simple"><p>在Oracle数据库中，不同类型的文件起着关键的作用，确保数据库的正常运行和数据的完整性。从数据文件存储实际数据，到控制文件跟踪数据库的结构和状态，再到重做日志文件记录数据库的更改操作，以及参数文件存储数据库的各种配置选项，每个文件都具有独特的功能和重要性。了解文件的组织和作用对于维护和管理Oracle数据库至关重要。</p></div><p>希望本文的介绍能够帮助您更好地理解和应用Oracle数据库的物理结构，以及不同类型的文件在数据库中的作用。通过合理管理和配置这些文件，您可以确保数据库的稳定性和性能优化。祝您在使用Oracle数据库时取得更好的效果！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>加速查询优化——深入了解Oracle Hint</title>
+      <link href="/posts/24522.html"/>
+      <url>/posts/24522.html</url>
+      
+        <content type="html"><![CDATA[<div class="note blue icon-padding simple"><i class="note-icon fas fa-bullhorn"></i><p>引言：<br>在Oracle数据库中，查询性能的优化一直是DBA和开发人员关注的焦点。作为Oracle数据库的高级功能之一，Oracle Hint（提示）可以直接指导执行计划的生成，对于提高查询性能至关重要。</p></div><h2 id="什么是Oracle-Hint？"><a href="#什么是Oracle-Hint？" class="headerlink" title="什么是Oracle Hint？"></a>什么是Oracle Hint？</h2><p>Oracle Hint是一种以注释形式嵌入SQL语句中的指令，其目的是引导数据库优化器生成更优化的查询执行计划。通过使用Hint，我们可以直接干预执行计划的生成过程，以最大程度地提高查询性能。</p><h2 id="常用Hint"><a href="#常用Hint" class="headerlink" title="常用Hint"></a>常用Hint</h2><table><thead><tr><th>Oracle Hint</th><th>作用与使用场景</th></tr></thead><tbody><tr><td>ALL_ROWS</td><td>以最佳的性能获取所有行的方式进行查询</td></tr><tr><td>FIRST_ROWS(n)</td><td>指示优化器返回前n行结果，适用于需要快速返回部分结果的查询</td></tr><tr><td>INDEX(table_name index)</td><td>强制使用指定索引进行查询</td></tr><tr><td>FULL(table_name)</td><td>强制执行全表扫描，避免使用索引</td></tr><tr><td>ORDERED</td><td>强制按照查询中表出现的顺序连接表</td></tr><tr><td>USE_HASH(table_name)</td><td>强制使用哈希连接算法来连接表</td></tr><tr><td>USE_MERGE(table_name)</td><td>强制使用合并连接算法</td></tr><tr><td>LEADING(table_name)</td><td>指定连接的顺序</td></tr><tr><td>USE_CONCAT(table_name)</td><td>合并多个表的全表扫描</td></tr><tr><td>PARALLEL(table_name, n)</td><td>指示查询并行执行</td></tr><tr><td>INDEX_ASC(table_name)</td><td>强制使用升序索引进行查询</td></tr><tr><td>INDEX_DESC(table_name)</td><td>强制使用降序索引进行查询</td></tr><tr><td>PUSH_PRED(table_name)</td><td>提前将谓词推入到视图或子查询中进行评估</td></tr><tr><td>UNNEST(table_name)</td><td>对表的嵌套子查询进行展开</td></tr><tr><td>NO_MERGE(table_name)</td><td>禁止合并表达式计算</td></tr><tr><td>NO_PUSH_PRED(table_name)</td><td>禁止将谓词推入到视图或子查询中进行评估</td></tr><tr><td>USE_CUBE(table_name)</td><td>使用立方体优化进行查询</td></tr><tr><td>VECTOR_TRANSFORM(table_name)</td><td>使用向量转换技术进行查询</td></tr><tr><td>REWRITE(table_name)</td><td>使用查询重写技术进行优化</td></tr><tr><td>OPT_PARAM(‘optimizer_feature_enable’, ‘false’)</td><td>禁用特定的优化器功能</td></tr></tbody></table><h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>例子1：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ INDEX(orders order_date_idx) */</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> orders</span><br><span class="line"><span class="keyword">WHERE</span> order_date <span class="keyword">BETWEEN</span> <span class="string">&#x27;2022-01-01&#x27;</span> <span class="keyword">AND</span> <span class="string">&#x27;2022-12-31&#x27;</span>;</span><br></pre></td></tr></table></figure><p>在上述查询中，我们使用Hint “INDEX(orders order_date_idx)”，强制优化器使用名为”order_date_idx”的索引来执行查询。这可以提高查询性能，尤其在处理大量数据时效果显著。</p><p>例子2：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ PARALLEL(employees, 8) */</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> employees;</span><br></pre></td></tr></table></figure><p>在此查询中，我们使用Hint “PARALLEL(employees, 8)”，指示优化器使用8个并行进程来执行查询，提高查询效率和并行处理能力。</p><p>例子3：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ LEADING(dept, emp) */</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> departments dept</span><br><span class="line"><span class="keyword">JOIN</span> employees emp <span class="keyword">ON</span> dept.department_id <span class="operator">=</span> emp.department_id;</span><br></pre></td></tr></table></figure><p>在此查询中，我们使用Hint “LEADING(dept, emp)”，强制优化器按照给定的连接顺序连接表，以达到更好的性能。</p><p>例子4：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ USE_HASH(customers, orders) */</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> customers</span><br><span class="line"><span class="keyword">JOIN</span> orders <span class="keyword">ON</span> customers.customer_id <span class="operator">=</span> orders.customer_id;</span><br></pre></td></tr></table></figure><p>在以上查询中，我们使用Hint “USE_HASH(customers, orders)”，指示优化器使用哈希连接算法来连接customers表和orders表，以提升查询效率。</p><p>例子5：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ OPT_PARAM(&#x27;optimizer_feature_enable&#x27;, &#x27;false&#x27;) */</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> employees;</span><br></pre></td></tr></table></figure><p>在此查询中，我们使用Hint “OPT_PARAM(‘optimizer_feature_enable’, ‘false’)”，禁用特定的优化器功能，以便在特定情况下获得更好的查询性能。</p><h2 id="Hint使用规范"><a href="#Hint使用规范" class="headerlink" title="Hint使用规范"></a>Hint使用规范</h2><ol><li>谨慎使用：仅在需要进行特定优化时使用Hint，并在使用前进行全面测试和评估。</li><li>避免过度使用：过度使用Hint可能导致查询性能下降或不稳定。</li><li>Hint的适应性：使用Hint时要考虑数据库结构、数据规模和查询需求的特点，选择适应性强的Hint。</li><li>统计信息更新：使用Hint可能会影响优化器对表和索引的统计信息的收集和更新，应及时更新相关统计信息。</li><li>版本兼容性：不同版本的Oracle数据库对Hint的支持和效果可能有所差异，应根据具体版本权衡使用。</li></ol><blockquote><p>结语：<br>通过合理使用Oracle Hint，我们可以直接干预查询执行计划的生成过程，从而优化查询性能。在使用Hint时，我们需要根据实际需求和数据库环境进行选择和测试，并注意遵循使用Hint的最佳实践和注意事项。希望本文的介绍和示例能够帮助您更好地理解和应用Oracle Hint，并在优化查询性能的过程中取得更好的效果。祝您的查询性能优化顺利！</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何根据执行计划识别低效SQL</title>
+      <link href="/posts/20503.html"/>
+      <url>/posts/20503.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>引用《收获，不止SQL优化》中的总结</p></blockquote><div class="note red icon-padding flat"><i class="note-icon fas fa-fan"></i><p><img src="https://www.cdn.cheneyblog.com/blog/202309140949942.png" alt="总结1"></p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看懂执行计划之执行顺序</title>
+      <link href="/posts/12101.html"/>
+      <url>/posts/12101.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="口诀"><a href="#口诀" class="headerlink" title="口诀"></a>口诀</h2><p>  最右最上先执行</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ol><li>从上往下，第一个没有子节点的步骤先执行</li><li>对于兄弟节点，即靠上的节点先执行</li><li>所有兄弟节点执行完以后，执行父节点</li></ol><hr><ol><li>缩进最深的，最先执行</li><li>缩进深度相同的，先上后下</li></ol><h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>从上至下，从右向左</p><p>  由上至下：在执行计划中一般含有多个节点，相同级别(或并列)的节点，靠上的优先执行，靠下的后执行<br>  从右向左：在某个节点下还存在多个子节点，先从最靠右的子节点开始执行。</p><p>&emsp;&emsp;先从最开头一直连续往右看，直到看到最右边的并列的地方;对于不并列的，靠右的先执行;如果见到并列的，就从上往下看，对于并列的部分，靠上的先执行。</p><h2 id="格式化显示父子关系"><a href="#格式化显示父子关系" class="headerlink" title="格式化显示父子关系"></a>格式化显示父子关系</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> id, parent_id, operation</span><br><span class="line">  <span class="keyword">from</span> (<span class="keyword">select</span> level lvl,</span><br><span class="line">               id,</span><br><span class="line">               parent_id,</span><br><span class="line">               lpad(<span class="string">&#x27; &#x27;</span>, level) <span class="operator">||</span> operation <span class="operator">||</span> <span class="string">&#x27; &#x27;</span> <span class="operator">||</span> options <span class="operator">||</span> <span class="string">&#x27; &#x27;</span> <span class="operator">||</span></span><br><span class="line">               object_name <span class="keyword">as</span> operation</span><br><span class="line">          <span class="keyword">from</span> plan_table</span><br><span class="line">         <span class="keyword">start</span> <span class="keyword">with</span> id <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">connect</span> <span class="keyword">by</span> prior id <span class="operator">=</span> parent_id)</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> lvl <span class="keyword">desc</span>, id;</span><br></pre></td></tr></table></figure><p>  该SQL必须同explain plan for 在同一个session（即同一个窗口执行）</p><h2 id="查看执行顺序工具"><a href="#查看执行顺序工具" class="headerlink" title="查看执行顺序工具"></a>查看执行顺序工具</h2><ul><li><p>PL/SQL Developer 快捷键 F5<br><img src="https://www.cdn.cheneyblog.com/blog/202309140926628.png" alt="示例"></p></li><li><p>XPLAN 包<br><img src="https://www.cdn.cheneyblog.com/blog/202309140927069.png" alt="XPLAN 包"><br><img src="https://www.cdn.cheneyblog.com/blog/202309140943310.png" alt="扫码获取xplan包"></p></li></ul>]]></content>
       
       
       <categories>
