@@ -33,7 +33,307 @@
       <link href="/posts/50904.html"/>
       <url>/posts/50904.html</url>
       
-        <content type="html"><![CDATA[<p>当涉及到Oracle开发学习，有一些关键的指南可以帮助你更好地掌握这个数据库管理系统。在本文中，我将向大家分享一些有关Oracle开发学习的重要指南。</p><h2 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h2><ul><li><a href="https://cheneyblog.com//posts/565.html">物理结构</a></li><li><a href="https://cheneyblog.com//posts/14901.html">内存结构</a></li><li><a href="https://cheneyblog.com//posts/35730.html">进程结构</a></li><li><a href="https://cheneyblog.com//posts/24947.html">逻辑结构</a></li><li><a href="https://cheneyblog.com//posts/47150.html">体系结构</a></li></ul><h2 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h2><ul><li><a href="https://cheneyblog.com//posts/65435.html">SQL语句执行过程</a></li></ul><h2 id="执行计划"><a href="#执行计划" class="headerlink" title="执行计划"></a>执行计划</h2><ul><li><a href="https://cheneyblog.com//posts/20895.html">执行计划简介</a></li><li><a href="https://cheneyblog.com//posts/26508.html">Oracle统计信息</a></li><li><a href="https://cheneyblog.com//posts/32449.html">统计信息管理工具：DBMS_STATS包</a></li><li><a href="https://cheneyblog.com//posts/54365.html">获取执行计划</a></li><li><a href="https://cheneyblog.com//posts/12101.html">看懂执行计划之执行顺序</a></li><li><a href="https://cheneyblog.com//posts/20503.html">如何根据执行计划识别低效SQL</a></li><li><a href="https://cheneyblog.com//posts/24522.html">加速查询优化——深入了解Oracle Hint</a></li></ul><p>通过以上的指南，你可以更好地学习和掌握Oracle开发技能。无论是作为初学者还是有一定经验的开发者，这些指南都能够为你提供有价值的指导和帮助。祝你在Oracle开发学习的旅程中取得成功！</p>]]></content>
+        <content type="html"><![CDATA[<p>当涉及到Oracle开发学习，有一些关键的指南可以帮助你更好地掌握这个数据库管理系统。在本文中，我将向大家分享一些有关Oracle开发学习的重要指南。</p><h2 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h2><ul><li><a href="https://cheneyblog.com//posts/565.html">物理结构</a></li><li><a href="https://cheneyblog.com//posts/14901.html">内存结构</a></li><li><a href="https://cheneyblog.com//posts/35730.html">进程结构</a></li><li><a href="https://cheneyblog.com//posts/24947.html">逻辑结构</a></li><li><a href="https://cheneyblog.com//posts/47150.html">体系结构</a></li><li><a href="https://cheneyblog.com//posts/39514.html">Library Cache 的基本结构</a></li><li><a href="https://cheneyblog.com//posts/27399.html">Library Cache 详解</a></li></ul><h2 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h2><ul><li><a href="https://cheneyblog.com//posts/65435.html">SQL语句执行过程</a></li></ul><h2 id="执行计划"><a href="#执行计划" class="headerlink" title="执行计划"></a>执行计划</h2><ul><li><a href="https://cheneyblog.com//posts/20895.html">执行计划简介</a></li><li><a href="https://cheneyblog.com//posts/26508.html">Oracle统计信息</a></li><li><a href="https://cheneyblog.com//posts/32449.html">统计信息管理工具：DBMS_STATS包</a></li><li><a href="https://cheneyblog.com//posts/54365.html">获取执行计划</a></li><li><a href="https://cheneyblog.com//posts/12101.html">看懂执行计划之执行顺序</a></li><li><a href="https://cheneyblog.com//posts/65395.html">看懂执行计划之基于规则的优化器（RBO）</a></li><li><a href="https://cheneyblog.com//posts/61.html">看懂执行计划之基于成本的优化器（CBO）</a></li><li><a href="https://cheneyblog.com//posts/49498.html">看懂执行计划之优化器的模式</a></li><li><a href="https://cheneyblog.com//posts/46535.html">看懂执行计划之表相关执行计划</a></li><li><a href="https://cheneyblog.com//posts/9739.html">看懂执行计划之索引介绍</a></li><li><a href="https://cheneyblog.com//posts/26997.html">看懂执行计划之B-tree索引</a></li><li><a href="https://cheneyblog.com//posts/35895.html">看懂执行计划之位图索引</a></li><li><a href="https://cheneyblog.com//posts/10468.html">看懂执行计划之表连接</a></li><li><a href="https://cheneyblog.com//posts/44822.html">看懂执行计划之其他执行计划</a></li><li><a href="https://cheneyblog.com//posts/1085.html">看懂执行计划之稳定执行计划</a></li><li><a href="https://cheneyblog.com//posts/24522.html">加速查询优化——深入了解Oracle Hint</a></li><li><a href="https://cheneyblog.com//posts/20503.html">如何根据执行计划识别低效SQL</a></li></ul><p>通过以上的指南，你可以更好地学习和掌握Oracle开发技能。无论是作为初学者还是有一定经验的开发者，这些指南都能够为你提供有价值的指导和帮助。祝你在Oracle开发学习的旅程中取得成功！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看懂执行计划之稳定执行计划</title>
+      <link href="/posts/1085.html"/>
+      <url>/posts/1085.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Oracle-Hint"><a href="#Oracle-Hint" class="headerlink" title="Oracle Hint"></a>Oracle Hint</h2><p>&emsp;&emsp;Oracle Hints 是一种机制，用来告诉优化器按照我们的告诉它的方式生成执行计划，它允许用户在 SQL 语句中插入相关的语法，从而影响 SQL 的执行方式。</p><h3 id="Hint-的作用"><a href="#Hint-的作用" class="headerlink" title="Hint 的作用"></a>Hint 的作用</h3><ol><li>调整目标 SQL 使用的优化器类型</li><li>调整优化器的优化目标</li><li>调整表的访问路径</li><li>调整表的连接类型</li><li>调整表的连接顺序</li><li>提高语句的并行程度</li></ol><h3 id="Hint-的弊端"><a href="#Hint-的弊端" class="headerlink" title="Hint 的弊端"></a>Hint 的弊端</h3><ul><li>Hint 是比较”暴力”的一种解决方式，不是很优雅。需要开发人员手工修改代码。</li><li>Hint 不会去适应新的变化，只是在现有的基础上产生更优的执行计划。</li><li>Hint 随着数据库版本的变化，可能会有一些差异、甚至废弃的情况。</li></ul><h2 id="Oracle-stored-outline"><a href="#Oracle-stored-outline" class="headerlink" title="Oracle stored outline"></a>Oracle stored outline</h2><p>&emsp;&emsp;Oracle stored outline（存储提纲）是最早的基于提示来控制 SQL 执行计划的机制，也是 9i 以及之前版本唯一可以用来稳定和控制 SQL 执行计划的工具。主要的作用是用来保持固定 sql 语句的执行计划，让 sql 语句的执行计划在数据库环境变更（统计信息、优化器参数、表结果变更等）后还能保持原来的执行计划。</p><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ol><li>避免 SQL 的执行计划在统计数据不准确的情况（如未能及时收集表或索引的统计信息）下导致变化从而引起的性能降低。</li><li>避免容易因为 Bind Peeking 导致 SQL 执行计划变差从而引起的性能降低。</li><li>避免大规模分布实施的应用出现数据库版本、配置等区别引起的优化器产生不同的执行计划。</li></ol><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul><li>从 10g 以后，outline 基本已经被 Oracle 废弃并且不在维护。</li><li>只有设置 use_stored_outlines 参数后才能启用 outline。</li><li>创建 outline 需要 create any outline or execute_catelog_role 权限 。</li></ul><h2 id="SQL-Profile"><a href="#SQL-Profile" class="headerlink" title="SQL Profile"></a>SQL Profile</h2><p>&emsp;&emsp;SQL Profile 是 stored outline 的进化版，是为目标 SQL 提供除了统计信息之外的其他信息，比如运行环境、更准确的执行路径等，以帮助优化器为 SQL 语句选择更合适的执行计划。</p><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol><li>更容易生成、更改和控制</li><li>适用范围广</li><li>在不改变目标 SQL 文本的情况下达到稳定执行计划的效果</li></ol><h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><ul><li>Automatic 类型的 SQL Profile<br>Automatic 类型的 SQL Profile 其实是目标 SQL 一些额外的调整信息，这些信息存储在数据字典中。Oracle 会使用类似于动态采样的方法来支持 Automatic 类型的 SQL Profile，在生成执行计划的时候 Oracle 会将调整信息同原 SQL 的相关统计信息等内容一起作用从而得到最新的执行计划</li><li>Manual 类型的 SQL Profile<br>Manual 类型 SQL Profile 的本质是一堆来源 Outline Data 部分的 Hint 组合，可以在不改变目标 SQL 文本的情况下调整其执行计划</li></ul><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>&emsp;&emsp;SQL Profile 实际上只是一种亡羊补牢、被动的技术手段，应用在那些执行计划已经发生了不好的变更的 SQL 上，即当我们发现这些 SQL 的执行计划已经出了问题时通过创建 SQL Pofle 来纠正、稳定这些 SQL 的执行计划。也就是说，即便通过创建 SQLProfile 解决了目标 SQL 执行计划变更的问题，依然不能保证系统后续执行的 SQL 的执行计划就不再发生不好的变更。</p><h2 id="SPM（SQL-Plan-Management）"><a href="#SPM（SQL-Plan-Management）" class="headerlink" title="SPM（SQL Plan Management）"></a>SPM（SQL Plan Management）</h2><p>&emsp;&emsp;SPM 是一种主动的稳定执行计划的手段，能够保证只有被验证过的执行计划才会被启用。SPM 既能够主动地稳定执行计划，又保留了继续使用新的执行效率可能更高的执行计划的机会。 SPM 启动后，每个 SQL 的所有执行计划都有对应的 SQL Plan Baseline，可以通过 DBA_SQL_PLAN_BASELINE 查看。只有 DBA_SQL_PLAN_BASELINE 表中 ENABLE 和 ACCEPTED 列的值均为’YES’的 SQL Plan Baseline 对应的执行计划才会被 Oracle 启用。</p><h3 id="获取方法"><a href="#获取方法" class="headerlink" title="获取方法"></a>获取方法</h3><ul><li>自动捕获（Automatic Initial Plan Capture）</li></ul><ol><li>设置 OPTIMIZER_CAPTURE_SQL_PLAN_BASELINES = Ture</li><li>Oracle 自动监控执行两次以上的 SQL 语句，将执行计划记入 Plan History。</li><li>生成的第一个执行计划被标记为 ENABLED 并且是 ACCEPTED，后续的执行计划会被标记为 ENABLED 但不是 ACCEPTED。</li><li>后续如果关闭了自动捕捉，针对存在 baseline 的 SQL，仍旧会有新的 PLAN 生成，新的 Plan 仍会进入 Plan History，标记为 ENABLED 但不是 ACCEPTED。</li></ol><ul><li>手动导入（Manual Plan Capture）<br>Oracle 支持通过 DBMS_SPM 包手动管理 SPM，可以将 SQL 执行计划从高速缓存或现有的 SQL 优化集中加载到 SPM。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看懂执行计划之其他执行计划</title>
+      <link href="/posts/44822.html"/>
+      <url>/posts/44822.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="AND-EQUAL-INDEX-MERGE"><a href="#AND-EQUAL-INDEX-MERGE" class="headerlink" title="AND-EQUAL(INDEX MERGE)"></a>AND-EQUAL(INDEX MERGE)</h2><p>INDEX MERGE 是指当 where 条件中出现针对多个不同索引列的等值条件，Oracle 会分别去扫描这些索引列，然后合并每个索引的集合，找到值相同的 ROWID 最后回表。</p><h3 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h3><p>涉及到的索引都为单列索引<br>索引都在查询中出现<br>谓词使用=关系符号连接<br>从 Oracle 10g 开始，and_equal 操作被废弃，Oracle 不再支持，这里废弃的含义并不是被彻底移除，而是说不再进行改进，通过 hints 仍然可以强制实现 Index Merge 的 and_equal 操作。</p><h2 id="INDEX-JOIN"><a href="#INDEX-JOIN" class="headerlink" title="INDEX JOIN"></a>INDEX JOIN</h2><p>对 index 进行关联,oracle 通过 hash index join 的方式实现了避免对表的访问.所有的数据都从索引中直接获得.它不受查询条件影响,可以是唯一索引,也可以是多列索引.</p><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>如果不是所有数据都能从索引获得,那么将不会使用 index join</p><h2 id="VIEW"><a href="#VIEW" class="headerlink" title="VIEW"></a>VIEW</h2><p>Oracle 在处理包含视图的 SQL 时，通常会根据该视图是否能做视图合并（View Merging），即 Oracle 在执行该 SQL 时可以直接针对该视图的基表，此时 SQL 的执行计划中很可能不会出现关键字”VIEW”<br>对于某些 SQL 而言，即使 Oracle 已经做了视图合并但其所对应的执行计划中可能还是会显示关键字”VIEW”<br>如果不能做视图合并，则 Oracle 将把该视图看作一个整体并独立地执行它，此时 SQL 的执行计划中将出现关键字”VIEW”</p><h2 id="FILTER"><a href="#FILTER" class="headerlink" title="FILTER"></a>FILTER</h2><p>FILTER 直译过来就是过滤、筛选的意思，它是一种特殊的执行计划。</p><pre><code>FILTER 类型的执行计划实际上是一种改良的嵌套循环连接，FILTER的性能跟列值distinct数有关</code></pre><h3 id="执行过程"><a href="#执行过程" class="headerlink" title="执行过程"></a>执行过程</h3><ol><li>得到一个驱动结果集。</li><li>根据一定的过滤条件从上述驱动结果集中滤除不满足条件的记录。</li><li>结果集中剩下的记录就会返回给最终用户或者继续参与下一个执行步骤。</li></ol><h2 id="SORT"><a href="#SORT" class="headerlink" title="SORT"></a>SORT</h2><ol><li>SORT AGGREGATE<br>通常发生在使用一些聚合函数的时候，sum(),avg(),min(),max()，count（）等等，实际上 sort aggregate 不做真正的 sort，并不会用到排序空间，而是通过一个全局变量＋全表或全索引扫描来实现</li><li>SORT UNIQUE<br>需要取 distinct 值的时候或 in 子查询</li><li>SORT GROUP BY<br>发生在有 group by 子句的时候</li><li>SORT ORDER BY<br>发生在有 order by 子句的时候</li><li>SORT JOIN<br>发生在出现 merge join 的情况下，两张关联的表要各自做 sort，然后再 merge</li></ol><h2 id="UNION-UNION-ALL"><a href="#UNION-UNION-ALL" class="headerlink" title="UNION/UNION ALL"></a>UNION/UNION ALL</h2><p>UNION 和 UNIONALL 的区别是 ∶UNION ALL 仅仅是简单地将两个结果集合并，并不做任何额外的处理;而 UNION 除了将两个结果集简单合并之外，还会对合并后的结果集做排序和去重，即 UNION 相当于先做 UNION ALL，然后再对 UNIONALL 之后的结果集做 SORT UNIQUE。</p><h2 id="CONCAT"><a href="#CONCAT" class="headerlink" title="CONCAT"></a>CONCAT</h2><p>CONCAT 就是 IN-List 扩展（IN-List Expansion）或 OR 扩展（OR Expansion），IN-List 扩展/OR 扩展在执行计划中对应的关键字是”CONCATENATION”。<br>CONCATENATION 操作类似 union ,只不过与 union 不同的是他并不对全部数据去重.<br>CONCATENATION 操作只去除由 OR 引起的重复值.</p><h2 id="CONNECT-BY"><a href="#CONNECT-BY" class="headerlink" title="CONNECT BY"></a>CONNECT BY</h2><p>CONNECT BY 是 Oracle 数据库中层次查询（Hierarchical Queries）。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Library Cache 详解</title>
+      <link href="/posts/27399.html"/>
+      <url>/posts/27399.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>&emsp;&emsp;库缓存主要用于缓存刚刚执行过的 SQL 语句和 PL/SQL 语句（如存储过程、函数、包、触发器）所对应的执行计划、解析树（Parse Tree）、Pcode、Mcode 等，当同样的 SQL 语句和 PL/SOL 语句再次被执行时无须再次从头开始解析，从而提高 SQL 语句和 PL/SQL 语句重复执行的执行效率。V$DB_OBJECT_CACHE 视图可以查看 Library Cache 的对象。</p><h2 id="基础结构"><a href="#基础结构" class="headerlink" title="基础结构"></a>基础结构</h2><p><a href="https://cheneyblog.com//posts/39514.html">Library Cache 的基本结构</a></p><h2 id="主要作用"><a href="#主要作用" class="headerlink" title="主要作用"></a>主要作用</h2><ol><li>可以快速定位数据库对象，并找到对应的信息</li><li>Library Cache 中存储着各库缓存对象的依赖关系，解决依赖问题</li><li>Library Cache 可以并发控制，管理大量共享对象的并发访问和修改问题</li></ol><hr><p>&emsp;&emsp;当 SQL 语句传到服务器，Oracle 会先对目标 SQL 进行哈希运算，然后根据哈希值访问库缓存对象句柄链表，从而找到对应的库缓存对象句柄，重用 SQL 的执行计划、解析树而无需从头开始解析；如果找不到对应的库缓存对象句柄，则重新解析目标 SQL，将解析后的资源以库缓存对象句柄的方式链接在对应 Hash Bucket 的库缓存对象句柄链表中。</p><h2 id="并发控制"><a href="#并发控制" class="headerlink" title="并发控制"></a>并发控制</h2><p>Oracle 利用 Library cache lock 和 Library cache pin 来实现并发控制，Library cache lock 是在 handle 上获取的，而 Library cache pin 则是在 data heap 上获取。访问对象时，首先必须获取 handle 上的 lock，然后将访问的数据 pin 在内存中。lock 的作用是控制进程间的并发访问，而 pin 的作用是保证数据一致性，防止数据在访问时被交换出去。</p><p>Library cache lock 有三种模式：null，share，exclusive，Library cache pin 有两种模式：share，exclusive。</p><p>每个 handle 上都有 lock 和 pin 的 holder list 和 waiter list，用来保存持有该资源和等待该资源的队列。</p><h2 id="Hash-Latch"><a href="#Hash-Latch" class="headerlink" title="Hash Latch"></a>Hash Latch</h2><p>&emsp;&emsp;当多个用户同时访问或修改 Hash Bucket 和库缓存对象句柄链表时会出现冲突,为了解决这一问题，实现用户的有序访问和共享，Oracle 生成 Hash Latch 的机制来保护这些共享资源，当一个用户需要访问或修改这些 Hash Bucket 及其库缓存对象句柄链表时，需要首先获取 Hash Latch，如果期间有其他需要获取相同 Hash Latch 的用户或会话就需要等待，直到持有该哈希 Latch 的用户释放为止.</p><pre><code>Hash Latch分类shared pool latch：分配或释放空间时使用Library cache latch：hash bucket中定位handle时使用library cache lock latch、library cache pin latch：获取lock和pin时使用</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Library Cache 的基本结构</title>
+      <link href="/posts/39514.html"/>
+      <url>/posts/39514.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="图解-Library-Cache"><a href="#图解-Library-Cache" class="headerlink" title="图解 Library Cache"></a>图解 Library Cache</h2><p><img src="https://www.cdn.cheneyblog.com/blog/202309151502341.png" alt="Library Cache 基本结构1"></p><p><img src="https://www.cdn.cheneyblog.com/blog/202309151503289.png" alt="Library Cache 基本结构2"></p><h2 id="结构说明"><a href="#结构说明" class="headerlink" title="结构说明"></a>结构说明</h2><h3 id="Hash-Bucket"><a href="#Hash-Bucket" class="headerlink" title="Hash Bucket"></a>Hash Bucket</h3><p>库缓存相当于一个 Hash Table 由一组 Hash Bucket 构成，每个 Hash Bucket 存储相同哈希值的所有库缓存对象句柄，不同库缓存对象句柄间用指针连接，构成库缓存对象句柄链表（Library Cache Object Handles）</p><pre><code>Hash Bucket主要用于可执行对象的快速定位和存取</code></pre><h3 id="Library-Cache-Object-Handle"><a href="#Library-Cache-Object-Handle" class="headerlink" title="Library Cache Object Handle"></a>Library Cache Object Handle</h3><p>库缓存对象句柄(Library Cache Object Handle)是存储库缓存对象的一种结构，这些句柄包含了对象的相关属性，例如：名称、标记、指向对象内存地址的指针等。<br>Object Handle 的主要属性：</p><ol><li><p>Name<br>库缓存对象句柄对应的库缓存对象名称</p></li><li><p>Namespace<br>库缓存对象句柄对应的库缓存对象的分组名</p><table><thead><tr><th>Namespace 值</th><th>含义</th></tr></thead><tbody><tr><td>CRSR</td><td>SQL 语句和匿名 PL/SQL 语句</td></tr><tr><td>TABL/PRCD/TYPE</td><td>表、视图、序列、同义词、存储过程、函数、Type 和 Package</td></tr><tr><td>BODY/TYBD</td><td>Type 和 Package 的 Body</td></tr><tr><td>TRGR</td><td>Trigger</td></tr><tr><td>INDEX</td><td>索引</td></tr><tr><td>CLST</td><td>Cluster</td></tr></tbody></table></li><li><p>Heap 0 Pointer<br>指向子结构 Heap 0 的指针</p></li></ol><h3 id="Library-Cache-Object"><a href="#Library-Cache-Object" class="headerlink" title="Library Cache Object"></a>Library Cache Object</h3><p>Handle 对应可执行对象 Library Cache Object，通常以堆（Heap）的形式组成。Handle 中指向第一个堆的指针为 Heap 0，Heap 0 中包含指向其他堆的指针信息。</p><ol><li>dependency table<br>该对象依赖的对象信息</li><li>child table<br>对象的子对象；比如同一个父游标对应的不同子游标</li><li>authorization table<br>对象的授权信息</li><li>type<br>shared cursor,index,table,cluster,view,synonym,sequence,procedure,function,package,table body,package body,trigger 等等。</li><li>data blocks<br>data block 也是一个指针，指向了 data heap</li></ol><h3 id="Data-heap"><a href="#Data-heap" class="headerlink" title="Data heap"></a>Data heap</h3><p>Data heap 即存放真实数据的地方，主要包含库缓存对象的 SQL 语句、执行计划、执行文本等信息。</p><table><thead><tr><th>Heap</th><th>Usage</th></tr></thead><tbody><tr><td>0</td><td>Object</td></tr><tr><td>1</td><td>Source</td></tr><tr><td>2</td><td>Diana</td></tr><tr><td>3</td><td>Pcode</td></tr><tr><td>4</td><td>Mcode</td></tr><tr><td>5</td><td>Errors</td></tr><tr><td>6</td><td>SQL Context</td></tr><tr><td>7</td><td>Free</td></tr><tr><td>8</td><td>Subordinate Heaps</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看懂执行计划之表连接</title>
+      <link href="/posts/10468.html"/>
+      <url>/posts/10468.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>&emsp;&emsp;表连接，顾名思义多个表之间用用连接条件连接在一起，使用表连接的目标 SQL 其目的就是从多个表获取存储在这些表中不同维度的数据。</p><h2 id="解析表连接-SQL-的要素"><a href="#解析表连接-SQL-的要素" class="headerlink" title="解析表连接 SQL 的要素"></a>解析表连接 SQL 的要素</h2><ol><li>目标 SQL 文本的写法<br>SQL 文本的写法决定表连接的类型：内连接、外连接、自连接<blockquote><p>自连接：同一张表内的字段做连接</p></blockquote></li><li>表连接顺序<br>不管目标 SQL 中有多少个表做连接，Oracle 在实际执行该 SQL 时都只能先两两 连接，再依次同剩下的表做连接，直到目标 SQL 中所有的表都已连接完毕。</li><li>表连接方法<br>排序合并连接、嵌套循环连接、哈希连接和笛卡尔积连接</li></ol><h2 id="表连接类型"><a href="#表连接类型" class="headerlink" title="表连接类型"></a>表连接类型</h2><ul><li>内连接（Join）<br>连接结果只包含那些完全满足连接条件的记录</li><li>外连接 1. 左外连接（Left Join）<br>表连接结果包含左边表的全部行，右边表满足连接条件的查询列正常显示，不满足展示 Null 2. 右外连接（Right Join）<br>表连接结果包含右边表的全部行，左边表满足连接条件的查询列正常显示，不满足展示 Null 3. 全外连接（Full Join）<br>表连接结果包含两张表的全部记录，满足连接条件的查询列正常显示，不满足连接条件的记录对应另外一张表展示 Null<blockquote><p>如果使用（+）操作符指定外连接,不满足连接条件时靠近操作符表的连接列以 Null 值填充,必须使用 Where 子句指定连接条件,否则会产生笛卡尔积</p></blockquote></li></ul><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>A 表：1，2，3，4，5<br>B 表：2，4，6，8，10<br><img src="https://www.cdn.cheneyblog.com/blog/202309151456976.png" alt="表连接"></p><h2 id="表连接方法"><a href="#表连接方法" class="headerlink" title="表连接方法"></a>表连接方法</h2><h3 id="排序合并连接-Sort-Merge-Join"><a href="#排序合并连接-Sort-Merge-Join" class="headerlink" title="排序合并连接(Sort Merge Join)"></a>排序合并连接(Sort Merge Join)</h3><pre><code>两个表在做表连接时用排序操作(Sort)和合并操作(Merge)来得到结果集的表连接方法</code></pre><p>执行步骤简析</p><ol><li><p>用目标 SQL 中指定的谓词分别去访问两张表，对谓词过滤后的表数据分别按照连接列排序生成结果集 1 和结果集 2。</p></li><li><p>遍历结果集 1，按照连接列的顺序依次匹配结果集 2 中的数据，最后结果集 1 和结果集 2 中所有的匹配结果就是上述排序合并连接的最终结果。</p></li></ol><p>适用场景</p><ul><li><p>通常情况下，排序合并连接的执行效率不如哈希连接，但前者的适用范围广，因为哈希连接通常只用于等值连接，而排序连接还能用于其他连接(例：&gt;,&lt;,&gt;=,&lt;=)。</p></li><li><p>通常情况下，排序合并连接不适合 OLTP(On-Line Transaction Processing)联机事务处理过程，因为排序相对而言成本较高。</p></li></ul><h3 id="嵌套循环连接-Nested-Loops-Join"><a href="#嵌套循环连接-Nested-Loops-Join" class="headerlink" title="嵌套循环连接(Nested Loops Join)"></a>嵌套循环连接(Nested Loops Join)</h3><pre><code>两张表在做表连接时依靠两层嵌套循环(外层循环和内层循环)来得到连接结果集的表连接方法。</code></pre><p>执行步骤</p><ol><li><p>首先 Oracle 优化器会按照一定的规则来决定驱动表和被驱动表。驱动表用于外层循环，被驱动表用于内层循环。</p></li><li><p>然后分别用目标 SQL 中指定的谓词去筛选数据。</p></li><li><p>接着遍历驱动表按照连接条件去匹配被驱动表中的数据，直到遍历完驱动表中的所有数据。显然驱动表有多少数据，内层循环就要做多少次。</p></li></ol><p>适用场景</p><ul><li><p>如果驱动表所对应的驱动结果集的记录数较少，同时在被驱动表的连接列上又存在唯一索引(或者在被驱动表的连接列上存在选择性比较好的非唯一性索引)，那么此时使用嵌套循环连接的执行效率就会非常高；但如果驱动表所对应的驱动结果集的记录数很多，即便被驱动表的连接列上存在索引，此时使用嵌套循环连接的执行效率也不会太高。</p></li><li><p>大表也可以作为嵌套循环连接的驱动表，关键看目标 SQL 中指定谓词条件能否将驱动结果集的数据量降下来。</p></li><li><p>嵌套循环连接有一个其他连接方法没有的优点：嵌套循环连接可以实现快速响应。</p></li></ul><blockquote><p>在 Oracle11g 中，Oracle 引入了向量 I/O(Vector I/O)。在引入向量 I/O 后，Oracle 就可以将原先一批单块读所需要消耗的物理 I/O 组合起来，然后用一个向量 I/O 去批量处理他们，这样就实现了在单块读的数据量不降低的情况下减少这些单块读所需要消耗的物理 I/O 数量，也就提高了嵌套循环连接的执行效率。</p></blockquote><h3 id="哈希连接-Hash-Join"><a href="#哈希连接-Hash-Join" class="headerlink" title="哈希连接(Hash Join)"></a>哈希连接(Hash Join)</h3><pre><code>两张表在做表连接时主要依靠哈希运算来得到连接结果集的表连接方法。</code></pre><p>执行步骤</p><ol><li>两张表在施加了目标 SQL 指定谓词条件后，结果集数量较少的将被 Oracle 选为哈希连接的驱动表，反之结果集数据量较多的选做被驱动结果集。</li><li>哈希运算会在 hash area 生成 hash bulket，并将若干 bulket 分成一组，成为一个 partition，还会生成一个 bitmap 的列表，每个 bulket 在上面占一位</li><li>对驱动表的连接列做 hash 运算，将数据分散到相应 partition 的 bulket 中，当运算完成后，如果键值唯一性较高的话，bulket 里的数据会比较均匀，也有可能有的桶里面数据会是空的，这样 bitmap 上对应的标志位就是 0，有数据的桶，标志位会是 1</li><li>再对被驱动表的连接列做 hash 运算，确定应该到某个 partition 的某个 bulket 去探测，探测之前，会看这个 bulket 的 bitmap 是否会 1，如果为 0，表示没数据，这行就直接丢弃掉，如果 bitmap 为 1，则在桶内做精确匹配，判断 OK 后，返回数据</li><li>如果驱动表或被驱动表数据量很大，在构建对应的 Hash Table 时，会出现 PGA 的工作区(Work Area)被填满的情况，这时 Oracle 会把工作区中包含记录数最多的 Hash Partition 写到磁盘上(TEMP 表空间)。</li><li>两张表都扫描完毕后，由于两边的数据都按照相同的 hash 算法做的 partition 和 bulket，现在只要成对的比较两边 partition 数据即可，并且在比较的时候，oracle 也做了优化处理，没有严格的驱动与被驱动关系，他会在 partition 对中选较小的一个作为驱动来进行，直到磁盘上所有的 partition 对都比较完成，哈希连接处理结束</li></ol><p>试用场景</p><ul><li>哈希连接只适用于 CBO，只能用于等值连接条件(即使是哈希反连接，Oracle 实际上也是将其转换成了等价的等值连接)。</li><li>当两个表作哈希连接时，如果在施加了目标 SQL 中指定谓词条件后得到的数据量较小的那个结果集所对应的 Hash Table 能够完全被容纳在内存中(PGA 的工作区)，则此时的哈希连接的执行效率会非常高。</li></ul><h3 id="笛卡尔积连接-Cross-Join"><a href="#笛卡尔积连接-Cross-Join" class="headerlink" title="笛卡尔积连接(Cross Join)"></a>笛卡尔积连接(Cross Join)</h3><pre><code>两个表在做表连接时没有任何连接条件的表连接方法。</code></pre><p>执行步骤</p><ol><li><p>首先以目标 SQL 中指定谓词条件访问表 1，得到结果集 1，记录数 m；</p></li><li><p>接着以目标 SQL 中指定谓词条件访问表 2，得到结果集 2，记录数 n；</p></li><li><p>最后对结果集 1 和结果集 2 执行合并操作，因为没有表连接条件，结果集 1 和结果集 2 连接时，结果集 1 中的任意一条记录匹配结果集 2 中的每一条记录，最终得到记录数 m*n 的结果集。</p></li></ol><blockquote><p>笛卡尔积的出现通常是由于目标 SQL 中漏写了表连接条件，笛卡尔积一般是不好的，有些情况下也可以利用笛卡尔积来减少对目标 SQL 中大表的全表扫描次数。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看懂执行计划之表相关执行计划</title>
+      <link href="/posts/46535.html"/>
+      <url>/posts/46535.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="全表扫描（Full-Table-Scans-FTS）"><a href="#全表扫描（Full-Table-Scans-FTS）" class="headerlink" title="全表扫描（Full Table Scans, FTS）"></a>全表扫描（Full Table Scans, FTS）</h2><p>&emsp;&emsp;全表扫描是指 Oracle 在访问目标表里的数据时，会从该表所占用的第一个区（EXTENT）的第一个块（BLOCK）开始扫描，一直扫描到该表的高水位线（HWM,High Water Mark），这段范围内所有的数据块 Oracle 都必须读到。Oracle 会对这期间读到的所有数据施加目标 SQL 的 where 条件过滤，最后返回满足要求的数据。<br>&emsp;&emsp;Oracle 在做全表扫描操作时会使用多块读，在目标表数据量不大时执行效率是非常高的。全表扫描最大的问题是执行时间不稳定、不可控，会随着目标表数据量的递增而递增。<br>&emsp;&emsp;高水位线特性的副作用：即使 DELETE 删光了目标表里的所有数据，高水位线还是会在原来的位置，全表扫描的时候还是会扫描高水位线下所有的数据块。<br><img src="https://www.cdn.cheneyblog.com/blog/202309151446539.png" alt="全表扫描（Full Table Scans, FTS）"></p><h3 id="会引起全表扫描的-SQL"><a href="#会引起全表扫描的-SQL" class="headerlink" title="会引起全表扫描的 SQL"></a>会引起全表扫描的 SQL</h3><ol><li>全模糊查询</li><li>查询条件中含有 is null</li><li>查询条件中使用了不等于操作符（&lt;&gt;、!=）</li><li>对于组合索引，如果查询条件中没有前导列，也会引起全表扫描</li><li>对字段进行表达式操作</li><li>返回的行无任何限定条件</li></ol><h2 id="ROWID-扫描（table-access-by-ROWID）"><a href="#ROWID-扫描（table-access-by-ROWID）" class="headerlink" title="ROWID 扫描（table access by ROWID）"></a>ROWID 扫描（table access by ROWID）</h2><p>&emsp;&emsp;ROWID 表示的是 Oracle 中数据行记录所在的物理存储位置，同数据块中的记录一一对应。Oracle 通过 ROWID 去定位并访问数据的方法叫 ROWID 扫描。</p><h3 id="ROWID-的两层含义"><a href="#ROWID-的两层含义" class="headerlink" title="ROWID 的两层含义"></a>ROWID 的两层含义</h3><ol><li><p>根据 SQL 语句中输入的 ROWID 值直接去访问对应的行记录<br><img src="https://www.cdn.cheneyblog.com/blog/202309151446582.png" alt="ROWID 值直接去访问对应的行记录"></p></li><li><p>通过访问相关索引，再根据索引得到的 ROWID 访问数据<br><img src="https://www.cdn.cheneyblog.com/blog/202309151447101.png" alt="根据索引得到的 ROWID 访问数据"></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看懂执行计划之优化器的模式</title>
+      <link href="/posts/49498.html"/>
+      <url>/posts/49498.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>&emsp;&emsp;优化器是 Oracle 的内置软件，可以确定执行目标 SQL 的最有效方式。优化器的模式决定 Oracle 解析目标 SQL 时所用优化器的类型，以及决定使用 CBO 时计算成本的侧重点。优化器的模式不同，CBO 计算成本值的方法也不同。控制 Oracle 优化器模式的参数为 optimizer_mode。</p><ul><li>查看参数</li></ul><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">parameter</span> optimizer_mode</span><br></pre></td></tr></table></figure><ul><li>修改参数</li></ul><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> session <span class="keyword">set</span> optimizer_mode<span class="operator">=</span><span class="string">&#x27;CHOOSE&#x27;</span></span><br></pre></td></tr></table></figure><h2 id="RULE"><a href="#RULE" class="headerlink" title="RULE"></a>RULE</h2><p>表示优化器采用 RBO 来解析目标 SQL。<br>是 Oracle 早期版本的一种优化模式。<br>目前 Oracle 已不再更新 RBO，也不推荐使用 RBO。</p><h2 id="CHOOSE"><a href="#CHOOSE" class="headerlink" title="CHOOSE"></a>CHOOSE</h2><p>由 RBO 到 CBO 转换时的默认值。<br>表示既可以使用 RBO 又可以使用 CBO。<br>取决于 SQL 涉及的对象是否有统计信息，有统计信息 CBO（部分有时会采样统计），否则 RBO。</p><h2 id="FIRST-ROWS-n-n-1-10-100-1000"><a href="#FIRST-ROWS-n-n-1-10-100-1000" class="headerlink" title="FIRST_ROWS_n(n=1,10,100,1000)"></a>FIRST_ROWS_n(n=1,10,100,1000)</h2><p>Oracle 采用 CBO 解析目标 SQL。<br>侧重点是最快的速度返回头 n 条记录。<br>本质上其实是 Oracle 把那些能够以最快相应速度返回头 n 条记录所对应的执行步骤的成本修改成一个很小的值（远远小于默认情况下 CBO 对同样执行步骤所计算的成本值）。</p><h2 id="FIRST-ROWS"><a href="#FIRST-ROWS" class="headerlink" title="FIRST_ROWS"></a>FIRST_ROWS</h2><p>Oracle 在解析目标 SQL 时会联合使用 CBO 和 RBO。<br>解析时采用 CBO，侧重点在于以最快的响应速度返回记录；<br>当出现一些特定的情况时，会用 RBO 中的一些内置规则来选取执行计划而不考虑成本。<br>例如用索引来避免排序</p><h2 id="ALL-ROWS"><a href="#ALL-ROWS" class="headerlink" title="ALL_ROWS"></a>ALL_ROWS</h2><p>Oracle 10G 及后续版本的默认值。<br>Oracle 用 CBO 解析目标 SQL，此时计算成本值时的侧重点在于最佳的吞吐量（即最小的系统 I/O 和 CPU 资源的消耗量）。<br>这种优化模式适合于数据查看实时性不是那么强的数据仓库、决策支持系统和面向批处理的数据库（batch-oriented databases）等。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看懂执行计划之基于成本的优化器（CBO）</title>
+      <link href="/posts/61.html"/>
+      <url>/posts/61.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="基于代价的优化方式"><a href="#基于代价的优化方式" class="headerlink" title="基于代价的优化方式"></a>基于代价的优化方式</h2><p>&emsp;&emsp;Cost-Based Optimization，简称 CBO。CBO 选择目标 SQL 执行计划的判断原则是成本，从目标 SQL 的诸多执行计划中选取成本值最小的执行路径为其执行计划，各执行路径的成本值是根据目标 SQL 中涉及到的表、索引、列等相关对象的统计信息计算出来的，实际反应执行目标 SQL 所要消耗的 I/O、CPU 和网络资源的一个估计值。</p><ul><li>I/O<br>把数据从磁盘读入内存时所需代价(Select 重点指标)</li><li>CPU<br>处理内存中数据所需的代价（排序(sort)、连接(join)操作）</li><li>网络资源<br>网络资源是指那些用了 dblink 的分布式目标 SQL，CBO 在解析该类目标 SQL 时知道在实际执行时所需要的的数据并不在本地数据库中（需要远程数据库取数），便会将网络资源消耗折算成对等的 I/O 资源消耗再进行估算。</li><li>动态采样<br>执行 SQL 所涉及对象（表、索引等）没有被分析、统计过，Oracle 就会使用动态采样，动态的收集表和索引上的一些数据信息，但这些统计信息不会记录在视图中，只在硬解析时才会使用动态采样。</li></ul><h2 id="CBO-组成"><a href="#CBO-组成" class="headerlink" title="CBO 组成"></a>CBO 组成</h2><ul><li><p>查询转化器（Query Transformer）<br>查询转换器的作用就是等价改变查询语句的形式，以便产生更好的执行计划。<br>Oracle 转换技术：视图合并（View Merging）、谓词推进（Predicate Pushing）、非嵌套子查询（Subquery Unnesting）、物化视图的查询重写（Query Rewrite With Materialized Views）</p></li><li><p>代价评估器（Estimator）<br>评估器通过计算三个值来评估各个执行计划的总体成本：选择性（Selectivity）、集的势（Cardinality）、成本（Cost）</p><ol><li><p>选择性（Selectivity）：是指施加制定谓词条件后返回结果集的记录数占未施加任何谓词条件的原始结果集的记录数的比率。选择率的值越大，就意味着返回结果集的 Cardinality 值就越大，所以估算出来的成本值也就越大。</p><hr><p>   选择率的计算公式</p><pre><code>   目标列上没有直方图且没有NULL值的情况下，对目标列做等值查询时       Selectivity = 1 / NUM_DISTINCT       ※ NUM_DISTINCT表示目标列的distinct值的数量</code></pre><hr></li><li><p>集的势（Cardinality）：指集合所包含的记录数。实际上表示对目标 SQL 某个具体执行步骤的执行结果所包含记录数的估算。某个执行步骤的 Cardinality 值越大，那么它所对应的成本值也就越大，这个执行步骤所对应的执行路径总成本值也就越大。</p><hr><p>   CBO 估算 Cardinality 公式</p><pre><code>       Computed Cardinality = Original Cardinality * Selectivity       ※ Computed Cardinality:施加指定谓词条件后返回结果集的记录数       ※ Originad Cardinality:未施加任何谓词条件的原始结果集的记录数       ※ Selectivity:选择率</code></pre><hr></li></ol></li><li><p>计划生成器（Plan Generator）<br>计划生成器会考虑可能的访问路径（Access Path）、关联方法和关联顺序，生成不同的执行计划，让查询优化器从这些计划中选择出执行代价最小的一个计划。<br><img src="https://www.cdn.cheneyblog.com/blog/202309151440141.png" alt="query Optimizer Components"></p></li></ul><h2 id="CBO-的局限性"><a href="#CBO-的局限性" class="headerlink" title="CBO 的局限性"></a>CBO 的局限性</h2><ol><li>CBO 会默认目标 SQL 语句 where 条件中出现的各列之间是独立的，没有关联关系</li><li>CBO 会假设所有的目标 SQL 都是单独执行的，并且互不干扰</li><li>CBO 对直方图统计信息有诸多限制</li><li>CBO 在解析多表关联的目标 SQL 时，可能会漏选正确的执行计划</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看懂执行计划之基于规则的优化器（RBO）</title>
+      <link href="/posts/65395.html"/>
+      <url>/posts/65395.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>&emsp;&emsp;基于规则的优化器（RBO）是通过编码在 Oracle 数据库中的一系列固定的规则，来决定目标 SQL 的执行计划。Oracle 事先给各种类型的执行路径定一个等级，从 1 到 15，等级 1 对应执行路径的执行效率最高，等级 15 对应执行路径的执行效率最低。对于等级相同的执行计划，oracle 根据目标对象在数据字典中缓存的顺序判断选择哪一种执行计划。在决定目标 SQL 的执行计划时，RBO 会从该 SQL 的诸多执行路径中选择一条等级最低的执行路径来作为其执行计划。<br>&emsp;&emsp;RBO 中等级 1 对应的执行路径是“single row by rowid（通过 rowID 来访问单行数据）”，等级 15 所对应的执行路径时“full table scan（全表扫描）”。</p><h2 id="RBO-的缺陷"><a href="#RBO-的缺陷" class="headerlink" title="RBO 的缺陷"></a>RBO 的缺陷</h2><ul><li>RBO 的执行计划很难调整</li><li>目标 SQL 的写法及各个对象在该 SQL 文本中出现的先后顺序都会影响执行计划</li><li>Oracle 数据中的很多新特性、功能，均不支持 RBO</li><li>没有考虑目标 SQL 所涉及对象的实际数据量</li></ul><h2 id="RBO-执行计划的调整"><a href="#RBO-执行计划的调整" class="headerlink" title="RBO 执行计划的调整"></a>RBO 执行计划的调整</h2><ul><li><p>等价改写 SQL</p><p>Number 或 Date 类型的字段加上 0,Varchar 类型拼接上空字符’’,使本来走索引的现在不走索引，对于多表连接的改变 form 后表的先后顺序可以影响表连接顺序</p></li><li><p>如果出现多条等级值相同的执行路径，改变目标 SQL 中涉及相关对象数据字典缓存（Data Dictionary Cache）的缓存顺序</p></li><li><p>如果出现多条等级值相同的执行路径，改变目标 SQL 中涉及相关对象在 SQL 文本中出现的先后顺序</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看懂执行计划之位图索引</title>
+      <link href="/posts/35895.html"/>
+      <url>/posts/35895.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>&emsp;&emsp;目前一般我们使用的索引都是 B-Tree 索引，索引结构中存储的是键值和对应 ROWID。位图索引是指用位图表示的索引，通常创建在有大量重复值的列上，针对每个键值建立不同的位图。索引结构中主要存储键值、起止 ROWID 和位置编码，位置编码中的每一位表示键值对应数据行的有无，一个块可能指向多行数据的位置。<br><img src="https://www.cdn.cheneyblog.com/blog/202309151427035.jpg" alt="位图索引结果图"></p><ul><li>位图索引通过位图向量，表示索引键值在表中的分布</li><li>存在大量更新操作的列上不宜建位图索引，因为更新向量时相应键值涉及到的数据行都将被锁定</li></ul><h2 id="与-B-Tree-索引的区别"><a href="#与-B-Tree-索引的区别" class="headerlink" title="与 B-Tree 索引的区别"></a>与 B-Tree 索引的区别</h2><ol><li>位图索引一个键值对应一个叶子节点，B-Tree 索引一个叶子节点包含多个索引键值</li><li>位图索引使用位图向量标识键值对应数据行的分布，B-Tree 采用 Row_id 定位数据行</li><li>位图索引创建不需要排序，B-Tree 索引需要排序</li><li>位图索引允许键值为 Null，B-Tree 索引对 Null 值敏感</li><li>位图索引可以进行位运算（and、or）</li></ol><h2 id="位图索引优缺点"><a href="#位图索引优缺点" class="headerlink" title="位图索引优缺点"></a>位图索引优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul><li>位图索引由于只存储键值的起止 Rowid 和位图,占用的空间非常少.</li><li>位图索引创建时不需要排序，创建速度快</li><li>位图索引对 Null 值不敏感</li><li>位图运算使相应查询更快</li><li>可以通过位图索引直接计数。</li></ul><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul><li>不适合选择度底的列</li><li>频繁的 DML 可能会导致性能问题，更新索引会产生行锁（可能锁定多行）</li><li>可能会溢出，索引数据块难于放下整个索引值，这导致低效。</li></ul><h2 id="位图索引相关执行计划"><a href="#位图索引相关执行计划" class="headerlink" title="位图索引相关执行计划"></a>位图索引相关执行计划</h2><ul><li>位图索引单键值扫描（BITMAP INDEX SINGLE VALUE）</li><li>位图索引范围扫描（BITMAP INDEX RANGE SCAN）</li><li>位图索引全扫描（BITMAP INDEX FULL SCAN）</li><li>位图索引快速全扫描（BITMAP INDEX FAST FULL SCAN）</li><li>位图按位与（BITMAP AND）</li><li>位图按位或（BITMAP OR）</li><li>位图按位减（BITMAP MINUS）</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看懂执行计划之 B-Tree 索引</title>
+      <link href="/posts/26997.html"/>
+      <url>/posts/26997.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="B-Tree-索引内部结构"><a href="#B-Tree-索引内部结构" class="headerlink" title="B-Tree 索引内部结构"></a>B-Tree 索引内部结构</h2><p><img src="https://www.cdn.cheneyblog.com/blog/202309151423469.png" alt="B-Tree 索引内部结构"></p><p>&emsp;&emsp;B-Tree 是一种常见的数据结构，可以显著减少定位记录时所经历的中间过程，从而加快存取速度，主要用于 OLTP 系统（事务系统）。B-Tree 索引包含的主要组件如下：</p><ol><li>根节点（Root Node）：一个 B-Tree 索引只有一个根节点，它实际就是位于树的最顶端的分支节点。</li><li>分支节点（Branch Node）：包含指向相应索引分支块或叶子块的指针和索引键值列。</li><li>叶子节点（Leaf Node）：包含被索引键值和该键值对应的 ROWID</li><li>索引项（Index Entry）：对应每一条行记录</li></ol><h2 id="分支节点（Branch-Node）"><a href="#分支节点（Branch-Node）" class="headerlink" title="分支节点（Branch Node）"></a>分支节点（Branch Node）</h2><p>&emsp;&emsp;分支节点主要包括两部分：指针和索引键值列。</p><ul><li>指针<br>指针是指相关分支块或叶子块的块地址 RDBA。每个分支块都会有两种类型的指针，一种是 LMC（Left Most Child），比当前节点中最小的索引值还小的下一级节点块的数据块地址；另外一种是索引行记录指针即下一级节点块地址，该指针指向块的索引键值列最小值一定大于或等于该行记录的索引键值</li><li>索引键值列<br>索引键值列只要 Oracle 能区分相应的索引分支块或叶子块就行，这样既节省空间又可以快速定位下层的分支块或叶子块。</li></ul><h2 id="叶子节点（Leaf-Node）"><a href="#叶子节点（Leaf-Node）" class="headerlink" title="叶子节点（Leaf Node）"></a>叶子节点（Leaf Node）</h2><p>&emsp;&emsp;索引叶子节点也有两个指针，分别指向比当前节点最小索引值还小的叶节点块的地址，以及比当前节点最大索引值还大的叶节点块地址。通过这两个指针，把所有的叶节点串起来，形成一个双向链表。顺序遍历这个链表即可得到有序的数据。<br><strong>拓展</strong><br>唯一 B-Tree 索引，ROWID 存储在索引行的行头，Oracle 不存储该 ROWID 的长度，非唯一 B-Tree 索引则都需要存储。</p><h2 id="B-Tree-索引优势"><a href="#B-Tree-索引优势" class="headerlink" title="B-Tree 索引优势"></a>B-Tree 索引优势</h2><ul><li>所有索引叶子块在同一层，访问每一个键值的时间相同</li><li>通过索引访问数据的时间是可控的、基本稳定</li><li>B-Tree 索引自动保持平衡</li><li>不会随着表数据量的增长而性能下降。</li></ul><p><strong>特别提醒</strong><br>通过 B-Tree 索引访问数据的过程是先访问相关的 B-Tree 索引，然后再根据 ROWID 访问相应的行记录。<br>相应的会产生两部分消耗，一部分是访问索引的成本，另一部分是回表的成本。</p><h2 id="访问-B-Tree-索引的方法"><a href="#访问-B-Tree-索引的方法" class="headerlink" title="访问 B-Tree 索引的方法"></a>访问 B-Tree 索引的方法</h2><h3 id="索引唯一扫描（INDEX-UNIQUE-SCAN）"><a href="#索引唯一扫描（INDEX-UNIQUE-SCAN）" class="headerlink" title="索引唯一扫描（INDEX UNIQUE SCAN）"></a>索引唯一扫描（INDEX UNIQUE SCAN）</h3><p>WHERE 条件里是等值查询，扫描结果最多一条记录</p><h3 id="索引范围扫描（INDEX-RANGE-SCAN）"><a href="#索引范围扫描（INDEX-RANGE-SCAN）" class="headerlink" title="索引范围扫描（INDEX RANGE SCAN）"></a>索引范围扫描（INDEX RANGE SCAN）</h3><p>WHERE 条件为范围查询，扫描结果可能返回多条记录。<br>同等条件下，当目标索引的索引行数量大于 1 时，索引范围扫描所消耗的逻辑读至少会比相应的索引唯一扫描的逻辑读多 1 因为范围扫描会扫描多个叶子块。</p><h3 id="索引全扫描（INDEX-FULL-SCAN）"><a href="#索引全扫描（INDEX-FULL-SCAN）" class="headerlink" title="索引全扫描（INDEX FULL SCAN）"></a>索引全扫描（INDEX FULL SCAN）</h3><p>索引全扫描要从左至右依次顺序扫描目标索引所有叶子块的所有索引行，而索引是有序的，所以索引全扫描的执行结果也是有序的，并且是按照该索引的索引键值列来排序，这也意味着走索引全扫描能够既达到排序的效果，又同时避免了对该索引的索引键值列的真正排序操作。</p><p><strong><em>NULL 值不会在 B 树索引中存在，这意味着 Oracle 中能做索引全扫描的前提条件是目标索引至少有一个索引键值列的属性是 NOT NULL</em></strong></p><h3 id="索引快速全扫描（INDEX-FAST-FULL-SCAN）"><a href="#索引快速全扫描（INDEX-FAST-FULL-SCAN）" class="headerlink" title="索引快速全扫描（INDEX FAST FULL SCAN）"></a>索引快速全扫描（INDEX FAST FULL SCAN）</h3><p>从段头开始，读取包含位图块，root block, 所有的 branch block, leaf block，读取的顺序完全由物理存储位置决定，并采取多块读，每次读取 db_file_multiblock_read_count 个。</p><h4 id="索引快速全扫描与索引全扫描的区别"><a href="#索引快速全扫描与索引全扫描的区别" class="headerlink" title="索引快速全扫描与索引全扫描的区别"></a>索引快速全扫描与索引全扫描的区别</h4><ol><li>索引快速全扫描只适用于 CBO</li><li>索引快速全扫描可以使用多块读，也可以并行执行</li><li>索引快速全扫描的执行结果不一定是有序的</li><li>索引快速全扫描是根据索引行在磁盘上的物理存储顺序来扫描<br>索引全扫描时按照逻辑顺序从左至右依次扫描<br>对于单个索引叶子块中的索引行而言，其物理存储顺序和逻辑存储顺序一致;但对于物理存储位置相邻的索引叶子块而言，块与块之间索引行的物理存储顺序则不一定在逻辑上有序</li></ol><h3 id="索引跳跃式扫描（INDEX-SKIP-SCAN）"><a href="#索引跳跃式扫描（INDEX-SKIP-SCAN）" class="headerlink" title="索引跳跃式扫描（INDEX SKIP SCAN）"></a>索引跳跃式扫描（INDEX SKIP SCAN）</h3><p>索引跳跃式扫描使那些在 where 条件中没有对目标索引的前导列指定查询条件但同时又对该索引的非前导列指定了查询条件的目标 SQL 依然可以用上该索引。Oracle 会对该索引的前导列的所有 distinct 值做遍历，然后对原目标 SQL 做等价改写，将目标列的所有前导列的 distinct 值加进来。</p><p>Oracle 中的索引跳跃式扫描仅仅适用于那些目标索引前导列的 distinct 值数量较少、后续非前导列的可选择性又非常好的情形，因为索引跳跃式扫描的执行效率一定会随着目标索引前导列的 distinct 值数量的递增而递减。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看懂执行计划之索引介绍</title>
+      <link href="/posts/9739.html"/>
+      <url>/posts/9739.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>&emsp;&emsp;索引是建立在表上的可选数据库对象，是一组排序后的的索引键。主要用于加快数据的检索，类似于书籍的目录，快速定位到目标数据。索引在物理上和逻辑上都是独立的，创建或删除索引对基表不会有影响。当对基表进行 DML 操作时 Oracle 会自动管理索引，无需手动处理。</p><h2 id="索引分类"><a href="#索引分类" class="headerlink" title="索引分类"></a>索引分类</h2><h3 id="结构分类"><a href="#结构分类" class="headerlink" title="结构分类"></a>结构分类</h3><ul><li>分区索引</li></ul><p>索引按范围（Range）或散列（Hash，Oracle 10g中引入）进行分区<br>一个分区索引可能指向任何（或全部的）表分区。</p><ul><li>B-Tree 索引</li></ul><p>B-Tree索引是一个典型的树结构，通常包含根节点、分支节点、叶子节点<br>包括正常索引或反转关键字索引</p><ul><li>位图索引</li></ul><p>位图索引主要针对大量相同值的列而创建<br>位图索引不直接存储ROWID，而是存储字节位到ROWID的映射<br>位图索引的空间占用明显小于B-Tree索引<br>位图索引不适合经常更新的表<br>关键字BitMap</p><h3 id="逻辑分类"><a href="#逻辑分类" class="headerlink" title="逻辑分类"></a>逻辑分类</h3><ul><li>单列索引</li></ul><p>索引列为单个字段</p><ul><li>组合索引</li></ul><p>索引列为多个字段，最多为32列，顺序自定义</p><ul><li>唯一索引</li></ul><p>索引列的值唯一，Oracle会自动在表的主键列上创建唯一索引，关键字UNIQUE INDEX</p><ul><li>非唯一索引</li></ul><p>索引列的值允许重复</p><ul><li>函数索引</li></ul><p>一列或多列上的基于函数表达式所创建的索引<br>表达式不能出现聚合函数<br>不能在LOB类型的列上创建<br>创建时必须具有 QUERY REWRITE 权限</p><ul><li>反向键索引</li></ul><p>反向键索引反转索引列键值的每个字节，实现索引的均匀分配<br>通常建立在值是连续增长的列上，使数据均匀地分布在整个索引上<br>关键字REVERSE</p><h2 id="创建索引原则"><a href="#创建索引原则" class="headerlink" title="创建索引原则"></a>创建索引原则</h2><ul><li>权衡索引个数与 DML 之间关系</li></ul><p>建立索引的目的是为了提高查询效率的<br>但建立的索引过多，会影响插入、删除数据的速度</p><ul><li>尽量将表和索引放在不同的表空间</li></ul><p>在读取数据时表与索引是同时进行的。<br>表与索引在一个表空间里就会产生资源竞争，放在不同的表空间最佳。</p><ul><li>创建索引会产生 Redo 信息和占用磁盘空间</li></ul><p>索引是数据库对象之一，需要分配磁盘空间去存储。<br>创建索引会产生Redo信息，对于大表创建索引时可以设置不产生日志信息。</p><ul><li>创建索引需根据具体的业务 SQL</li></ul><p>Oracle根据具体的情况判断是否走索引。<br>索引建在Where限制条件、表连接、需排序字段上。</p><ul><li>唯一索引优先</li></ul><p>如果同时存在唯一性索引和非唯一索引，oracle将使用唯一性索引而忽略非唯一索引</p><ul><li>经常用的字段放组合索引第一列</li></ul><p>组合索引只有它的第一列被where子句引用时，优化器才会使用该索引</p><ul><li>限制表中索引的数量</li></ul><p>索引会占用物理空间，会随基表数据量的增大而增大；<br>当对表中的数据进行DML时，索引也要动态的维护，降低了数据的维护速度</p><ul><li><p>小表不要建索引</p></li><li><p>对于基数大的列适合建立 B 树索引，对于基数小的列适合建立位图索引</p></li><li><p>列中有很多空值，但经常查询该列上非空记录时应该建立索引</p></li><li><p>LONG（可变长字符串数据，最长 2G）和 LONG RAW（可变长二进制数据，最长 2G）列不能创建索引</p></li></ul><h2 id="索引可选项"><a href="#索引可选项" class="headerlink" title="索引可选项"></a>索引可选项</h2><ul><li>NOSORT</li></ul><p>建立索引时会先对表记录排序再建立索引，当表数据量较多是会占用较多的时间。<br>特殊情况下，我们就可以使用该参数加快建索引的速度。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX IDX_TEMP_CHR_D_NOSORT <span class="keyword">ON</span> TEMP_CHR_D (LIST_ID) NOSORT;</span><br></pre></td></tr></table></figure><ul><li>ONLINE</li></ul><p>数据库系统默认是不允许 DML 与创建索引同时进行的，ONLINE 选项可以避免此类问题，但会延长建索引时间。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX IDX_TEMP_CHR_D_NOSORT <span class="keyword">ON</span> TEMP_CHR_D (LIST_ID) ONLINE;</span><br></pre></td></tr></table></figure><ul><li>NOLOGGING</li></ul><p>是否需要记录日志信息，一般用在在大型表上建索引，使用该参数，默认是记日志。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX IDX_TEMP_CHR_D_NOSORT <span class="keyword">ON</span> TEMP_CHR_D (LIST_ID) NOLOGGING;</span><br></pre></td></tr></table></figure><ul><li>COMPUTE STATISTICS</li></ul><p>该参数会提示数据库建索引的同时，更新对应的统计信息。<br>当数据修改量比较大的情况下，使用该选项有可能导致执行计划的不稳定。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX IDX_TEMP_CHR_D_NOSORT <span class="keyword">ON</span> TEMP_CHR_D (LIST_ID) COMPUTE STATISTICS;</span><br></pre></td></tr></table></figure><ul><li>PARALLEL</li></ul><p>增加并发，多服务进程创建索引,通常针对大表建索引使用</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="comment">/*+ PARALLEL(2)*/</span> INDEX IDX_EMP_ENAME <span class="keyword">ON</span> EMP (ENAME);</span><br></pre></td></tr></table></figure><h2 id="索引失效分析"><a href="#索引失效分析" class="headerlink" title="索引失效分析"></a>索引失效分析</h2><ol><li><p>Where 条件有不等于操作符(&lt;&gt;, !=)</p></li><li><p>限定条件中有对空值的判断（Null 或 Not Null）</p></li><li><p>非函数索引，Where 条件中对索引列使用了函数</p></li><li><p>不匹配的索引数据类型</p></li><li><p>全模糊查询（’like ‘%aa’）</p></li><li><p>Union 替换 Or</p></li><li><p>用 EXISTS 替代 IN、用 NOT EXISTS 替代 NOT IN</p></li></ol><h2 id="索引相关视图"><a href="#索引相关视图" class="headerlink" title="索引相关视图"></a>索引相关视图</h2><table><thead><tr><th>视图</th><th>说明</th></tr></thead><tbody><tr><td>dba_indexes all_indexes user_indexes</td><td>这类视图显示索引的基本信息，如索引名称、索引是否压缩存储、索引段的存储等信息以及使用 dbms_stats 包或 analyze 语句生成的统计信息</td></tr><tr><td>dba_ind_columns all_ind_columns user_ind_columns</td><td>这类视图显示了被索引列的信息</td></tr><tr><td>dba_ind_expressions all_ind_expresions user_ind_expressions</td><td>这类视图显示函数索引的函数语句</td></tr><tr><td>dba_ind_statistics all_ind_statistics user_ind_statistics</td><td>这类视图显示对索引的优化统计信息</td></tr><tr><td>index_stats index_histogram</td><td>显示最近一次使用 analyze index… validate structure 语句生成的统计信息</td></tr><tr><td>v$object_usage</td><td>存储由 alter index … monitoring usage 语句生成的索引使用信息</td></tr></tbody></table>]]></content>
       
       
       <categories>

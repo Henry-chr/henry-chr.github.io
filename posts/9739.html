@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>看懂执行计划之索引介绍 | 宸汐缘</title><meta name="author" content="Henry Cheney"><meta name="copyright" content="Henry Cheney"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="简介&amp;emsp;&amp;emsp;索引是建立在表上的可选数据库对象，是一组排序后的的索引键。主要用于加快数据的检索，类似于书籍的目录，快速定位到目标数据。索引在物理上和逻辑上都是独立的，创建或删除索引对基表不会有影响。当对基表进行 DML 操作时 Oracle 会自动管理索引，无需手动处理。 索引分类结构分类 分区索引  索引按范围（Range）或散列（Hash，Oracle 10g中引入）进行分区一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="看懂执行计划之索引介绍">
+<meta property="og:url" content="https://www.cheneyblog.com/posts/9739.html">
+<meta property="og:site_name" content="宸汐缘">
+<meta property="og:description" content="简介&amp;emsp;&amp;emsp;索引是建立在表上的可选数据库对象，是一组排序后的的索引键。主要用于加快数据的检索，类似于书籍的目录，快速定位到目标数据。索引在物理上和逻辑上都是独立的，创建或删除索引对基表不会有影响。当对基表进行 DML 操作时 Oracle 会自动管理索引，无需手动处理。 索引分类结构分类 分区索引  索引按范围（Range）或散列（Hash，Oracle 10g中引入）进行分区一个">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.cdn.cheneyblog.com/blog/202309151353036.png">
+<meta property="article:published_time" content="2023-09-15T05:51:36.000Z">
+<meta property="article:modified_time" content="2023-09-15T06:28:48.549Z">
+<meta property="article:author" content="Henry Cheney">
+<meta property="article:tag" content="Oracle">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.cdn.cheneyblog.com/blog/202309151353036.png"><link rel="shortcut icon" href="https://www.cdn.cheneyblog.com/blog/202307211052086.png"><link rel="canonical" href="https://www.cheneyblog.com/posts/9739.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Henry Cheney","link":"链接: ","source":"来源: 宸汐缘","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '看懂执行计划之索引介绍',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-15 14:28:48'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/style.css?1"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="https://npm.elemecdn.com/tzy-blog/lib/css/dl.css"><link rel="stylesheet" href="https://npm.elemecdn.com/tzy-blog/lib/css/function.min.css"><link rel="stylesheet" href="/css/universe.css"><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-toolbox"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Hexo"><i class="fa-fw fa-solid fa-blog"></i><span> Hexo</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/categories/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://www.cdn.cheneyblog.com/blog/202309151353036.png')"><nav id="nav"><span id="blog-info"><a href="/" title="宸汐缘"><img class="site-icon" src="https://www.cdn.cheneyblog.com/blog/202307211053392.png"/><span class="site-name">宸汐缘</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-toolbox"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Hexo"><i class="fa-fw fa-solid fa-blog"></i><span> Hexo</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/categories/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">看懂执行计划之索引介绍</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-15T05:51:36.000Z" title="发表于 2023-09-15 13:51:36">2023-09-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-15T06:28:48.549Z" title="更新于 2023-09-15 14:28:48">2023-09-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Oracle/">Oracle</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="看懂执行计划之索引介绍"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>&emsp;&emsp;索引是建立在表上的可选数据库对象，是一组排序后的的索引键。主要用于加快数据的检索，类似于书籍的目录，快速定位到目标数据。索引在物理上和逻辑上都是独立的，创建或删除索引对基表不会有影响。当对基表进行 DML 操作时 Oracle 会自动管理索引，无需手动处理。</p>
+<h2 id="索引分类"><a href="#索引分类" class="headerlink" title="索引分类"></a>索引分类</h2><h3 id="结构分类"><a href="#结构分类" class="headerlink" title="结构分类"></a>结构分类</h3><ul>
+<li>分区索引</li>
+</ul>
+<p>索引按范围（Range）或散列（Hash，Oracle 10g中引入）进行分区<br>一个分区索引可能指向任何（或全部的）表分区。</p>
+<ul>
+<li>B-Tree 索引</li>
+</ul>
+<p>B-Tree索引是一个典型的树结构，通常包含根节点、分支节点、叶子节点<br>包括正常索引或反转关键字索引</p>
+<ul>
+<li>位图索引</li>
+</ul>
+<p>位图索引主要针对大量相同值的列而创建<br>位图索引不直接存储ROWID，而是存储字节位到ROWID的映射<br>位图索引的空间占用明显小于B-Tree索引<br>位图索引不适合经常更新的表<br>关键字BitMap</p>
+<h3 id="逻辑分类"><a href="#逻辑分类" class="headerlink" title="逻辑分类"></a>逻辑分类</h3><ul>
+<li>单列索引</li>
+</ul>
+<p>索引列为单个字段</p>
+<ul>
+<li>组合索引</li>
+</ul>
+<p>索引列为多个字段，最多为32列，顺序自定义</p>
+<ul>
+<li>唯一索引</li>
+</ul>
+<p>索引列的值唯一，Oracle会自动在表的主键列上创建唯一索引，关键字UNIQUE INDEX</p>
+<ul>
+<li>非唯一索引</li>
+</ul>
+<p>索引列的值允许重复</p>
+<ul>
+<li>函数索引</li>
+</ul>
+<p>一列或多列上的基于函数表达式所创建的索引<br>表达式不能出现聚合函数<br>不能在LOB类型的列上创建<br>创建时必须具有 QUERY REWRITE 权限</p>
+<ul>
+<li>反向键索引</li>
+</ul>
+<p>反向键索引反转索引列键值的每个字节，实现索引的均匀分配<br>通常建立在值是连续增长的列上，使数据均匀地分布在整个索引上<br>关键字REVERSE</p>
+<h2 id="创建索引原则"><a href="#创建索引原则" class="headerlink" title="创建索引原则"></a>创建索引原则</h2><ul>
+<li>权衡索引个数与 DML 之间关系</li>
+</ul>
+<p>建立索引的目的是为了提高查询效率的<br>但建立的索引过多，会影响插入、删除数据的速度</p>
+<ul>
+<li>尽量将表和索引放在不同的表空间</li>
+</ul>
+<p>在读取数据时表与索引是同时进行的。<br>表与索引在一个表空间里就会产生资源竞争，放在不同的表空间最佳。</p>
+<ul>
+<li>创建索引会产生 Redo 信息和占用磁盘空间</li>
+</ul>
+<p>索引是数据库对象之一，需要分配磁盘空间去存储。<br>创建索引会产生Redo信息，对于大表创建索引时可以设置不产生日志信息。</p>
+<ul>
+<li>创建索引需根据具体的业务 SQL</li>
+</ul>
+<p>Oracle根据具体的情况判断是否走索引。<br>索引建在Where限制条件、表连接、需排序字段上。</p>
+<ul>
+<li>唯一索引优先</li>
+</ul>
+<p>如果同时存在唯一性索引和非唯一索引，oracle将使用唯一性索引而忽略非唯一索引</p>
+<ul>
+<li>经常用的字段放组合索引第一列</li>
+</ul>
+<p>组合索引只有它的第一列被where子句引用时，优化器才会使用该索引</p>
+<ul>
+<li>限制表中索引的数量</li>
+</ul>
+<p>索引会占用物理空间，会随基表数据量的增大而增大；<br>当对表中的数据进行DML时，索引也要动态的维护，降低了数据的维护速度</p>
+<ul>
+<li><p>小表不要建索引</p>
+</li>
+<li><p>对于基数大的列适合建立 B 树索引，对于基数小的列适合建立位图索引</p>
+</li>
+<li><p>列中有很多空值，但经常查询该列上非空记录时应该建立索引</p>
+</li>
+<li><p>LONG（可变长字符串数据，最长 2G）和 LONG RAW（可变长二进制数据，最长 2G）列不能创建索引</p>
+</li>
+</ul>
+<h2 id="索引可选项"><a href="#索引可选项" class="headerlink" title="索引可选项"></a>索引可选项</h2><ul>
+<li>NOSORT</li>
+</ul>
+<p>建立索引时会先对表记录排序再建立索引，当表数据量较多是会占用较多的时间。<br>特殊情况下，我们就可以使用该参数加快建索引的速度。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX IDX_TEMP_CHR_D_NOSORT <span class="keyword">ON</span> TEMP_CHR_D (LIST_ID) NOSORT;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ONLINE</li>
+</ul>
+<p>数据库系统默认是不允许 DML 与创建索引同时进行的，ONLINE 选项可以避免此类问题，但会延长建索引时间。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX IDX_TEMP_CHR_D_NOSORT <span class="keyword">ON</span> TEMP_CHR_D (LIST_ID) ONLINE;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>NOLOGGING</li>
+</ul>
+<p>是否需要记录日志信息，一般用在在大型表上建索引，使用该参数，默认是记日志。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX IDX_TEMP_CHR_D_NOSORT <span class="keyword">ON</span> TEMP_CHR_D (LIST_ID) NOLOGGING;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>COMPUTE STATISTICS</li>
+</ul>
+<p>该参数会提示数据库建索引的同时，更新对应的统计信息。<br>当数据修改量比较大的情况下，使用该选项有可能导致执行计划的不稳定。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX IDX_TEMP_CHR_D_NOSORT <span class="keyword">ON</span> TEMP_CHR_D (LIST_ID) COMPUTE STATISTICS;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>PARALLEL</li>
+</ul>
+<p>增加并发，多服务进程创建索引,通常针对大表建索引使用</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="comment">/*+ PARALLEL(2)*/</span> INDEX IDX_EMP_ENAME <span class="keyword">ON</span> EMP (ENAME);</span><br></pre></td></tr></table></figure>
+
+<h2 id="索引失效分析"><a href="#索引失效分析" class="headerlink" title="索引失效分析"></a>索引失效分析</h2><ol>
+<li><p>Where 条件有不等于操作符(&lt;&gt;, !=)</p>
+</li>
+<li><p>限定条件中有对空值的判断（Null 或 Not Null）</p>
+</li>
+<li><p>非函数索引，Where 条件中对索引列使用了函数</p>
+</li>
+<li><p>不匹配的索引数据类型</p>
+</li>
+<li><p>全模糊查询（’like ‘%aa’）</p>
+</li>
+<li><p>Union 替换 Or</p>
+</li>
+<li><p>用 EXISTS 替代 IN、用 NOT EXISTS 替代 NOT IN</p>
+</li>
+</ol>
+<h2 id="索引相关视图"><a href="#索引相关视图" class="headerlink" title="索引相关视图"></a>索引相关视图</h2><table>
+<thead>
+<tr>
+<th>视图</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dba_indexes all_indexes user_indexes</td>
+<td>这类视图显示索引的基本信息，如索引名称、索引是否压缩存储、索引段的存储等信息以及使用 dbms_stats 包或 analyze 语句生成的统计信息</td>
+</tr>
+<tr>
+<td>dba_ind_columns all_ind_columns user_ind_columns</td>
+<td>这类视图显示了被索引列的信息</td>
+</tr>
+<tr>
+<td>dba_ind_expressions all_ind_expresions user_ind_expressions</td>
+<td>这类视图显示函数索引的函数语句</td>
+</tr>
+<tr>
+<td>dba_ind_statistics all_ind_statistics user_ind_statistics</td>
+<td>这类视图显示对索引的优化统计信息</td>
+</tr>
+<tr>
+<td>index_stats index_histogram</td>
+<td>显示最近一次使用 analyze index… validate structure 语句生成的统计信息</td>
+</tr>
+<tr>
+<td>v$object_usage</td>
+<td>存储由 alter index … monitoring usage 语句生成的索引使用信息</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.cheneyblog.com">Henry Cheney</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.cheneyblog.com/posts/9739.html">https://www.cheneyblog.com/posts/9739.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.cheneyblog.com" target="_blank">宸汐缘</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Oracle/">Oracle</a></div><div class="post_share"><div class="social-share" data-image="https://www.cdn.cheneyblog.com/blog/202309151353036.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/39514.html" title="Library Cache 的基本结构"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202309151501674.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-15</div><div class="title">Library Cache 的基本结构</div></div></a></div><div><a href="/posts/50904.html" title="Oracle开发学习指南：从入门到精通，打造高效数据库应用"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202309121646122.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-12</div><div class="title">Oracle开发学习指南：从入门到精通，打造高效数据库应用</div></div></a></div><div><a href="/posts/20895.html" title="Oracle执行计划简介：优化数据库查询的关键"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202309121738405.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-12</div><div class="title">Oracle执行计划简介：优化数据库查询的关键</div></div></a></div><div><a href="/posts/65435.html" title="SQL执行过程"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202308291738541.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-29</div><div class="title">SQL执行过程</div></div></a></div><div><a href="/posts/24522.html" title="加速查询优化——深入了解Oracle Hint"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202309141025242.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-14</div><div class="title">加速查询优化——深入了解Oracle Hint</div></div></a></div><div><a href="/posts/20503.html" title="如何根据执行计划识别低效SQL"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202309140948458.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-14</div><div class="title">如何根据执行计划识别低效SQL</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Henry Cheney</div><div class="author-info__description">中年程序猿的自我救赎，记录日常的技术整理和心得分享，涉及技术栈:SQL,Java,Python,Oracle,MySQL,大数据等</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/henry-chr"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:850318517@qq.com" target="_blank" title="Email"><i class="far fa-envelope"></i></a><a class="social-icon" href="https://gitee.com/henry-chr" target="_blank" title="Gitee"><i class="fab fa-github"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E5%88%86%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">索引分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB"><span class="toc-number">2.1.</span> <span class="toc-text">结构分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%88%86%E7%B1%BB"><span class="toc-number">2.2.</span> <span class="toc-text">逻辑分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E5%8E%9F%E5%88%99"><span class="toc-number">3.</span> <span class="toc-text">创建索引原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E5%8F%AF%E9%80%89%E9%A1%B9"><span class="toc-number">4.</span> <span class="toc-text">索引可选项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88%E5%88%86%E6%9E%90"><span class="toc-number">5.</span> <span class="toc-text">索引失效分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E7%9B%B8%E5%85%B3%E8%A7%86%E5%9B%BE"><span class="toc-number">6.</span> <span class="toc-text">索引相关视图</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023  <i id="heartbeat" class="fa fas fa-heartbeat"></i> Henry Cheney</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script><div class="js-pjax"></div><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script data-pjax defer src="https://npm.elemecdn.com/tzy-blog/lib/js/theme/chocolate.js"></script><script async src="https://npm.elemecdn.com/tzy-blog/lib/js/theme/cursor.js"></script><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script src="/js/script.js?1"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="1024,Java,Python,SQL,Oracle,MySql,Vue,Hexo,Linux,Shell,C++,Html,CSS" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
