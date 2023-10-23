@@ -8,7 +8,7 @@
       <link href="/posts/41485.html"/>
       <url>/posts/41485.html</url>
       
-        <content type="html"><![CDATA[<p>Web技术作为构建现代互联网世界的基石，不仅给人们带来了无限的便利，也推动了互联网的不断发展。本文将对几个关键的Web核心技术进行总结，帮助您更好地了解和应用这些技术，为Web应用的开发和优化提供指导。</p><ol><li><a href="https://cheneyblog.com//posts/11682.html">域名：互联网命名系统</a></li><li><a href="https://cheneyblog.com//posts/330.html">域名解析：连接互联网的关键枢纽</a></li><li><a href="https://cheneyblog.com//posts/44850.html">DNS：互联网底层通信的重要基石</a></li><li><a href="https://cheneyblog.com//posts/59495.html">DNS配置：将域名连接到IP地址的关键步骤</a></li><li><a href="https://cheneyblog.com//posts/26748.html">HTTP与HTTPS：保障Web通信安全的重要技术</a></li><li><a href="https://cheneyblog.com//posts/34621.html">SSL证书：构建安全可信的Web通信环境</a></li><li><a href="https://cheneyblog.com//posts/31314.html">CDN：实现高速可靠的网络内容分发</a></li></ol><p>通过深入理解和熟练应用这些Web核心技术，开发者可以构建功能强大、性能卓越、用户友好的Web应用。同时，这些技术也提供了不断学习和创新的机会，让我们能够驾驭Web技术的潮流，不断迭代和改善我们的应用。</p>]]></content>
+        <content type="html"><![CDATA[<p>Web技术作为构建现代互联网世界的基石，不仅给人们带来了无限的便利，也推动了互联网的不断发展。本文将对几个关键的Web核心技术进行总结，帮助您更好地了解和应用这些技术，为Web应用的开发和优化提供指导。</p><ol><li><a href="https://cheneyblog.com//posts/11682.html">域名：互联网命名系统</a></li><li><a href="https://cheneyblog.com//posts/330.html">域名解析：连接互联网的关键枢纽</a></li><li><a href="https://cheneyblog.com//posts/44850.html">DNS：互联网底层通信的重要基石</a></li><li><a href="https://cheneyblog.com//posts/59495.html">DNS配置：将域名连接到IP地址的关键步骤</a></li><li><a href="https://cheneyblog.com//posts/26748.html">HTTP与HTTPS：保障Web通信安全的重要技术</a></li><li><a href="https://cheneyblog.com//posts/34621.html">SSL证书：构建安全可信的Web通信环境</a></li><li><a href="https://cheneyblog.com//posts/62378.html">协议：链接互联网世界的规则与约定</a></li><li><a href="https://cheneyblog.com//posts/10760.html">互联网通信的关键：TCP/IP协议族</a></li><li><a href="https://cheneyblog.com//posts/31314.html">CDN：实现高速可靠的网络内容分发</a></li></ol><p>通过深入理解和熟练应用这些Web核心技术，开发者可以构建功能强大、性能卓越、用户友好的Web应用。同时，这些技术也提供了不断学习和创新的机会，让我们能够驾驭Web技术的潮流，不断迭代和改善我们的应用。</p>]]></content>
       
       
       <categories>
@@ -58,7 +58,7 @@
       <link href="/posts/50904.html"/>
       <url>/posts/50904.html</url>
       
-        <content type="html"><![CDATA[<p>当涉及到Oracle开发学习，有一些关键的指南可以帮助你更好地掌握这个数据库管理系统。在本文中，我将向大家分享一些有关Oracle开发学习的重要指南。</p><h2 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h2><ul><li><a href="https://cheneyblog.com//posts/565.html">物理结构</a></li><li><a href="https://cheneyblog.com//posts/14901.html">内存结构</a></li><li><a href="https://cheneyblog.com//posts/35730.html">进程结构</a></li><li><a href="https://cheneyblog.com//posts/24947.html">逻辑结构</a></li><li><a href="https://cheneyblog.com//posts/47150.html">体系结构总结</a></li><li><a href="https://cheneyblog.com//posts/39514.html">Library Cache 的基本结构</a></li><li><a href="https://cheneyblog.com//posts/27399.html">Library Cache 详解</a></li></ul><h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><ul><li><a href="https://cheneyblog.com//posts/65435.html">SQL语句执行过程</a></li><li><a href="https://cheneyblog.com//posts/22532.html">Cursor（游标）</a></li><li><a href="https://cheneyblog.com//posts/55163.html">Session Cursor</a></li><li><a href="https://cheneyblog.com//posts/22265.html">硬解析、软解析和软软解析</a></li></ul><h2 id="优化篇"><a href="#优化篇" class="headerlink" title="优化篇"></a>优化篇</h2><h3 id="执行计划"><a href="#执行计划" class="headerlink" title="执行计划"></a>执行计划</h3><ul><li><a href="https://cheneyblog.com//posts/20895.html">执行计划简介</a></li><li><a href="https://cheneyblog.com//posts/26508.html">Oracle统计信息</a></li><li><a href="https://cheneyblog.com//posts/32449.html">统计信息管理工具：DBMS_STATS包</a></li><li><a href="https://cheneyblog.com//posts/54365.html">获取执行计划</a></li><li><a href="https://cheneyblog.com//posts/12101.html">看懂执行计划之执行顺序</a></li><li><a href="https://cheneyblog.com//posts/65395.html">看懂执行计划之基于规则的优化器（RBO）</a></li><li><a href="https://cheneyblog.com//posts/61.html">看懂执行计划之基于成本的优化器（CBO）</a></li><li><a href="https://cheneyblog.com//posts/49498.html">看懂执行计划之优化器的模式</a></li><li><a href="https://cheneyblog.com//posts/46535.html">看懂执行计划之表相关执行计划</a></li><li><a href="https://cheneyblog.com//posts/9739.html">看懂执行计划之索引介绍</a></li><li><a href="https://cheneyblog.com//posts/26997.html">看懂执行计划之B-tree索引</a></li><li><a href="https://cheneyblog.com//posts/35895.html">看懂执行计划之位图索引</a></li><li><a href="https://cheneyblog.com//posts/10468.html">看懂执行计划之表连接</a></li><li><a href="https://cheneyblog.com//posts/44822.html">看懂执行计划之其他执行计划</a></li><li><a href="https://cheneyblog.com//posts/1085.html">看懂执行计划之稳定执行计划</a></li><li><a href="https://cheneyblog.com//posts/24522.html">加速查询优化——深入了解Oracle Hint</a></li><li><a href="https://cheneyblog.com//posts/20503.html">如何根据执行计划识别低效SQL</a></li></ul><h3 id="绑定变量"><a href="#绑定变量" class="headerlink" title="绑定变量"></a>绑定变量</h3><ul><li><a href="https://cheneyblog.com//posts/30060.html">简介</a></li><li><a href="https://cheneyblog.com//posts/10092.html">绑定变量PL/SQL中的应用</a></li><li><a href="https://cheneyblog.com//posts/6732.html">绑定变量窥探</a></li></ul><p>通过以上的指南，你可以更好地学习和掌握Oracle开发技能。无论是作为初学者还是有一定经验的开发者，这些指南都能够为你提供有价值的指导和帮助。祝你在Oracle开发学习的旅程中取得成功！</p>]]></content>
+        <content type="html"><![CDATA[<p>当涉及到Oracle开发学习，有一些关键的指南可以帮助你更好地掌握这个数据库管理系统。在本文中，我将向大家分享一些有关Oracle开发学习的重要指南。</p><h2 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h2><ul><li><a href="https://cheneyblog.com//posts/565.html">物理结构</a></li><li><a href="https://cheneyblog.com//posts/14901.html">内存结构</a></li><li><a href="https://cheneyblog.com//posts/35730.html">进程结构</a></li><li><a href="https://cheneyblog.com//posts/24947.html">逻辑结构</a></li><li><a href="https://cheneyblog.com//posts/47150.html">体系结构总结</a></li><li><a href="https://cheneyblog.com//posts/39514.html">Library Cache 的基本结构</a></li><li><a href="https://cheneyblog.com//posts/27399.html">Library Cache 详解</a></li></ul><h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><ul><li><a href="https://cheneyblog.com//posts/65435.html">SQL语句执行过程</a></li><li><a href="https://cheneyblog.com//posts/22532.html">Cursor（游标）</a></li><li><a href="https://cheneyblog.com//posts/55163.html">Session Cursor</a></li><li><a href="https://cheneyblog.com//posts/22265.html">硬解析、软解析和软软解析</a></li></ul><h2 id="优化篇"><a href="#优化篇" class="headerlink" title="优化篇"></a>优化篇</h2><h3 id="执行计划"><a href="#执行计划" class="headerlink" title="执行计划"></a>执行计划</h3><ul><li><a href="https://cheneyblog.com//posts/20895.html">执行计划简介</a></li><li><a href="https://cheneyblog.com//posts/26508.html">Oracle统计信息</a></li><li><a href="https://cheneyblog.com//posts/32449.html">统计信息管理工具：DBMS_STATS包</a></li><li><a href="https://cheneyblog.com//posts/54365.html">获取执行计划</a></li><li><a href="https://cheneyblog.com//posts/12101.html">看懂执行计划之执行顺序</a></li><li><a href="https://cheneyblog.com//posts/65395.html">看懂执行计划之基于规则的优化器（RBO）</a></li><li><a href="https://cheneyblog.com//posts/61.html">看懂执行计划之基于成本的优化器（CBO）</a></li><li><a href="https://cheneyblog.com//posts/49498.html">看懂执行计划之优化器的模式</a></li><li><a href="https://cheneyblog.com//posts/46535.html">看懂执行计划之表相关执行计划</a></li><li><a href="https://cheneyblog.com//posts/9739.html">看懂执行计划之索引介绍</a></li><li><a href="https://cheneyblog.com//posts/26997.html">看懂执行计划之B-tree索引</a></li><li><a href="https://cheneyblog.com//posts/35895.html">看懂执行计划之位图索引</a></li><li><a href="https://cheneyblog.com//posts/10468.html">看懂执行计划之表连接</a></li><li><a href="https://cheneyblog.com//posts/44822.html">看懂执行计划之其他执行计划</a></li><li><a href="https://cheneyblog.com//posts/1085.html">看懂执行计划之稳定执行计划</a></li><li><a href="https://cheneyblog.com//posts/24522.html">加速查询优化——深入了解Oracle Hint</a></li><li><a href="https://cheneyblog.com//posts/20503.html">如何根据执行计划识别低效SQL</a></li></ul><h3 id="绑定变量"><a href="#绑定变量" class="headerlink" title="绑定变量"></a>绑定变量</h3><ul><li><a href="https://cheneyblog.com//posts/30060.html">简介</a></li><li><a href="https://cheneyblog.com//posts/10092.html">绑定变量PL/SQL中的应用</a></li><li><a href="https://cheneyblog.com//posts/6732.html">绑定变量窥探</a></li><li><a href="https://cheneyblog.com//posts/54542.html">常量游标共享</a></li></ul><p>通过以上的指南，你可以更好地学习和掌握Oracle开发技能。无论是作为初学者还是有一定经验的开发者，这些指南都能够为你提供有价值的指导和帮助。祝你在Oracle开发学习的旅程中取得成功！</p>]]></content>
       
       
       <categories>
@@ -71,6 +71,56 @@
         <tags>
             
             <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>协议：链接互联网世界的规则与约定</title>
+      <link href="/posts/62378.html"/>
+      <url>/posts/62378.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>随着互联网的广泛应用和普及，我们越来越离不开这个连接世界的网络。在互联网通信中，协议扮演着至关重要的角色。本文将介绍什么是协议，它在互联网通信中的作用，以及一些常见的互联网协议。让我们一起深入了解协议，见证它如何连接世界的。</p><h2 id="什么是协议"><a href="#什么是协议" class="headerlink" title="什么是协议"></a>什么是协议</h2><p>在互联网通信中，协议是规定通信过程和数据交换格式的约定。它定义了通信双方之间的规则和方法，确保信息的准确传输和解析。协议规定了数据如何分割、编码、传输和解码，以及如何处理错误和确认传输的完整性。</p><h2 id="协议的作用"><a href="#协议的作用" class="headerlink" title="协议的作用"></a>协议的作用</h2><p>协议在互联网通信中发挥着重要作用：</p><ol><li>实现互通性：不同设备和系统可能使用不同的硬件、操作系统和通信技术，协议提供了一个共同的标准，使得它们能够相互交流和理解。</li><li>确保数据的可靠传输：协议采用各种技术和机制，如错误检测、数据分段、数据重传等，以确保数据能够在网络中可靠地传输。</li><li>管理网络流量：协议定义了数据的传输方式和流量控制机制，以保证网络的高效运行和资源的有效利用。</li><li>提供安全性保障：许多协议提供加密和认证等安全机制，确保数据的机密性、完整性和身份验证。</li></ol><h2 id="常见的互联网协议"><a href="#常见的互联网协议" class="headerlink" title="常见的互联网协议"></a>常见的互联网协议</h2><p>互联网上有众多的协议，在此，列举几个常见的互联网协议：</p><ol><li>TCP/IP协议：TCP/IP协议族是互联网通信的基石，它包括了IP、TCP、UDP、ICMP和DNS等协议，保证了数据的可靠传输、网络的可扩展性和互操作性。</li><li>HTTP协议：HTTP（超文本传输协议）用于客户端和服务器之间传输和解释网页等超文本资源，它是现代互联网应用的基础协议之一。</li><li>FTP协议：FTP（文件传输协议）用于在客户端和服务器之间传输文件，方便文件的上传和下载操作。</li><li>SMTP协议：SMTP（简单邮件传输协议）用于电子邮件的发送，确保邮件能够通过互联网传递到接收方。</li><li>SSL/TLS协议：SSL/TLS协议提供了加密和身份验证等安全机制，保护数据在网络中的传输过程。</li></ol><blockquote><p>结语：<br>协议在互联网通信中扮演着关键角色，它们确保信息的可靠传输、网络的互通和安全性的保障。通过协议的存在，不同设备和系统能够顺利地交换信息和进行通信。目前已经存在各种各样的互联网协议，不断发展和完善，以满足不断增长的互联网需求。作为用户，了解和熟悉常见的互联网协议，将有助于我们更好地使用互联网服务，并享受便利、高效、安全的互联网体验。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> WebEcology </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Web生态 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解密互联网通信的关键：TCP/IP协议族</title>
+      <link href="/posts/10760.html"/>
+      <url>/posts/10760.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>在当今数字化时代，互联网已经成为了人们生活中不可或缺的一部分。然而，要实现互联网的通信，我们需要依赖于一种庞大而强大的协议体系，其中最重要的就是TCP/IP协议族。本文将向您介绍TCP/IP协议族的重要性、成员以及其在互联网通信中的作用。</p><h2 id="TCP-IP协议族的重要性"><a href="#TCP-IP协议族的重要性" class="headerlink" title="TCP/IP协议族的重要性"></a>TCP/IP协议族的重要性</h2><p>TCP/IP协议族是一个基于TCP（传输控制协议）和IP（网际协议）的通信协议集合。它是实现互联网通信的基础，无论是网页浏览、文件传输、电子邮件还是其他各种互联网应用，都离不开TCP/IP协议族。它的设计目标是确保数据的可靠传输、网络的可扩展性和互操作性。</p><h2 id="TCP-IP协议族的成员"><a href="#TCP-IP协议族的成员" class="headerlink" title="TCP/IP协议族的成员"></a>TCP/IP协议族的成员</h2><p>TCP/IP协议族包含了多个重要的协议，每个协议都具有特定的功能和任务。以下是其中一些重要的成员：</p><ol><li><p>IP协议（Internet Protocol）：作为TCP/IP协议族的核心协议之一，IP协议负责为数据包提供唯一的地址，并根据这些地址转发数据包到目的地。它通过IP地址和子网掩码进行寻址和路由选择。</p></li><li><p>TCP协议（Transmission Control Protocol）：TCP协议是一种面向连接的传输协议，主要用于保证数据的可靠传输。它通过数据分段、序列号以及确认机制来确保数据的完整性、顺序性和可靠性。</p></li><li><p>UDP协议（User Datagram Protocol）：与TCP协议不同，UDP协议是一种无连接的传输协议。它提供了一种简单的数据传输机制，但不保证数据的可靠传输。因此，它常用于实时应用，如音频和视频流媒体。</p></li><li><p>ICMP协议（Internet Control Message Protocol）：ICMP协议负责传输网络中的控制消息和错误报告。它与IP协议配合工作，用于网络故障排查、网络状态监测等功能。</p></li><li><p>DNS协议（Domain Name System）：DNS协议用于将域名映射为相应的IP地址。它提供了域名解析的服务，使用户无需记住复杂的IP地址，只需使用易记的域名来访问互联网服务。</p></li></ol><h2 id="TCP-IP协议族在互联网通信中的作用"><a href="#TCP-IP协议族在互联网通信中的作用" class="headerlink" title="TCP/IP协议族在互联网通信中的作用"></a>TCP/IP协议族在互联网通信中的作用</h2><p>TCP/IP协议族在互联网通信中扮演着极为重要的角色。它通过IP协议实现了数据包在网络中的传输，通过TCP协议确保了数据的可靠性，而UDP协议则提供了高速的实时传输。此外，ICMP协议可以帮助我们排查网络故障，而DNS协议则使我们能够通过便捷的域名来访问服务。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>TCP/IP协议族是互联网通信的基石，它确保了数据的可靠传输、网络的可扩展性和互操作性。TCP/IP协议族在实现互联网通信中扮演着关键角色，使我们能够浏览网页、传输文件、进行在线通信，并享受各种互联网应用。随着互联网的发展，TCP/IP协议族不断演进和优化，以满足更大的地址空间、更高的网络带宽和处理能力的需求。然而，网络安全和性能问题仍需要持续关注和解决。总的来说，TCP/IP协议族是连接世界的通信基石，为我们创造了方便、快捷、安全的互联网体验。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> WebEcology </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Web生态 </tag>
             
         </tags>
       
