@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>Python之旅：从入门到无限可能</title>
+      <link href="/posts/23012.html"/>
+      <url>/posts/23012.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python"></p><p>欢迎来到本博客，这篇文章将为你提供一个Python学习的路线图。Python是一门简单易学、功能强大的编程语言，广泛应用于数据分析、人工智能、Web开发等领域。无论你是初学者还是有一定编程经验的开发者，都可以通过以下学习路线逐步提升自己的Python技能。</p><h2 id="生态库"><a href="#生态库" class="headerlink" title="生态库"></a>生态库</h2><ul><li><a href="https://cheneyblog.com//posts/14008.html">Random模块：生成随机数的利器</a></li><li><a href="https://cheneyblog.com//posts/19502.html">Builtwith模块：快速识别网站所用技术栈</a></li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Python是一门强大而灵活的编程语言，具有广泛的应用领域和庞大的开发社区。通过按照上述学习路线逐步提升自己的Python技能，你将能够快速上手开发各种类型的应用程序，并为自己的职业发展打下坚实的基础。</p><p>希望这篇博客对你的Python学习起到一定的指导作用。祝愉快学习！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>构建现代Web应用的核心技术剖析</title>
       <link href="/posts/41485.html"/>
       <url>/posts/41485.html</url>
       
-        <content type="html"><![CDATA[<p>Web技术作为构建现代互联网世界的基石，不仅给人们带来了无限的便利，也推动了互联网的不断发展。本文将对几个关键的Web核心技术进行总结，帮助您更好地了解和应用这些技术，为Web应用的开发和优化提供指导。</p><ol><li><a href="https://cheneyblog.com//posts/11682.html">域名：互联网命名系统</a></li><li><a href="https://cheneyblog.com//posts/330.html">域名解析：连接互联网的关键枢纽</a></li><li><a href="https://cheneyblog.com//posts/44850.html">DNS：互联网底层通信的重要基石</a></li><li><a href="https://cheneyblog.com//posts/59495.html">DNS配置：将域名连接到IP地址的关键步骤</a></li><li><a href="https://cheneyblog.com//posts/26748.html">HTTP与HTTPS：保障Web通信安全的重要技术</a></li><li><a href="https://cheneyblog.com//posts/34621.html">SSL证书：构建安全可信的Web通信环境</a></li><li><a href="https://cheneyblog.com//posts/62378.html">协议：链接互联网世界的规则与约定</a></li><li><a href="https://cheneyblog.com//posts/10760.html">互联网通信的关键：TCP/IP协议族</a></li><li><a href="https://cheneyblog.com//posts/31314.html">CDN：实现高速可靠的网络内容分发</a></li></ol><p>通过深入理解和熟练应用这些Web核心技术，开发者可以构建功能强大、性能卓越、用户友好的Web应用。同时，这些技术也提供了不断学习和创新的机会，让我们能够驾驭Web技术的潮流，不断迭代和改善我们的应用。</p>]]></content>
+        <content type="html"><![CDATA[<p>Web技术作为构建现代互联网世界的基石，不仅给人们带来了无限的便利，也推动了互联网的不断发展。本文将对几个关键的Web核心技术进行总结，帮助您更好地了解和应用这些技术，为Web应用的开发和优化提供指导。</p><ol><li><a href="https://cheneyblog.com//posts/11682.html">域名：互联网命名系统</a></li><li><a href="https://cheneyblog.com//posts/330.html">域名解析：连接互联网的关键枢纽</a></li><li><a href="https://cheneyblog.com//posts/44850.html">DNS：互联网底层通信的重要基石</a></li><li><a href="https://cheneyblog.com//posts/59495.html">DNS配置：将域名连接到IP地址的关键步骤</a></li><li><a href="https://cheneyblog.com//posts/26748.html">HTTP与HTTPS：保障Web通信安全的重要技术</a></li><li><a href="https://cheneyblog.com//posts/34621.html">SSL证书：构建安全可信的Web通信环境</a></li><li><a href="https://cheneyblog.com//posts/62378.html">协议：链接互联网世界的规则与约定</a></li><li><a href="https://cheneyblog.com//posts/10760.html">互联网通信的关键：TCP/IP协议族</a></li><li><a href="https://cheneyblog.com//posts/6511.html">网络带宽解析：速度的背后隐藏着什么？</a></li><li><a href="https://cheneyblog.com//posts/36427.html">IP地址：连接互联网的数字指纹</a></li><li><a href="https://cheneyblog.com//posts/60895.html">IPv4：互联网的”小四”们如何玩转世界</a></li><li><a href="https://cheneyblog.com//posts/31314.html">CDN：实现高速可靠的网络内容分发</a></li></ol><p>通过深入理解和熟练应用这些Web核心技术，开发者可以构建功能强大、性能卓越、用户友好的Web应用。同时，这些技术也提供了不断学习和创新的机会，让我们能够驾驭Web技术的潮流，不断迭代和改善我们的应用。</p>]]></content>
       
       
       <categories>
@@ -45,7 +70,7 @@
       
         <tags>
             
-            <tag> Java基础 </tag>
+            <tag> Java </tag>
             
         </tags>
       
@@ -58,7 +83,7 @@
       <link href="/posts/50904.html"/>
       <url>/posts/50904.html</url>
       
-        <content type="html"><![CDATA[<p>当涉及到Oracle开发学习，有一些关键的指南可以帮助你更好地掌握这个数据库管理系统。在本文中，我将向大家分享一些有关Oracle开发学习的重要指南。</p><h2 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h2><ul><li><a href="https://cheneyblog.com//posts/565.html">物理结构</a></li><li><a href="https://cheneyblog.com//posts/14901.html">内存结构</a></li><li><a href="https://cheneyblog.com//posts/35730.html">进程结构</a></li><li><a href="https://cheneyblog.com//posts/24947.html">逻辑结构</a></li><li><a href="https://cheneyblog.com//posts/47150.html">体系结构总结</a></li><li><a href="https://cheneyblog.com//posts/39514.html">Library Cache 的基本结构</a></li><li><a href="https://cheneyblog.com//posts/27399.html">Library Cache 详解</a></li></ul><h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><ul><li><a href="https://cheneyblog.com//posts/65435.html">SQL语句执行过程</a></li><li><a href="https://cheneyblog.com//posts/22532.html">Cursor（游标）</a></li><li><a href="https://cheneyblog.com//posts/55163.html">Session Cursor</a></li><li><a href="https://cheneyblog.com//posts/22265.html">硬解析、软解析和软软解析</a></li></ul><h2 id="优化篇"><a href="#优化篇" class="headerlink" title="优化篇"></a>优化篇</h2><h3 id="执行计划"><a href="#执行计划" class="headerlink" title="执行计划"></a>执行计划</h3><ul><li><a href="https://cheneyblog.com//posts/20895.html">执行计划简介</a></li><li><a href="https://cheneyblog.com//posts/26508.html">Oracle统计信息</a></li><li><a href="https://cheneyblog.com//posts/32449.html">统计信息管理工具：DBMS_STATS包</a></li><li><a href="https://cheneyblog.com//posts/54365.html">获取执行计划</a></li><li><a href="https://cheneyblog.com//posts/12101.html">看懂执行计划之执行顺序</a></li><li><a href="https://cheneyblog.com//posts/65395.html">看懂执行计划之基于规则的优化器（RBO）</a></li><li><a href="https://cheneyblog.com//posts/61.html">看懂执行计划之基于成本的优化器（CBO）</a></li><li><a href="https://cheneyblog.com//posts/49498.html">看懂执行计划之优化器的模式</a></li><li><a href="https://cheneyblog.com//posts/46535.html">看懂执行计划之表相关执行计划</a></li><li><a href="https://cheneyblog.com//posts/9739.html">看懂执行计划之索引介绍</a></li><li><a href="https://cheneyblog.com//posts/26997.html">看懂执行计划之B-tree索引</a></li><li><a href="https://cheneyblog.com//posts/35895.html">看懂执行计划之位图索引</a></li><li><a href="https://cheneyblog.com//posts/10468.html">看懂执行计划之表连接</a></li><li><a href="https://cheneyblog.com//posts/44822.html">看懂执行计划之其他执行计划</a></li><li><a href="https://cheneyblog.com//posts/1085.html">看懂执行计划之稳定执行计划</a></li><li><a href="https://cheneyblog.com//posts/24522.html">加速查询优化——深入了解Oracle Hint</a></li><li><a href="https://cheneyblog.com//posts/20503.html">如何根据执行计划识别低效SQL</a></li></ul><h3 id="绑定变量"><a href="#绑定变量" class="headerlink" title="绑定变量"></a>绑定变量</h3><ul><li><a href="https://cheneyblog.com//posts/30060.html">简介</a></li><li><a href="https://cheneyblog.com//posts/10092.html">绑定变量PL/SQL中的应用</a></li><li><a href="https://cheneyblog.com//posts/6732.html">绑定变量窥探</a></li><li><a href="https://cheneyblog.com//posts/54542.html">常量游标共享</a></li><li><a href="https://cheneyblog.com//posts/39784.html">自适应游标共享</a></li><li><a href="https://cheneyblog.com//posts/17267.html">自适应游标共享流程实践</a></li></ul><p>通过以上的指南，你可以更好地学习和掌握Oracle开发技能。无论是作为初学者还是有一定经验的开发者，这些指南都能够为你提供有价值的指导和帮助。祝你在Oracle开发学习的旅程中取得成功！</p>]]></content>
+        <content type="html"><![CDATA[<p>当涉及到Oracle开发学习，有一些关键的指南可以帮助你更好地掌握这个数据库管理系统。在本文中，我将向大家分享一些有关Oracle开发学习的重要指南。</p><h2 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h2><ul><li><a href="https://cheneyblog.com//posts/565.html">物理结构</a></li><li><a href="https://cheneyblog.com//posts/14901.html">内存结构</a></li><li><a href="https://cheneyblog.com//posts/35730.html">进程结构</a></li><li><a href="https://cheneyblog.com//posts/24947.html">逻辑结构</a></li><li><a href="https://cheneyblog.com//posts/47150.html">体系结构总结</a></li><li><a href="https://cheneyblog.com//posts/39514.html">Library Cache 的基本结构</a></li><li><a href="https://cheneyblog.com//posts/27399.html">Library Cache 详解</a></li></ul><h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><ul><li><a href="https://cheneyblog.com//posts/65435.html">SQL语句执行过程</a></li><li><a href="https://cheneyblog.com//posts/22532.html">Cursor（游标）</a></li><li><a href="https://cheneyblog.com//posts/55163.html">Session Cursor</a></li><li><a href="https://cheneyblog.com//posts/22265.html">硬解析、软解析和软软解析</a></li></ul><h2 id="优化篇"><a href="#优化篇" class="headerlink" title="优化篇"></a>优化篇</h2><h3 id="执行计划"><a href="#执行计划" class="headerlink" title="执行计划"></a>执行计划</h3><ul><li><a href="https://cheneyblog.com//posts/20895.html">执行计划简介</a></li><li><a href="https://cheneyblog.com//posts/26508.html">Oracle统计信息</a></li><li><a href="https://cheneyblog.com//posts/32449.html">统计信息管理工具：DBMS_STATS包</a></li><li><a href="https://cheneyblog.com//posts/54365.html">获取执行计划</a></li><li><a href="https://cheneyblog.com//posts/12101.html">看懂执行计划之执行顺序</a></li><li><a href="https://cheneyblog.com//posts/65395.html">看懂执行计划之基于规则的优化器（RBO）</a></li><li><a href="https://cheneyblog.com//posts/61.html">看懂执行计划之基于成本的优化器（CBO）</a></li><li><a href="https://cheneyblog.com//posts/49498.html">看懂执行计划之优化器的模式</a></li><li><a href="https://cheneyblog.com//posts/46535.html">看懂执行计划之表相关执行计划</a></li><li><a href="https://cheneyblog.com//posts/9739.html">看懂执行计划之索引介绍</a></li><li><a href="https://cheneyblog.com//posts/26997.html">看懂执行计划之B-tree索引</a></li><li><a href="https://cheneyblog.com//posts/35895.html">看懂执行计划之位图索引</a></li><li><a href="https://cheneyblog.com//posts/10468.html">看懂执行计划之表连接</a></li><li><a href="https://cheneyblog.com//posts/44822.html">看懂执行计划之其他执行计划</a></li><li><a href="https://cheneyblog.com//posts/1085.html">看懂执行计划之稳定执行计划</a></li><li><a href="https://cheneyblog.com//posts/24522.html">加速查询优化——深入了解Oracle Hint</a></li><li><a href="https://cheneyblog.com//posts/20503.html">如何根据执行计划识别低效SQL</a></li></ul><h3 id="绑定变量"><a href="#绑定变量" class="headerlink" title="绑定变量"></a>绑定变量</h3><ul><li><a href="https://cheneyblog.com//posts/30060.html">简介</a></li><li><a href="https://cheneyblog.com//posts/10092.html">绑定变量PL/SQL中的应用</a></li><li><a href="https://cheneyblog.com//posts/6732.html">绑定变量窥探</a></li><li><a href="https://cheneyblog.com//posts/54542.html">常量游标共享</a></li><li><a href="https://cheneyblog.com//posts/39784.html">自适应游标共享</a></li><li><a href="https://cheneyblog.com//posts/17267.html">自适应游标共享流程实践</a></li></ul><h3 id="查询转换"><a href="#查询转换" class="headerlink" title="查询转换"></a>查询转换</h3><ul><li><a href="https://cheneyblog.com//posts/15852.html">深入解析Oracle优化器中的查询转换操作</a></li><li><a href="https://cheneyblog.com//posts/51875.html">子查询展开：揭秘Oracle的“嵌套奇迹”</a></li></ul><p>通过以上的指南，你可以更好地学习和掌握Oracle开发技能。无论是作为初学者还是有一定经验的开发者，这些指南都能够为你提供有价值的指导和帮助。祝你在Oracle开发学习的旅程中取得成功！</p>]]></content>
       
       
       <categories>
@@ -71,6 +96,131 @@
         <tags>
             
             <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>子查询展开：揭秘Oracle的“嵌套奇迹”</title>
+      <link href="/posts/51875.html"/>
+      <url>/posts/51875.html</url>
+      
+        <content type="html"><![CDATA[<p>嘿，大家好！今天我来给大家介绍一下Oracle数据库中的一个重要概念——子查询展开。或许你已经听说过这个术语，但是不太了解具体是什么意思，别担心，接下来我会给你详细讲解。</p><h2 id="什么是子查询展开？"><a href="#什么是子查询展开？" class="headerlink" title="什么是子查询展开？"></a>什么是子查询展开？</h2><p>子查询展开是一种查询优化技术，它可以将一个包含子查询的查询语句转换为等效的、不包含子查询的查询语句，从而提高查询的执行效率。<br>子查询展开的具体含义是将子查询中的SQL语句嵌入到外部查询语句中，从而构成一个新的查询语句。这个新的查询语句会使用到原子查询中用到的表，条件和操作符等，从而达到与原子查询相同的功能。<br>子查询展开可以将复杂的逻辑转换为更简单、更高效的查询计划，并减少多次访问数据库的次数。</p><h2 id="为什么要使用子查询展开？"><a href="#为什么要使用子查询展开？" class="headerlink" title="为什么要使用子查询展开？"></a>为什么要使用子查询展开？</h2><p>好了，我们知道什么是子查询展开了，接下来让我们来探讨一下为什么要使用子查询展开。<br>因为如果原SQL不做子查询展开，那么通常情况下该子查询就会在其执行计划的最后一步才被执行，并且会走FILTER类型的执行计划，这也就意味着对于外部查询所在结果集中的每一条记录，该子查询都会被当作一个独立的执行单元来执行一次，外部查询所在的结果集有多少条记录，该子查询就会被执行多少次。<br>子查询展开后优化器就会有其他更多、更高效的执行路径(比如哈希连接)可以选择。使用子查询展开也就大大提高查询性能，尤其是当子查询中的数据量较大时。相比于执行多条独立的查询语句，将子查询展开后，可以减少数据库对物理存储的访问次数，从而减少I/O开销，使查询更加高效。</p><h2 id="子查询展开的执行计划分类举例"><a href="#子查询展开的执行计划分类举例" class="headerlink" title="子查询展开的执行计划分类举例"></a>子查询展开的执行计划分类举例</h2><p>现在，让我给你举个例子，来说明子查询展开对应的执行计划分类。考虑以下这个查询语句：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> t.cust_first_name, t.cust_last_name</span><br><span class="line">  <span class="keyword">from</span> CUSTOMERS t</span><br><span class="line"> <span class="keyword">where</span> t.customer_id <span class="keyword">in</span> (<span class="keyword">select</span> <span class="comment">/*+ no_unnest*/</span></span><br><span class="line">                          s.cust_id</span><br><span class="line">                           <span class="keyword">from</span> sales s</span><br><span class="line">                          <span class="keyword">where</span> s.amount_sold <span class="operator">&gt;</span> <span class="number">700</span>)</span><br></pre></td></tr></table></figure><p>这个查询语句中使用了一个子查询来获取sales表中amount_sold&gt;700的cust_id。在执行计划中，Oracle会走FILTER类型的执行计划，如下所示：</p><p><img src="https://www.cdn.cheneyblog.com//blog/202312031032868.png" alt="image-20231203103214190"></p><p>  NO_UNNEST Hint使优化器不对该子查询进行展开</p><p>当做子查询展开时，Oracle会把那些外部where条件为“EXISTS”、“IN”或“=ANY”的子查询转换为对应的半连接(SemiJoin)。使得查询性能更高效。</p><p><img src="https://www.cdn.cheneyblog.com//blog/202312031033204.png" alt="image-20231203103339122"></p><blockquote><p>如果连接字段的值存在不重复的情况，比如有唯一索引，那么该SQL在子查询展开时也可以改写成内连接</p></blockquote><p>当做子查询展开时，Oracle经常会把那些外部where条件为“NO EXISTS”、“NOT IN”或“&lt;&gt;ALL”的子查询转换为对应的反连接(AntiJoin)。</p><p><img src="https://www.cdn.cheneyblog.com//blog/202312031059289.png" alt="image-20231203105925213"></p><p>当子查询中存在表连接时，只能子查询内部先做表连接，然后再通主查询进行半连接或反连接，这时Oracle会对子查询生成一个内嵌视图，如下所示：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> t.cust_first_name, t.cust_last_name</span><br><span class="line">  <span class="keyword">from</span> CUSTOMERS t</span><br><span class="line"> <span class="keyword">where</span> t.customer_id <span class="keyword">not</span> <span class="keyword">in</span></span><br><span class="line">       (<span class="keyword">select</span> s.cust_id</span><br><span class="line">          <span class="keyword">from</span> sales s, products p</span><br><span class="line">         <span class="keyword">where</span> s.prod_id <span class="operator">=</span> p.prod_id</span><br><span class="line">           <span class="keyword">and</span> s.amount_sold <span class="operator">&gt;</span> <span class="number">700</span>)</span><br></pre></td></tr></table></figure><p>对应执行计划如下：</p><p><img src="https://www.cdn.cheneyblog.com//blog/202312031106275.png" alt="image-20231203110605176"></p><h2 id="子查询展开的限制和注意事项"><a href="#子查询展开的限制和注意事项" class="headerlink" title="子查询展开的限制和注意事项"></a>子查询展开的限制和注意事项</h2><p>在使用子查询展开时，也需要注意一些限制和注意事项。</p><ol><li>子查询展开所对应的等价改写SQL和原SQL在语义上一定要是完全等价的。如果改写后的SQL和原SQL并不一定能保持语义上的完全等价，这种类型的子查询就不能做子查询展开。</li><li>对于不拆开子查询但是会把它转换为一个内嵌视图的子查询展开，只有当经过子查询展开后的等价改写SQL的成本值小于原SQL的成本值时，Oracle才会对目标SQL执行子查询展开。</li><li>这里需要注意的是，将子查询拆开，把该子查询中的表、视图从子查询中拿出来，然后和外部查询中的表、视图做表连接这种情况,即使是在Oracle 10g及其以后的版本中，Oracle也不会考虑子查询展开的成本，即Oracle此时会认为这种情形下子查询展开的效率始终比不展开的效率要高，而不管经过子查询展开后的等价改写SQL的成本值是否小于原SQL的成本值。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Builtwith模块：快速识别网站所用技术栈</title>
+      <link href="/posts/19502.html"/>
+      <url>/posts/19502.html</url>
+      
+        <content type="html"><![CDATA[<p>在当今互联网时代，各种网站与应用层出不穷，而它们的背后所用的技术栈也千差万别。而对于开发者而言，了解一个网站所用的技术栈可以更好地研究其实现逻辑，提高开发效率。在Python中，我们可以使用builtwith模块来快速地识别一个网站所用的技术栈，本文将介绍该模块的用法和功能。</p><ol><li>安装builtwith模块<br>在使用builtwith模块之前，需要安装该模块。可以使用以下命令进行安装：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install builtwith</span><br></pre></td></tr></table></figure><ol start="2"><li>引入builtwith模块<br>安装完成后，在Python代码中需进行引入：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> builtwith</span><br></pre></td></tr></table></figure><ol start="3"><li>检测网站所用技术栈<br>使用builtwith模块可以快速地检测一个网站所用的技术栈。可以使用以下代码进行检测：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">result = builtwith.builtwith(<span class="string">&#x27;https://www.google.com&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure><p>上述代码执行后会返回一个字典对象，包含了该网站所用的各种技术栈信息。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;javascript-frameworks&#x27;</span>: [<span class="string">&#x27;Prototype&#x27;</span>, <span class="string">&#x27;RequireJS&#x27;</span>, <span class="string">&#x27;jQuery&#x27;</span>]&#125;</span><br></pre></td></tr></table></figure><ol start="4"><li>检测多个网站所用技术栈<br>如果想要批量检测多个网站的技术栈，可以使用<code>for</code>循环来实现。</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">websites = [<span class="string">&#x27;http://www.baidu.com/&#x27;</span>, <span class="string">&#x27;https://www.cheneyblog.com/&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> website <span class="keyword">in</span> websites:</span><br><span class="line">    result = builtwith.builtwith(website)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;技术栈信息 - <span class="subst">&#123;website&#125;</span>: <span class="subst">&#123;result&#125;</span>\n&quot;</span>)</span><br></pre></td></tr></table></figure><p>上述代码返回结果如下，每个字典对象表示一个网站使用的技术栈。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">技术栈信息 - http://www.baidu.com/: &#123;<span class="string">&#x27;javascript-frameworks&#x27;</span>: [<span class="string">&#x27;Prototype&#x27;</span>, <span class="string">&#x27;RequireJS&#x27;</span>, <span class="string">&#x27;jQuery&#x27;</span>]&#125;</span><br><span class="line"></span><br><span class="line">技术栈信息 - https://www.cheneyblog.com/: &#123;<span class="string">&#x27;javascript-frameworks&#x27;</span>: [<span class="string">&#x27;Vue.js&#x27;</span>, <span class="string">&#x27;jQuery&#x27;</span>]&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>总结：<br>builtwith模块是Python中用于识别网站所用技术栈的工具，可以快速地帮助开发者了解一个网站的实现细节。通过使用该模块，我们可以快速获取一个网站使用的技术栈及版本信息，提高开发效率。如果你是一位Web开发者，builtwith模块绝对是你必不可少的工具之一。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python模块 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Random模块：生成随机数的利器</title>
+      <link href="/posts/14008.html"/>
+      <url>/posts/14008.html</url>
+      
+        <content type="html"><![CDATA[<p>随机数在计算机编程中扮演着重要的角色，无论是游戏开发、密码学还是模拟等领域，随机性都是必不可少的。在Python中，我们可以使用random模块来生成各种类型的随机数，本文将介绍该模块的用法和功能。</p><ol><li>引入random模块<br>要使用random模块，首先需要在程序中引入它。可以使用以下代码：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br></pre></td></tr></table></figure><ol start="2"><li>生成随机整数<br>random模块中有一个常用的函数是randint(a, b)，用于生成一个在指定范围内的随机整数，包括a和b。例如，要生成一个1到10之间的随机整数，可以使用以下代码：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">num = random.randint(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(num)</span><br></pre></td></tr></table></figure><ol start="3"><li>生成随机浮点数<br>如果需要生成随机的浮点数，可以使用random模块的uniform(a, b)函数。该函数会返回一个在a和b之间的随机浮点数。示例如下：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">num = random.uniform(<span class="number">1.0</span>, <span class="number">5.0</span>)</span><br><span class="line"><span class="built_in">print</span>(num)</span><br></pre></td></tr></table></figure><ol start="4"><li>随机选择列表元素<br>有时我们需要从列表中随机选择一个元素，可以使用random模块的choice()函数。该函数接受一个列表作为参数，并返回其中随机选择的一个元素。示例代码如下：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>, <span class="string">&#x27;grape&#x27;</span>]</span><br><span class="line">random_fruit = random.choice(fruits)</span><br><span class="line"><span class="built_in">print</span>(random_fruit)</span><br></pre></td></tr></table></figure><ol start="5"><li>随机打乱列表顺序<br>如果需要随机打乱列表的顺序，可以使用random模块的shuffle()函数。该函数会修改原列表，并将其顺序随机打乱。示例代码如下：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cards = [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>, <span class="number">12</span>, <span class="number">14</span>]</span><br><span class="line">random.shuffle(cards)</span><br><span class="line"><span class="built_in">print</span>(cards)</span><br></pre></td></tr></table></figure><ol start="6"><li>生成随机种子<br>在某些情况下，我们需要使用相同的随机数序列。为了实现这一点，可以使用random模块的seed()函数来设置随机种子。示例代码如下：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">random.seed(<span class="number">123</span>)</span><br><span class="line">num1 = random.randint(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line">random.seed(<span class="number">123</span>)</span><br><span class="line">num2 = random.randint(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(num1)  <span class="comment"># 输出相同的随机数</span></span><br><span class="line"><span class="built_in">print</span>(num2)</span><br></pre></td></tr></table></figure><p>以上只是random模块提供的一些基本功能，实际上它还有很多其他实用的函数，如生成随机字母、随机抽样等。通过灵活运用random模块，我们可以轻松地在Python中实现各种随机性需求。</p><p>总结：<br>random模块是Python中用于生成随机数的强大工具，可以轻松地生成随机整数、随机浮点数和随机选择列表元素。此外，它还能实现列表顺序的随机打乱和生成随机种子等功能。通过深入了解和学习random模块，我们可以在编程中更好地利用随机性。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python模块 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入解析Oracle优化器中的查询转换操作</title>
+      <link href="/posts/15852.html"/>
+      <url>/posts/15852.html</url>
+      
+        <content type="html"><![CDATA[<p>摘要：本文将详细介绍Oracle数据库优化器中的查询转换操作。查询转换是优化器在执行查询计划选择过程中的关键步骤之一，它可以通过重写和改变查询语句的结构，提供更高效的执行计划，从而优化查询性能。本文将深入探讨Oracle优化器中的查询转换技术，包括谓词下推、子查询转换、视图合并等常见的转换操作，并提供一些实用的示例。</p><h2 id="1-查询转换的背景和意义"><a href="#1-查询转换的背景和意义" class="headerlink" title="1. 查询转换的背景和意义"></a>1. 查询转换的背景和意义</h2><p>在查询执行过程中，Oracle优化器的任务是选择最佳的执行计划，以提供最优的查询性能。而查询转换作为其中的一项关键技术，它通过改变查询语句的结构，使得优化器能够更有效地评估和选择查询计划。查询转换可以用于优化查询的性能、简化查询的语法和逻辑，从而提高查询执行效率和可读性。</p><h2 id="2-常见的查询转换操作"><a href="#2-常见的查询转换操作" class="headerlink" title="2. 常见的查询转换操作"></a>2. 常见的查询转换操作</h2><h3 id="2-1-谓词下推（Predicate-Pushdown）"><a href="#2-1-谓词下推（Predicate-Pushdown）" class="headerlink" title="2.1 谓词下推（Predicate Pushdown）"></a>2.1 谓词下推（Predicate Pushdown）</h3><p>谓词下推是一种常见的查询转换操作，它将查询中的谓词条件（例如WHERE子句中的条件）尽早地应用于表之上。这种转换操作可以减少查询所需的数据量，提高查询性能。</p><p>示例：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 未进行谓词下推的查询</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t1 <span class="keyword">UNION</span> <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t2) <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 进行谓词下推的查询</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t1 <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="number">1</span></span><br><span class="line"><span class="keyword">UNION</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t2 <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="number">1</span>);</span><br></pre></td></tr></table></figure><p>  过滤谓词下推将限制条件(id=1)下推到内联视图的内部并产生了下面的查询。现在，这两张表不仅可以通过索引来访问，同时也保证了UNION集合运算符需要的排序操作所处理的记录尽可能少：</p><h3 id="2-2-子查询转换（Subquery-Unnesting）"><a href="#2-2-子查询转换（Subquery-Unnesting）" class="headerlink" title="2.2 子查询转换（Subquery Unnesting）"></a>2.2 子查询转换（Subquery Unnesting）</h3><p>子查询转换是指将子查询（嵌套在主查询中的查询语句）转换为等效的连接操作，以提高查询性能。优化器会尝试将子查询转换为连接查询，从而减少查询的复杂性和执行时间。</p><p>示例：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 子查询转换前的查询</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> department_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> department_id <span class="keyword">FROM</span> departments <span class="keyword">WHERE</span> location_id <span class="operator">=</span> <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 子查询转换后的查询</span></span><br><span class="line"><span class="keyword">SELECT</span> employees.<span class="operator">*</span> <span class="keyword">FROM</span> employees <span class="keyword">JOIN</span> departments <span class="keyword">ON</span> employees.department_id <span class="operator">=</span> departments.department_id</span><br><span class="line">  <span class="keyword">WHERE</span> departments.location_id <span class="operator">=</span> <span class="number">100</span>;</span><br></pre></td></tr></table></figure><h3 id="2-3-视图合并（View-Merging）"><a href="#2-3-视图合并（View-Merging）" class="headerlink" title="2.3 视图合并（View Merging）"></a>2.3 视图合并（View Merging）</h3><p>视图合并是指将涉及到多个视图的查询转换为等效的单个查询，以减少查询的复杂性和执行时间。视图合并可以将多个视图的定义合并为一个查询，从而避免了查询中的冗余计算和表连接操作。</p><p>示例：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 视图合并前的查询</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> (<span class="keyword">SELECT</span> t1.<span class="operator">*</span> <span class="keyword">FROM</span> t1, t2 <span class="keyword">WHERE</span> t1.id <span class="operator">=</span> t2.t1_id) t12,</span><br><span class="line">     (<span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t3 <span class="keyword">WHERE</span> id <span class="operator">&gt;</span> <span class="number">6</span>) t3</span><br><span class="line"><span class="keyword">WHERE</span> t12.id <span class="operator">=</span> t3.t1_id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 视图合并后的查询</span></span><br><span class="line"><span class="keyword">SELECT</span> t1.<span class="operator">*</span>,t3.<span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> t1, t2,t3</span><br><span class="line"><span class="keyword">WHERE</span> t1.id <span class="operator">=</span> t3.t1_id <span class="keyword">and</span> t1.id <span class="operator">=</span> t2.t1_id <span class="keyword">and</span> t3.id <span class="operator">&gt;</span> <span class="number">6</span>;</span><br></pre></td></tr></table></figure><h3 id="2-4-“或”扩张（Or-Expansion）"><a href="#2-4-“或”扩张（Or-Expansion）" class="headerlink" title="2.4 “或”扩张（Or Expansion）"></a>2.4 “或”扩张（Or Expansion）</h3><p>“或”扩张的目的是将查询的WHERE条件中包含分隔谓词的语句转化为使用一个或多个UNION ALL集合运算符的复合查询。通常情况下，每个分隔的谓词被转化成为一个单独的查询从而启用额外的索引访问路径。</p><p>示例1：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 原SQL</span></span><br><span class="line"><span class="keyword">select</span> t.employee_id <span class="keyword">from</span> employees t <span class="keyword">where</span> t.department_id <span class="operator">=</span> <span class="number">10</span> <span class="keyword">or</span> t.job_id <span class="operator">=</span> <span class="string">&#x27;SH_CLERK&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询优化器会评估一次基于表扫描的成本是否高于两次单独的基于索引扫描的成本</span></span><br><span class="line"><span class="comment">-- 如果两次索引扫描的成本更低就会转换为以下查询</span></span><br><span class="line"><span class="comment">-- 添加lnnvl(n1=1)这个谓词是为了避免多重记录。lnnvl函数在作为参数传递的条件为FALSE或NULL时返回TRUE。因此，第二个组件查询只会在第一个组件查询未返回某条记录的情况下才返回这条记录：</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> t.employee_id <span class="keyword">from</span> employees t <span class="keyword">where</span> t.department_id <span class="operator">=</span> <span class="number">10</span></span><br><span class="line"><span class="keyword">union</span> <span class="keyword">all</span></span><br><span class="line"><span class="keyword">select</span> t.employee_id <span class="keyword">from</span> employees t <span class="keyword">where</span> t.job_id <span class="operator">=</span> <span class="string">&#x27;SH_CLERK&#x27;</span> <span class="keyword">and</span> lnnvl(t.department_id <span class="operator">=</span> <span class="number">10</span>);</span><br></pre></td></tr></table></figure><h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h2><p>查询转换作为Oracle数据库优化器的重要技术之一，在优化查询性能、简化查询语法和逻辑等方面具有广泛的应用。本文介绍了常见的查询转换操作，包括谓词下推、子查询转换和视图合并等操作，并给出了一些实用的示例。通过深入了解Oracle优化器中的查询转换技术，可以更好地优化查询性能和提升数据库的性能表现。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IPv4：互联网的&quot;小四&quot;们如何玩转世界</title>
+      <link href="/posts/60895.html"/>
+      <url>/posts/60895.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>IPv4（Internet Protocol Version 4）是互联网中最常用的一种地址格式，用于标识连接到互联网的设备。它属于IPv4协议族的一部分，用于寻址和路由数据包。</p><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>IPv4地址根据范围的不同可分为以下五个类别：</p><ol><li>A类地址：范围从1.0.0.0到126.0.0.0，用于大规模网络，支持约1.67亿个主机。例如，10.0.0.1。</li><li>B类地址：范围从128.0.0.0到191.255.0.0，用于中等规模网络，支持约6.55万个主机。例如，172.16.0.1。</li><li>C类地址：范围从192.0.0.0到223.255.255.0，用于小规模网络，支持约254个主机。例如，192.168.0.1。</li><li>D类地址：范围从224.0.0.0到239.255.255.255，用于多播通信，不分配给单个设备。</li><li>E类地址：范围从240.0.0.0到255.255.255.255，保留未分配的地址空间，用于将来使用。</li></ol><h2 id="构成"><a href="#构成" class="headerlink" title="构成"></a>构成</h2><p>IPv4地址可以分为两部分：网络部分和主机部分。网络部分用于标识这个主机所在的网络，而主机部分用于标识这个主机在该网络中的唯一性。IPv4地址的网络部分和主机部分是根据子网掩码进行划分的。子网掩码指定了网络部分和主机部分的边界。</p><ol><li>网络地址：由IPv4地址的高位组成，用于识别设备所连接的网络。根据地址类别，网络地址的位数不同。<ul><li>A类地址的网络地址使用8位，如10.0.0.0。</li><li>B类地址的网络地址使用16位，如172.16.0.0。</li><li>C类地址的网络地址使用24位，如192.168.0.0。</li></ul></li><li>主机地址：由IPv4地址的低位组成，用于唯一标识网络中的设备。主机地址的位数取决于剩余的位数。<ul><li>A类地址的主机地址使用24位，支持约1677万个主机，如10.0.0.1。</li><li>B类地址的主机地址使用16位，支持约6.55万个主机，如172.16.0.1。</li><li>C类地址的主机地址使用8位，支持约254个主机，如192.168.0.1。</li></ul></li><li>子网掩码：作为一个32位的二进制数，用于划分IPv4地址的网络地址和主机地址。子网掩码的作用是确定哪些位用于网络地址，哪些位用于主机地址。它与IPv4地址进行逻辑AND运算以确定网络部分。例如，255.255.255.0的子网掩码将前24位用作网络地址。</li></ol><h2 id="公网IP和私网IP的划分"><a href="#公网IP和私网IP的划分" class="headerlink" title="公网IP和私网IP的划分"></a>公网IP和私网IP的划分</h2><ol><li>公网IP：公网IP地址用于直接连接到互联网的设备，用于全球范围内的通信。这些地址需要由互联网服务提供商（ISP）分配，以确保全球唯一性。例如，203.0.113.1是一个公网IP地址。</li><li>私网IP：私网IP地址用于内部网络中的设备，在局域网或内部通信中使用，不直接暴露在公共互联网上。私网IP地址范围在以下三个段内：</li></ol><ul><li>10.0.0.0至10.255.255.255（A类私网地址）</li><li>172.16.0.0至172.31.255.255（B类私网地址）</li><li>192.168.0.0至192.168.255.255（C类私网地址）</li></ul><p>私网IP地址对于内部网络是唯一的，但在公网中并不唯一。通过网络地址转换（NAT），私网IP可以转换为公网IP，以允许内部设备与互联网进行通信。这种转换允许使用较少的公网IP地址来连接大量的私网设备。</p><h2 id="NAT（网络地址转换）"><a href="#NAT（网络地址转换）" class="headerlink" title="NAT（网络地址转换）"></a>NAT（网络地址转换）</h2><p>NAT是一种技术，用于在私网和公网之间进行地址转换。它允许多个设备使用单个公网IP地址访问互联网。NAT会维护一个转换表，将私网IP和端口映射到公网IP和端口，以确保适当的数据转发。</p><p>举个例子，假设有一个公司内部局域网，使用私网IP地址范围为192.168.0.0/24。所有设备都能够访问互联网，但只有一个公网IP地址。通过使用NAT，路由器将私网IP和端口与公网IP和端口进行映射。当内部设备发送请求时，NAT将转换表中的信息用于正确的数据传输，使得互联网上的服务器能够正确响应数据包，最终实现设备与互联网的通信。</p><h2 id="CIDR（无类别域间路由选择）"><a href="#CIDR（无类别域间路由选择）" class="headerlink" title="CIDR（无类别域间路由选择）"></a>CIDR（无类别域间路由选择）</h2><p>CIDR是一种IP地址分配和路由选择方案，它允许更有效地利用IP地址空间。在传统的分类方式中，每个地址类别都有固定的网络地址和主机地址位数，导致地址浪费。而CIDR通过使用可变长度子网掩码（VLSM），允许将IP地址空间划分为较小的子网，以适应网络的实际需求。</p><p>CIDR表示法使用斜线后跟有子网掩码的网络前缀长度，例如：192.168.0.0/24。这表示前24位用于网络地址，剩余的8位用于主机地址。</p><p>CIDR的使用使得网络规划更加灵活，减少了地址的浪费，并提高了路由的效率。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> WebEcology </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Web生态 </tag>
             
         </tags>
       
