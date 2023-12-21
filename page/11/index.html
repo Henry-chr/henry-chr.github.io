@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>宸汐缘</title><meta name="author" content="Cheney"><meta name="copyright" content="Cheney"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="中年程序猿的自我救赎，记录日常的技术整理和心得分享，涉及技术栈:SQL,Java,Python,Oracle,MySQL,大数据等">
+<meta property="og:type" content="website">
+<meta property="og:title" content="宸汐缘">
+<meta property="og:url" content="https://www.cheneyblog.com/page/11/index.html">
+<meta property="og:site_name" content="宸汐缘">
+<meta property="og:description" content="中年程序猿的自我救赎，记录日常的技术整理和心得分享，涉及技术栈:SQL,Java,Python,Oracle,MySQL,大数据等">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg">
+<meta property="article:author" content="Cheney">
+<meta property="article:tag" content="SQL,Java,Python,Oracle,MySQL,大数据">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg"><link rel="shortcut icon" href="https://www.cdn.cheneyblog.com/blog/202307211052086.png"><link rel="canonical" href="https://www.cheneyblog.com/page/11/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Cheney","link":"链接: ","source":"来源: 宸汐缘","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '宸汐缘',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-12-21 16:50:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/style.css?1"><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li><li><a class="site-page child" href="/categories/Python"><i class="fa-fw fa fa-sitemap"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-toolbox"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Hexo"><i class="fa-fw fa-solid fa-blog"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/categories/Docker"><i class="fa-fw fas fa-city"></i><span> Docker</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/categories/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://5b0988e595225.cdn.sohucs.com/images/20180114/1dec553b2b88499c871b097e299dafcc.gif')"><nav id="nav"><span id="blog-info"><a href="/" title="宸汐缘"><img class="site-icon" src="https://www.cdn.cheneyblog.com/blog/202307211053392.png"/><span class="site-name">宸汐缘</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li><li><a class="site-page child" href="/categories/Python"><i class="fa-fw fa fa-sitemap"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-toolbox"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Hexo"><i class="fa-fw fa-solid fa-blog"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/categories/Docker"><i class="fa-fw fas fa-city"></i><span> Docker</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/categories/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">宸汐缘</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="mailto:850318517@qq.com" target="_blank" title="Email"><i class="far fa-envelope"></i></a><a class="social-icon" href="https://gitee.com/henry-chr" target="_blank" title="Gitee"><i class="fab fa-github"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/33481.html" title="Java基本数据类型揭秘：数据的奥义与转换技巧"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308301538138.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基本数据类型揭秘：数据的奥义与转换技巧"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/33481.html" title="Java基本数据类型揭秘：数据的奥义与转换技巧">Java基本数据类型揭秘：数据的奥义与转换技巧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-30T07:36:38.000Z" title="发表于 2023-08-30 15:36:38">2023-08-30</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:47:23.000Z" title="更新于 2023-09-08 09:47:23">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java%E5%9F%BA%E7%A1%80/">Java基础</a></span></div><div class="content">今天，让我们一起深入探索Java的基本数据类型，并详细了解它们的特点、取值范围以及适用场景。对于Java开发者来说，熟悉基本数据类型是编写高效和可靠代码的关键。现在就跟随我一同揭开Java基本数据类型背后的内幕吧！
+整数类型在Java中，有四种整数类型：
+
+byte：占用1个字节，范围在-128至127之间。适用于节省内存的情况，如存储一个很小的整数值。
+
+short：占用2个字节，范围在-32768至32767之间。适用于需要中等范围的整数值存储，如计数和数量。
+
+int：占用4个字节，范围在-2147483648至2147483647之间。是Java中使用最广泛的整数类型，适用于大多数整数计算和变量存储。
+
+long：占用8个字节，范围在-9223372036854775808至9223372036854775807之间。适用于特别大范围的整数值，如时间戳操作和位运算等。
+
+
+浮点数类型在Java中，有两种浮点数类型：
+
+float：占用4个字节，精度为7位有效数字。适用于存储较大的浮点数值，并且对精度要求不是十分严格的情况，如科学计算、图形处理等。
+
+double：占用8个字节， ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/41318.html" title="解析Java数据类型：探索数据存储的多样性"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308301105836.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解析Java数据类型：探索数据存储的多样性"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/41318.html" title="解析Java数据类型：探索数据存储的多样性">解析Java数据类型：探索数据存储的多样性</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-30T03:02:46.000Z" title="发表于 2023-08-30 11:02:46">2023-08-30</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:45:37.000Z" title="更新于 2023-09-08 09:45:37">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java%E5%9F%BA%E7%A1%80/">Java基础</a></span></div><div class="content">今天，让我们一起深入探索Java数据类型，了解不同数据类型的特点和应用场景。作为Java开发者，熟悉选择合适的数据类型将使您的程序更加高效和可靠。让我们开始探索Java数据类型的多样性吧！
+什么是数据类型？在编程中，数据类型是用来声明变量和解释内存中存储数据的方式。Java是一种静态类型的编程语言，每个变量都需要被指定数据类型。数据类型决定了变量可存储的数据类型和所占用的内存空间。
+Java的基本数据类型Java提供了一组基本数据类型，用于存储简单的值。以下是Java的基本数据类型：
+
+整数类型：byte、short、int、long
+
+浮点数类型：float、double
+
+字符类型：char
+
+布尔类型：boolean
+
+
+这些基本数据类型直接存储在内存中，具有固定的大小和取值范围。您可以根据需求选择最合适的数据类型。
+引用数据类型除了基本数据类型，Java还提供了引用数据类型，用于存储复杂的对象。引用数据类型包括类、接口、数组等，它们在内存中存储的是对象的引用。
+
+类：通过关键字class定义，可以包含属性（变量）和方法。
+
+接口：通过关键字interface定义，声明了一组方法 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/29193.html" title="解密Java关键字：探索Java语言的特殊力量"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308291734486.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解密Java关键字：探索Java语言的特殊力量"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/29193.html" title="解密Java关键字：探索Java语言的特殊力量">解密Java关键字：探索Java语言的特殊力量</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-29T07:19:06.000Z" title="发表于 2023-08-29 15:19:06">2023-08-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:45:24.000Z" title="更新于 2023-09-08 09:45:24">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java%E5%9F%BA%E7%A1%80/">Java基础</a></span></div><div class="content">今天，我们将深入探讨Java关键字，探索这些特殊的标识符在Java语言中的重要意义和作用。作为Java开发者，了解和正确使用关键字将为您的代码提供更强大的功能和更高的效率。让我们一同探索Java关键字的魅力！
+什么是关键字？在Java中，关键字是一组被保留并且具有特殊意义的标识符。这些关键字在Java编程语言中有特定的用途，不能用作标识符（比如变量、方法或类名）。Java关键字是由语言规范定义的，每个关键字都有其独特的功能和语法。
+常用的Java关键字
+public、private、protected：访问修饰符，用于定义类、方法和变量的可访问性范围。
+
+class、interface：用于声明类和接口。
+
+extends、implements：继承和实现，用于实现类之间的继承和接口的实现。
+
+static、final：用于定义静态成员和常量，可以通过类名直接访问。
+
+void：用于方法签名中，表示方法没有返回值。
+
+new、this、super：用于创建新对象、引用当前对象和引用父类对象。
+
+if、else、switch、case、default：条件语句和分支控制关键字，用于控制程 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/55389.html" title="Java JDK：解锁编程之门，探索Java开发必备利器"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308291736227.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java JDK：解锁编程之门，探索Java开发必备利器"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/55389.html" title="Java JDK：解锁编程之门，探索Java开发必备利器">Java JDK：解锁编程之门，探索Java开发必备利器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-29T02:49:30.000Z" title="发表于 2023-08-29 10:49:30">2023-08-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:46:21.000Z" title="更新于 2023-09-08 09:46:21">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java%E5%9F%BA%E7%A1%80/">Java基础</a></span></div><div class="content">今天，我们将带您进入Java开发的精彩世界，为您介绍Java Development Kit（JDK）这个必备利器。如果您是一个初学者，或者对Java开发感兴趣，那么本文将为您提供入门所需的关键信息和指导。让我们一同探索Java开发中的JDK吧！
+什么是Java JDK？Java JDK是Java开发中的核心工具包，包含了一系列开发和运行Java应用程序所需的工具和库。它提供了编译、调试、运行和部署Java代码的功能，是Java开发的不可或缺的组成部分。
+为什么需要了解JDK？了解JDK的重要性在于它对于Java开发的基础和核心功能提供了支持。以下是为什么要了解JDK的几个重要原因：
+
+编译和运行Java代码：JDK中包含了Java编译器（javac），可以将Java源代码编译成可执行的字节码文件。同时，JDK提供了Java Virtual Machine（JVM）来执行这些字节码文件。
+
+开发工具和库：JDK提供了丰富的开发工具和库，包括调试器、性能分析工具、图形界面库等。这些工具和库能够提升您的开发效率和代码质量。
+
+版本管理和兼容性：JDK的不同版本之间可能存在一些差异，了解各个 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/64847.html" title="企业数字化：引领未来商业发展的关键"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308291733756.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="企业数字化：引领未来商业发展的关键"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/64847.html" title="企业数字化：引领未来商业发展的关键">企业数字化：引领未来商业发展的关键</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-29T09:47:30.000Z" title="发表于 2023-07-29 17:47:30">2023-07-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:57:34.000Z" title="更新于 2023-09-08 09:57:34">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Digitalize/">Digitalize</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Digitalize/">Digitalize</a></span></div><div class="content">摘要
+​  随着信息技术的飞跃发展，企业数字化已成为引领未来商业发展的关键要素。本文将探讨企业数字化的含义、重要性以及实施数字化转型的关键策略，旨在帮助企业把握数字化机遇，迈向全面发展的新高度。
+企业数字化的含义和重要性​  企业数字化是指将传统的商业活动以数字化方式进行，通过技术和网络平台来实现管理、运营和创新的转型过程。它涵盖了包括业务流程、组织结构、客户关系、市场营销等方面的数字化化改造，旨在提高效率、降低成本、提升竞争力。
+​  企业数字化的重要性不可忽视。首先，数字化能够实现业务流程的高度自动化和集成化，提升企业的运营效率和灵活性。其次，数字化极大地扩展了企业的市场触角，打破了地域限制，带来全球范围内的商机和合作伙伴。再次，数字化为企业创新提供了无限可能，通过大数据分析和人工智能等技术手段，企业能够更加准确地洞察市场需求，开发出高质量的产品和服务。
+实施数字化转型的关键策略
+制定清晰的数字化战略：企业需要明确数字化的目标和方向，制定可行的战略计划，并将其与企业的整体战略相衔接。数字化战略应该包括改造业务流程、优化组织结构、提升客户体验等方面。
+
+投资适当的技术和平台：企业需要 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/64847.html" title="企业数字化：引领未来商业发展的关键"><img class="post-bg" src="http://www.cdn.cheneyblog.com/blog/202308291733756.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="企业数字化：引领未来商业发展的关键"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/64847.html" title="企业数字化：引领未来商业发展的关键">企业数字化：引领未来商业发展的关键</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-29T09:47:30.000Z" title="发表于 2023-07-29 17:47:30">2023-07-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-29T09:46:48.000Z" title="更新于 2023-08-29 17:46:48">2023-08-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Internet/">Internet</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Internet/">Internet</a></span></div><div class="content">摘要
+​  随着信息技术的飞跃发展，企业数字化已成为引领未来商业发展的关键要素。本文将探讨企业数字化的含义、重要性以及实施数字化转型的关键策略，旨在帮助企业把握数字化机遇，迈向全面发展的新高度。
+企业数字化的含义和重要性​  企业数字化是指将传统的商业活动以数字化方式进行，通过技术和网络平台来实现管理、运营和创新的转型过程。它涵盖了包括业务流程、组织结构、客户关系、市场营销等方面的数字化化改造，旨在提高效率、降低成本、提升竞争力。
+​  企业数字化的重要性不可忽视。首先，数字化能够实现业务流程的高度自动化和集成化，提升企业的运营效率和灵活性。其次，数字化极大地扩展了企业的市场触角，打破了地域限制，带来全球范围内的商机和合作伙伴。再次，数字化为企业创新提供了无限可能，通过大数据分析和人工智能等技术手段，企业能够更加准确地洞察市场需求，开发出高质量的产品和服务。
+实施数字化转型的关键策略
+制定清晰的数字化战略：企业需要明确数字化的目标和方向，制定可行的战略计划，并将其与企业的整体战略相衔接。数字化战略应该包括改造业务流程、优化组织结构、提升客户体验等方面。
+
+投资适当的技术和平台：企业需要 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/4785.html" title="探索Java开发的专有名词：掌握专有术语，驾驭编程世界！"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308291736431.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="探索Java开发的专有名词：掌握专有术语，驾驭编程世界！"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/4785.html" title="探索Java开发的专有名词：掌握专有术语，驾驭编程世界！">探索Java开发的专有名词：掌握专有术语，驾驭编程世界！</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-29T09:22:12.000Z" title="发表于 2023-07-29 17:22:12">2023-07-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:46:12.000Z" title="更新于 2023-09-08 09:46:12">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java%E5%9F%BA%E7%A1%80/">Java基础</a></span></div><div class="content">Java是一种广泛应用的编程语言，在Java开发中有一些必须了解的专有名词。对于初学者来说，这些名词可能有些陌生，但理解它们对于掌握Java开发是至关重要的。在本文中，我们将简单明了地介绍这些专有名词。
+
+JDK（Java Development Kit）JDK是Java开发工具包，它是开发Java应用程序所必需的核心工具集。其中包括了编译器（用于将Java源代码编译为字节码）、调试器（用于调试程序）、类库（提供各种Java类和方法）等。JDK是开发Java应用程序的基石，必须安装和配置好才能开始编写Java代码。
+
+JVM（Java Virtual Machine）JVM是Java虚拟机，它是Java程序运行的环境。JVM会将Java字节码解释或编译成机器码，并执行程序。JVM具有跨平台特性，使得Java程序在不同的操作系统上能够运行。
+
+OOP（Object-Oriented Programming）OOP是面向对象编程的缩写，是一种编程范式。在Java中，一切都是对象，通过封装、继承和多态等概念，以对象为基本单位进行软件设计和开发。OOP使得代码更加模块化、可维护和可扩展。
+
+I ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/65435.html" title="SQL执行过程"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308291738541.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SQL执行过程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/65435.html" title="SQL执行过程">SQL执行过程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-29T08:30:02.000Z" title="发表于 2023-07-29 16:30:02">2023-07-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:47:52.000Z" title="更新于 2023-09-08 09:47:52">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Oracle/">Oracle</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Oracle/">Oracle</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/SQL/">SQL</a></span></div><div class="content">流程图
+执行过程建立连接  用户在客户端输入执行SQL，该SQL语句通过session传输到服务器端，服务器通过Server Process接收SQL语句。客户端无需再做其他的操作，只是将SQL语句发送给服务端。
+查看Lib Cache  服务器进程在接到客户端传送过来的 SQL 语句后，不会直接去数据库查询。服务器进程会把这个 SQL 语句的字符进行转码，将转码后的值传递给一个 HASH 函数，并返回一个 hash 值，然后服务器进程将到 shared pool 的 library cache （高速缓存）中去查找是否存在相同的 hash 值。如果存在，服务器进程将使用这条语句已高速缓存在 library cache 中的已分析过的解析树和执行计划，省去后续的解析工作，这便是软解析。若高速缓存中不存在，则仍需要继续解析SQL、生成最佳执行计划，这便是硬解析，硬解析通常是昂贵的操作，大约占整个 SQL 执行的 70% 左右的时间。​  所以，采用高速数据缓存的话，可以提高 SQL 语句的查询效率。其原因有两方面：一方面是从内存中读取数据要比从硬盘中的数据文件中读取数据效率要高，另一方面 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/3039.html" title="TDSQL For MySQL认证-单选题"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308291740627.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TDSQL For MySQL认证-单选题"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/3039.html" title="TDSQL For MySQL认证-单选题">TDSQL For MySQL认证-单选题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-29T06:41:17.000Z" title="发表于 2023-07-29 14:41:17">2023-07-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:48:09.000Z" title="更新于 2023-09-08 09:48:09">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/TDSQL/">TDSQL</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/TDSQL/">TDSQL</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/MySQL/">MySQL</a></span></div><div class="content">
+
+TDSQL(mysql)下列关于主键错误的是().
+A. InnoDB表必须指定主键B. 尽量游免更新主键字段C. 如果存在多个唯一健，考虑最常用的唯一键作为主键D. 主键值可以为空
+
+D. 主键值不可以为空，是错误的，应该修改为主键值不允许为空。
+
+在TDSQL中，主键是数据库表中的一个特殊字段，它的值必须是唯一的，且不允许为空，用来唯一标识一条记录。因此，选项D是错误的。选项A是正确的，在使用InnoDB存储引擎的表中，必须指定主键。选项B是正确的，尽量避免对主键字段进行更新操作，以减少索引维护的成本。选项C是合理的建议，根据最常用的唯一键作为主键可以提高查询效率和数据存储的规范性。
+
+
+
+在mysql 中innodb引擎表T1，执行update t1 set a=2 where id =1；语句，id列有索引，下面描述正确的是（）.A. 加表锁B. 不加锁C. 加行锁D. 加字段锁
+
+C. 加行锁。
+
+在MySQL中，InnoDB引擎支持行级锁，当执行类似 update t1 set a=2 where id =1 的语句时，根据id列的索引，InnoDB引擎会为该行加上行锁 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/11880.html" title="Java开发学习路线"><img class="post-bg" src="https://www.cdn.cheneyblog.com/blog/202308291737161.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java开发学习路线"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/11880.html" title="Java开发学习路线">Java开发学习路线</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-29T05:48:32.000Z" title="发表于 2023-07-29 13:48:32">2023-07-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-08T01:47:31.000Z" title="更新于 2023-09-08 09:47:31">2023-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java/">Java</a></span></div><div class="content">今天，我们将为大家分享自学Java开发的学习路线，助力您步入编程的精彩世界。无论您是对编程感兴趣的新手，还是希望升级自己技能的开发者，本文将为您提供一份简明扼要的指南。让我们一起探索自学Java开发的学习之旅吧！
+掌握Java基础知识Java是一门广泛应用的编程语言，熟练掌握其基础知识是成为合格Java开发者的第一步。以下是您应该着重学习的内容：
+
+语法基础：了解Java的关键词、数据类型、变量、运算符、流程控制等基本语法。
+
+面向对象编程（OOP）：掌握类、对象、继承、多态、封装等OOP的核心概念。
+
+Java集合框架：学习常用的集合类如List、Set、Map等，掌握它们的用法和特性。
+
+异常处理：了解异常的概念、处理机制和异常处理的最佳实践。
+
+
+深入学习Java核心技术除了基础知识外，了解Java核心技术将帮助您更全面地应用和理解Java开发。以下是您应该关注的主题：
+
+IO操作和文件处理：学习Java中的输入输出操作，包括文件读写、流操作、序列化等。
+
+多线程编程：掌握多线程的概念、线程同步、锁机制等，以提高程序的并发性能。
+
+网络编程：了解Socket编程、HTTP协议等， ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/10/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/#content-inner">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/#content-inner">12</a><a class="extend next" rel="next" href="/page/12/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Cheney</div><div class="author-info__description">中年程序猿的自我救赎，记录日常的技术整理和心得分享，涉及技术栈:SQL,Java,Python,Oracle,MySQL,大数据等</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/henry-chr"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:850318517@qq.com" target="_blank" title="Email"><i class="far fa-envelope"></i></a><a class="social-icon" href="https://gitee.com/henry-chr" target="_blank" title="Gitee"><i class="fab fa-github"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Digitalize/"><span class="card-category-list-name">Digitalize</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Docker/"><span class="card-category-list-name">Docker</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo/"><span class="card-category-list-name">Hexo</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/HtmlCss/"><span class="card-category-list-name">HtmlCss</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Internet/"><span class="card-category-list-name">Internet</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">15</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Oracle/"><span class="card-category-list-name">Oracle</span><span class="card-category-list-count">43</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">26</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Digitalize/" style="font-size: 1.15em; color: rgb(106, 88, 59)">Digitalize (1)</a><a href="/tags/Docker/" style="font-size: 1.27em; color: rgb(66, 7, 171)">Docker (3)</a><a href="/tags/Hexo/" style="font-size: 1.15em; color: rgb(0, 43, 120)">Hexo (1)</a><a href="/tags/Git/" style="font-size: 1.15em; color: rgb(26, 78, 44)">Git (1)</a><a href="/tags/Node-js/" style="font-size: 1.15em; color: rgb(52, 127, 190)">Node.js (1)</a><a href="/tags/HtmlCss/" style="font-size: 1.15em; color: rgb(130, 18, 151)">HtmlCss (1)</a><a href="/tags/Internet/" style="font-size: 1.15em; color: rgb(16, 196, 33)">Internet (1)</a><a href="/tags/Java/" style="font-size: 1.21em; color: rgb(99, 25, 77)">Java (2)</a><a href="/tags/Oracle/" style="font-size: 1.45em; color: rgb(74, 47, 16)">Oracle (43)</a><a href="/tags/Python/" style="font-size: 1.15em; color: rgb(30, 154, 180)">Python (1)</a><a href="/tags/TDSQL/" style="font-size: 1.15em; color: rgb(118, 182, 48)">TDSQL (1)</a><a href="/tags/MySQL/" style="font-size: 1.15em; color: rgb(179, 110, 114)">MySQL (1)</a><a href="/tags/Web%E7%94%9F%E6%80%81/" style="font-size: 1.39em; color: rgb(192, 75, 71)">Web生态 (18)</a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.33em; color: rgb(48, 128, 144)">爬虫 (13)</a><a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 1.33em; color: rgb(125, 59, 84)">Java基础 (13)</a><a href="/tags/SQL/" style="font-size: 1.15em; color: rgb(53, 63, 110)">SQL (1)</a><a href="/tags/Python%E5%9F%BA%E7%A1%80/" style="font-size: 1.33em; color: rgb(104, 68, 32)">Python基础 (13)</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">111</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-07-16T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">102.2k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-12-21T08:50:07.492Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023  <i id="heartbeat" class="fa fas fa-heartbeat"></i> Cheney</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/typed.js/2.0.12/typed.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["程序是为人而写，偶尔也供机器读取。","程序员有两个最大的敌人：计算机和程序员自己。","软件设计就是组织复杂性的艺术。","代码是写给人看的，顺便给机器执行。"])
+  } else {
+    document.getElementById("subtitle").textContent = "程序是为人而写，偶尔也供机器读取。"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script data-pjax defer src="https://npm.elemecdn.com/tzy-blog/lib/js/theme/chocolate.js"></script><canvas id="universe"></canvas><script src="/js/script.js?1"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="1024,Java,Python,SQL,Oracle,MySql,Vue,Hexo,Linux,Shell,C++,Html,CSS" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

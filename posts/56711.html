@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>PyQuery：轻松搞定网页解析和数据提取 | 宸汐缘</title><meta name="author" content="Cheney"><meta name="copyright" content="Cheney"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Python爬虫领域一直在不断演进，而PyQuery模块作为其中的重要利器之一，提供了一种优雅而强大的方式来解析HTML文档，并进行数据提取和分析。本文将深入探讨PyQuery模块的常用方法，并通过举例说明其用法和魔力。 简介PyQuery是Python中的HTML&#x2F;XML解析库，其灵感来自于jQuery。它提供了一种更加Pythonic的方式来操作文档，使得解析和提取数据变得简单而高效。 安装首">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyQuery：轻松搞定网页解析和数据提取">
+<meta property="og:url" content="https://www.cheneyblog.com/posts/56711.html">
+<meta property="og:site_name" content="宸汐缘">
+<meta property="og:description" content="Python爬虫领域一直在不断演进，而PyQuery模块作为其中的重要利器之一，提供了一种优雅而强大的方式来解析HTML文档，并进行数据提取和分析。本文将深入探讨PyQuery模块的常用方法，并通过举例说明其用法和魔力。 简介PyQuery是Python中的HTML&#x2F;XML解析库，其灵感来自于jQuery。它提供了一种更加Pythonic的方式来操作文档，使得解析和提取数据变得简单而高效。 安装首">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.cdn.cheneyblog.com/blog/202312182223720.gif">
+<meta property="article:published_time" content="2023-12-18T14:19:35.000Z">
+<meta property="article:modified_time" content="2023-12-20T07:49:21.579Z">
+<meta property="article:author" content="Cheney">
+<meta property="article:tag" content="爬虫">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.cdn.cheneyblog.com/blog/202312182223720.gif"><link rel="shortcut icon" href="https://www.cdn.cheneyblog.com/blog/202307211052086.png"><link rel="canonical" href="https://www.cheneyblog.com/posts/56711.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Cheney","link":"链接: ","source":"来源: 宸汐缘","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'PyQuery：轻松搞定网页解析和数据提取',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-20 15:49:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/style.css?1"><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li><li><a class="site-page child" href="/categories/Python"><i class="fa-fw fa fa-sitemap"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-toolbox"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Hexo"><i class="fa-fw fa-solid fa-blog"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/categories/Docker"><i class="fa-fw fas fa-city"></i><span> Docker</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/categories/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://www.cdn.cheneyblog.com/blog/202312182223720.gif')"><nav id="nav"><span id="blog-info"><a href="/" title="宸汐缘"><img class="site-icon" src="https://www.cdn.cheneyblog.com/blog/202307211053392.png"/><span class="site-name">宸汐缘</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li><li><a class="site-page child" href="/categories/Python"><i class="fa-fw fa fa-sitemap"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-toolbox"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Hexo"><i class="fa-fw fa-solid fa-blog"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/categories/Docker"><i class="fa-fw fas fa-city"></i><span> Docker</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/categories/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">PyQuery：轻松搞定网页解析和数据提取</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-18T14:19:35.000Z" title="发表于 2023-12-18 22:19:35">2023-12-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-20T07:49:21.579Z" title="更新于 2023-12-20 15:49:21">2023-12-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/">Python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="PyQuery：轻松搞定网页解析和数据提取"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>Python爬虫领域一直在不断演进，而PyQuery模块作为其中的重要利器之一，提供了一种优雅而强大的方式来解析HTML文档，并进行数据提取和分析。本文将深入探讨PyQuery模块的常用方法，并通过举例说明其用法和魔力。</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>PyQuery是Python中的HTML/XML解析库，其灵感来自于jQuery。它提供了一种更加Pythonic的方式来操作文档，使得解析和提取数据变得简单而高效。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>首先，确保你已经安装了PyQuery模块。你可以使用pip命令来安装：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyquery</span><br></pre></td></tr></table></figure>
+
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>以下是使用PyQuery解析HTML文档的基本步骤：</p>
+<ol>
+<li><p>导入PyQuery模块：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyquery <span class="keyword">import</span> PyQuery <span class="keyword">as</span> pq</span><br></pre></td></tr></table></figure></li>
+<li><p>创建PyQuery对象：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">doc = pq(html_doc)</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>html_doc</code>是你要解析的HTML文档。</p>
+</li>
+<li><p>使用PyQuery对象进行提取数据：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 选择元素</span></span><br><span class="line">element = doc(<span class="string">&#x27;tag&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取元素文本</span></span><br><span class="line">text = element.text()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取元素属性</span></span><br><span class="line">attribute_value = element.attr(<span class="string">&#x27;attribute&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>你还可以使用类似jQuery的选择器语法来选择元素、查找子元素、过滤元素等，非常灵活方便。</p>
+</li>
+</ol>
+<h2 id="实例演示"><a href="#实例演示" class="headerlink" title="实例演示"></a>实例演示</h2><p>假设我们想从一个网页中提取出所有的图片链接和它们的描述文字。下面是使用PyQuery模块实现的示例代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyquery <span class="keyword">import</span> PyQuery <span class="keyword">as</span> pq</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">header = &#123;</span><br><span class="line">    <span class="string">&quot;User-Agent&quot;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 &quot;</span></span><br><span class="line">                  <span class="string">&quot;Safari/537.36 Edg/120.0.0.0&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发送HTTP请求，获取网页内容</span></span><br><span class="line">response = requests.get(<span class="string">&#x27;https://book.douban.com/&#x27;</span>, headers=header)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;test.html&quot;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    file.write(response.text)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建PyQuery对象</span></span><br><span class="line">doc = pq(filename=<span class="string">&quot;test.html&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取所有图片链接和描述文字</span></span><br><span class="line">books = []</span><br><span class="line">book_list = doc(<span class="string">&#x27;.more-meta&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> book_list.items():</span><br><span class="line">    title = item(<span class="string">&#x27;.title&#x27;</span>).text()</span><br><span class="line">    author = item(<span class="string">&#x27;.author&#x27;</span>).text()</span><br><span class="line">    year = item(<span class="string">&#x27;.year&#x27;</span>).text()</span><br><span class="line">    publisher = item(<span class="string">&#x27;.publisher&#x27;</span>).text()</span><br><span class="line">    abstract = item(<span class="string">&#x27;.abstract&#x27;</span>).text()</span><br><span class="line">    book_dict = &#123;<span class="string">&quot;title&quot;</span>: title, <span class="string">&quot;author&quot;</span>: author, <span class="string">&quot;year&quot;</span>: year, <span class="string">&quot;publisher&quot;</span>: publisher, <span class="string">&quot;abstract&quot;</span>: abstract&#125;</span><br><span class="line">    books.append(book_dict)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> book <span class="keyword">in</span> books:</span><br><span class="line">    <span class="built_in">print</span>(book)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># &#123;&#x27;title&#x27;: &#x27;散步：罗伯特·瓦尔泽中短篇小说集&#x27;, &#x27;author&#x27;: &#x27;[瑞士]罗伯特·瓦尔泽&#x27;, &#x27;year&#x27;: &#x27;2023-11&#x27;, &#x27;publisher&#x27;: &#x27;广西师范大学出版社&#x27;, &#x27;abstract&#x27;: &#x27;【编辑推荐】 ⭐现代德语文学奠基人罗伯特·瓦尔泽中短篇小说集，精心编选，全新呈现！ 他被誉为 “错过了时间的散步者”“细微之处的洞见者”“命运如雪的诗人”； 他是被埋没的天才作家，一生坚持不懈地为小人物著书立传； 他与穆齐尔、卡夫卡齐名，影响深远，被追认为现代德语文学奠基人。 罗伯特·瓦尔泽——“柏林三部曲”+精选故事集，德语直译，全新译本携手出版！ ...&#x27;&#125;</span></span><br><span class="line"><span class="comment"># &#123;&#x27;title&#x27;: &#x27;女人味的昨天、今天和明天：宫本百合子随笔集&#x27;, &#x27;author&#x27;: &#x27;[日]宫本百合子&#x27;, &#x27;year&#x27;: &#x27;2023-11&#x27;, &#x27;publisher&#x27;: &#x27;贵州人民出版社&#x27;, &#x27;abstract&#x27;: &#x27;亚洲女性主义先驱，近百年前坚决抵制男凝 “日本的波伏娃”，东亚版《第二性》 刨根问底“女人味”的前世今生，重走女性主义来时路 为古今东西被曲解、被规训的女人们正名 🌊 编辑推荐： 阻碍女性的，正是被创造出来的“女人味” 《伊利亚特》《蒙娜丽莎》《傲慢与偏见》《源氏物语》《我是猫》…… 女人是如何被塑造的，她们的觉醒又是如何一再被打断的？ “我们”不再是观...&#x27;&#125;</span></span><br><span class="line"><span class="comment"># &#123;&#x27;title&#x27;: &#x27;拉莫莱特之吻：有关文化史的思考&#x27;, &#x27;author&#x27;: &#x27;(美) 罗伯特·达恩顿&#x27;, &#x27;year&#x27;: &#x27;2024-1&#x27;, &#x27;publisher&#x27;: &#x27;上海教育出版社&#x27;, &#x27;abstract&#x27;: &#x27;想象怎么能是历史呢？ 历史学家要进入已逝的世界，光靠方法理论那一套是不行的，还需要大胆想象。 本书有四个目的：第一，是要显示过去如何作为暗流存在于当下；第二，是要通过个案来分析媒体的作用；第三，借本书的写作过程来昭示媒体研究中的历史向度；第四，在这些讨论的基础上探讨宏观历史以及与历史相关的其他人文领域。&#x27;&#125;</span></span><br><span class="line"><span class="comment"># &#123;&#x27;title&#x27;: &#x27;国家与学术的地方互动：四川大学国立化进程（1925-1939）（修订本）&#x27;, &#x27;author&#x27;: &#x27;王东杰&#x27;, &#x27;year&#x27;: &#x27;2023-11&#x27;, &#x27;publisher&#x27;: &#x27;四川人民出版社&#x27;, &#x27;abstract&#x27;: &#x27;本书是集中讨论中国现代大学与国家关系的优秀作品。本书最重要的特色是从“基层”入手，着重反映地方经验，从而深化了我们在中国民族主义问题上的认知和理解。从方法论上，书稿也体现出作者将历史学和人类学加以结合的跨学科研究的努力。此书立论具体而充实，背后所反映的问题极大。其取材丰富，不仅充分利用留存档案，更以报刊、文集等各类文献互相比证。其见识不受...&#x27;&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>通过以上代码，我们成功地从网页中提取了所有图片链接和它们的描述文字。PyQuery模块的灵活性和强大功能使得数据提取变得十分便捷。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>PyQuery模块是Python爬虫领域不可或缺的工具之一。希望通过本文的介绍，你对PyQuery模块有了更深入的了解，并能充分发挥它的潜力。无论你是在进行网页内容解析、数据提取还是其他任务，PyQuery模块都会成为你的得力助手。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.cheneyblog.com">Cheney</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.cheneyblog.com/posts/56711.html">https://www.cheneyblog.com/posts/56711.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.cheneyblog.com" target="_blank">宸汐缘</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%88%AC%E8%99%AB/">爬虫</a></div><div class="post_share"><div class="social-share" data-image="https://www.cdn.cheneyblog.com/blog/202312182223720.gif" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://www.cdn.cheneyblog.com/blog/202312171658035.jpg" target="_blank"><img class="post-qr-code-img" src="https://www.cdn.cheneyblog.com/blog/202312171658035.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://www.cdn.cheneyblog.com/blog/202312171659217.jpg" target="_blank"><img class="post-qr-code-img" src="https://www.cdn.cheneyblog.com/blog/202312171659217.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/53891.html" title="XPath表达式：精准定位文档节点"><img class="cover" src="https://www.cdn.cheneyblog.com//blog/202312191728814.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-19</div><div class="title">XPath表达式：精准定位文档节点</div></div></a></div><div><a href="/posts/35834.html" title="解剖HTML的魔幻术：揭秘BeautifulSoup模块的元素操控艺术"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202312182223555.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-17</div><div class="title">解剖HTML的魔幻术：揭秘BeautifulSoup模块的元素操控艺术</div></div></a></div><div><a href="/posts/21220.html" title="使用Python和Selenium打造你的Web自动化之旅"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202312192056812.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-19</div><div class="title">使用Python和Selenium打造你的Web自动化之旅</div></div></a></div><div><a href="/posts/19502.html" title="Builtwith模块：快速识别网站所用技术栈"><img class="cover" src="https://www.cdn.cheneyblog.com//blog/202311270007160.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-27</div><div class="title">Builtwith模块：快速识别网站所用技术栈</div></div></a></div><div><a href="/posts/50810.html" title="certifi：保障Python与Https服务器间的安全连接"><img class="cover" src="https://www.cdn.cheneyblog.com//blog/202312061353532.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-06</div><div class="title">certifi：保障Python与Https服务器间的安全连接</div></div></a></div><div><a href="/posts/63921.html" title="python-whois:轻松获取网站的WHOIS信息"><img class="cover" src="https://www.cdn.cheneyblog.com//blog/202312051337917.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-05</div><div class="title">python-whois:轻松获取网站的WHOIS信息</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Cheney</div><div class="author-info__description">中年程序猿的自我救赎，记录日常的技术整理和心得分享，涉及技术栈:SQL,Java,Python,Oracle,MySQL,大数据等</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/henry-chr"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:850318517@qq.com" target="_blank" title="Email"><i class="far fa-envelope"></i></a><a class="social-icon" href="https://gitee.com/henry-chr" target="_blank" title="Gitee"><i class="fab fa-github"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA"><span class="toc-number">4.</span> <span class="toc-text">实例演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">5.</span> <span class="toc-text">结论</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023  <i id="heartbeat" class="fa fas fa-heartbeat"></i> Cheney</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script><div class="js-pjax"></div><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script data-pjax defer src="https://npm.elemecdn.com/tzy-blog/lib/js/theme/chocolate.js"></script><canvas id="universe"></canvas><script src="/js/script.js?1"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="1024,Java,Python,SQL,Oracle,MySql,Vue,Hexo,Linux,Shell,C++,Html,CSS" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
