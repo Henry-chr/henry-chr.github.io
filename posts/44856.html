@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Java格式化输出指南 | 宸汐缘</title><meta name="author" content="Cheney"><meta name="copyright" content="Cheney"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Java中的格式化输出主要用于将数据以特定的格式输出到控制台或文件中。这种输出方式可以让输出的数据更易于阅读和理解，并且可以按照规定的格式进行对齐和排列。 使用格式化输出可以控制输出的字符串的长度、精度、对齐方式等，可以输出带有特定格式的日期、时间和数字。这对于生成报表、日志、表格等结构化的输出非常有用，也能提供更好的用户体验。 String.format 方法String.format 方法可以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java格式化输出指南">
+<meta property="og:url" content="https://www.cheneyblog.com/posts/44856.html">
+<meta property="og:site_name" content="宸汐缘">
+<meta property="og:description" content="Java中的格式化输出主要用于将数据以特定的格式输出到控制台或文件中。这种输出方式可以让输出的数据更易于阅读和理解，并且可以按照规定的格式进行对齐和排列。 使用格式化输出可以控制输出的字符串的长度、精度、对齐方式等，可以输出带有特定格式的日期、时间和数字。这对于生成报表、日志、表格等结构化的输出非常有用，也能提供更好的用户体验。 String.format 方法String.format 方法可以">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.cdn.cheneyblog.com//blog/202401151606424.png">
+<meta property="article:published_time" content="2024-01-15T02:44:58.000Z">
+<meta property="article:modified_time" content="2024-01-15T08:06:41.196Z">
+<meta property="article:author" content="Cheney">
+<meta property="article:tag" content="Java基础">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.cdn.cheneyblog.com//blog/202401151606424.png"><link rel="shortcut icon" href="https://www.cdn.cheneyblog.com/blog/202307211052086.png"><link rel="canonical" href="https://www.cheneyblog.com/posts/44856.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java格式化输出指南',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-15 16:06:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/style.css?1"><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">128</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li><li><a class="site-page child" href="/categories/Python"><i class="fa-fw fa fa-sitemap"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-toolbox"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Hexo"><i class="fa-fw fa-solid fa-blog"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/categories/Docker"><i class="fa-fw fas fa-city"></i><span> Docker</span></a></li><li><a class="site-page child" href="/categories/Conda"><i class="fa-fw fas fa-code-branch"></i><span> Conda</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/categories/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li><li><a class="site-page child" href="/categories/AI"><i class="fa-fw fa-brands fa-airbnb"></i><span> AI</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://www.cdn.cheneyblog.com//blog/202401151606424.png')"><nav id="nav"><span id="blog-info"><a href="/" title="宸汐缘"><img class="site-icon" src="https://www.cdn.cheneyblog.com/blog/202307211053392.png"/><span class="site-name">宸汐缘</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li><li><a class="site-page child" href="/categories/Python"><i class="fa-fw fa fa-sitemap"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-toolbox"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Hexo"><i class="fa-fw fa-solid fa-blog"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/categories/Docker"><i class="fa-fw fas fa-city"></i><span> Docker</span></a></li><li><a class="site-page child" href="/categories/Conda"><i class="fa-fw fas fa-code-branch"></i><span> Conda</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/categories/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li><li><a class="site-page child" href="/categories/AI"><i class="fa-fw fa-brands fa-airbnb"></i><span> AI</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java格式化输出指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-15T02:44:58.000Z" title="发表于 2024-01-15 10:44:58">2024-01-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-15T08:06:41.196Z" title="更新于 2024-01-15 16:06:41">2024-01-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Java/">Java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Java格式化输出指南"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>Java中的格式化输出主要用于将数据以特定的格式输出到控制台或文件中。这种输出方式可以让输出的数据更易于阅读和理解，并且可以按照规定的格式进行对齐和排列。</p>
+<p>使用格式化输出可以控制输出的字符串的长度、精度、对齐方式等，可以输出带有特定格式的日期、时间和数字。这对于生成报表、日志、表格等结构化的输出非常有用，也能提供更好的用户体验。</p>
+<h2 id="String-format-方法"><a href="#String-format-方法" class="headerlink" title="String.format 方法"></a>String.format 方法</h2><p><code>String.format</code> 方法可以用于创建格式化的字符串，它的用法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">formattedString</span> <span class="operator">=</span> String.format(format, args);</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>format</code> 是格式化字符串，用于指定输出的格式；<code>args</code> 是要插入到格式化字符串中的参数。格式化字符串可以包含转换说明符（conversion specifiers）、标志（flags）、宽度（width）、精度（precision）等，用于指定输出的格式。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">formattedString</span> <span class="operator">=</span> String.format(<span class="string">&quot;Hello, %s! Today is %tF&quot;</span>, <span class="string">&quot;Alice&quot;</span>, <span class="keyword">new</span> <span class="title class_">Date</span>());</span><br><span class="line">System.out.println(formattedString);</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>%s</code> 用于替换字符串，<code>%tF</code> 用于替换日期，<code>%tF</code> 是日期格式化的一种方式。</p>
+<h2 id="System-out-printf-方法"><a href="#System-out-printf-方法" class="headerlink" title="System.out.printf 方法"></a>System.out.printf 方法</h2><p><code>System.out.printf</code> 方法可以用于格式化输出到标准输出流，它的用法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.printf(format, args);</span><br></pre></td></tr></table></figure>
+
+<p>与 <code>String.format</code> 方法类似，<code>format</code> 是格式化字符串，<code>args</code> 是要插入到格式化字符串中的参数。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;Bob&quot;</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">30</span>;</span><br><span class="line">System.out.printf(<span class="string">&quot;Name: %s, Age: %d&quot;</span>, name, age);</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>%s</code> 用于替换字符串，<code>%d</code> 用于替换整数。</p>
+<h2 id="转换符"><a href="#转换符" class="headerlink" title="转换符"></a>转换符</h2><table>
+<thead>
+<tr>
+<th>转换符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%d</td>
+<td>整数型</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>浮点型</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>字符型</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>字符串</td>
+</tr>
+<tr>
+<td>%b</td>
+<td>布尔型</td>
+</tr>
+<tr>
+<td>%x</td>
+<td>十六进制</td>
+</tr>
+<tr>
+<td>%o</td>
+<td>八进制</td>
+</tr>
+<tr>
+<td>%e</td>
+<td>科学计数法</td>
+</tr>
+<tr>
+<td>%tA</td>
+<td>完整星期名称</td>
+</tr>
+<tr>
+<td>%ta</td>
+<td>缩写星期名称</td>
+</tr>
+<tr>
+<td>%tB</td>
+<td>完整月份名称</td>
+</tr>
+<tr>
+<td>%tb</td>
+<td>缩写月份名称</td>
+</tr>
+<tr>
+<td>%tY</td>
+<td>4 位年份</td>
+</tr>
+<tr>
+<td>%ty</td>
+<td>2 位年份</td>
+</tr>
+<tr>
+<td>%tm</td>
+<td>2 位月份</td>
+</tr>
+<tr>
+<td>%td</td>
+<td>2 位日</td>
+</tr>
+<tr>
+<td>%tH</td>
+<td>24 小时格式的小时</td>
+</tr>
+<tr>
+<td>%tI</td>
+<td>12 小时格式的小时</td>
+</tr>
+<tr>
+<td>%tM</td>
+<td>2 位分钟</td>
+</tr>
+<tr>
+<td>%tS</td>
+<td>2 位秒数</td>
+</tr>
+<tr>
+<td>%tp</td>
+<td>上午或下午</td>
+</tr>
+</tbody></table>
+<h2 id="标志符"><a href="#标志符" class="headerlink" title="标志符"></a>标志符</h2><table>
+<thead>
+<tr>
+<th>标识符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-</code></td>
+<td>结果将是左对齐的。默认情况下，结果将是右对齐的。</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>结果将包括一个加号（+）对于正数或一个减号（-）对于负数。默认情况下，只有负数前面才会添加减号。</td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>结果将用零来填充，而不是空格。默认情况下，结果将使用空格来填充。</td>
+</tr>
+<tr>
+<td><code>,</code></td>
+<td>用作分组分隔符。例如，<code>12345</code> 可以用 <code>,</code> 标识符来格式化为 <code>12,345</code>。</td>
+</tr>
+<tr>
+<td><code>(</code></td>
+<td>结果将在负数前面加上括号。例如，<code>-10</code> 可以被格式化为 <code>(10)</code>。</td>
+</tr>
+<tr>
+<td><code>#</code></td>
+<td>根据不同的转换类型，对结果加上特定的标记。例如，在十六进制数中使用 <code>#</code> 可以表示加上 <code>0x</code> 前缀，对于浮点数则表示包括小数点。</td>
+</tr>
+<tr>
+<td><code>&lt;空格&gt;</code></td>
+<td>结果将包括一个前导的空格（对于正数），而不是加号。</td>
+</tr>
+</tbody></table>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 格式化字符串输出</span></span><br><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;Alice&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">formattedString</span> <span class="operator">=</span> String.format(<span class="string">&quot;Hello, %s!&quot;</span>, name);</span><br><span class="line">System.out.println(formattedString); <span class="comment">// 输出：Hello, Alice!</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 格式化浮点数输出</span></span><br><span class="line"><span class="type">double</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">123.456</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">formattedNumber</span> <span class="operator">=</span> String.format(<span class="string">&quot;The number is: %f&quot;</span>, number);</span><br><span class="line">System.out.println(formattedNumber); <span class="comment">// 输出：The number is: 123.456000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用标志符进行浮点数格式化输出</span></span><br><span class="line"><span class="type">double</span> <span class="variable">number1</span> <span class="operator">=</span> <span class="number">123.456</span>;</span><br><span class="line"><span class="comment">// 格式化输出一个浮点数，带正负号，总宽度为10如果不足则在左侧使用空格进行填充，保留小数点后两位。</span></span><br><span class="line"><span class="type">String</span> <span class="variable">formattedNumber1</span> <span class="operator">=</span> String.format(<span class="string">&quot;The number is: %+10.2f&quot;</span>, number1);</span><br><span class="line">System.out.println(formattedNumber1); <span class="comment">// 输出：The number is:    +123.46</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 格式化时间输出</span></span><br><span class="line"><span class="type">Date</span> <span class="variable">now</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line"><span class="type">String</span> <span class="variable">formattedTime</span> <span class="operator">=</span> String.format(<span class="string">&quot;Current time: %tF %tT&quot;</span>, now, now);</span><br><span class="line">System.out.println(formattedTime); <span class="comment">// 输出：Current time: 2024-01-15 14:30:00</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用标志符进行时间格式化输出</span></span><br><span class="line"><span class="type">Date</span> <span class="variable">now1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line"><span class="comment">// &lt;：表示在当前位置使用前面给出的参数列表中的参数，避免重复指定参数。</span></span><br><span class="line"><span class="type">String</span> <span class="variable">formattedTime1</span> <span class="operator">=</span> String.format(<span class="string">&quot;Current time: %tA, %&lt;tB %&lt;td, %&lt;tY&quot;</span>, now1);</span><br><span class="line">System.out.println(formattedTime1); <span class="comment">// 输出：Current time: Sunday, January 15, 2024</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用标志符控制对齐方式和最小宽度</span></span><br><span class="line"><span class="type">int</span> <span class="variable">number1</span> <span class="operator">=</span> <span class="number">123</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">number2</span> <span class="operator">=</span> <span class="number">456</span>;</span><br><span class="line">System.out.printf(<span class="string">&quot;Left aligned: %-10d, Right aligned: %10d%n&quot;</span>, number1, number2);</span><br><span class="line"><span class="comment">// 输出：Left aligned: 123       , Right aligned:        456</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用标志符控制数值的显示格式</span></span><br><span class="line"><span class="type">double</span> <span class="variable">value</span> <span class="operator">=</span> <span class="number">12345.6789</span>;</span><br><span class="line">System.out.printf(<span class="string">&quot;Scientific notation: %e, Currency: %.2f%n&quot;</span>, value, value);</span><br><span class="line"><span class="comment">// 输出：Scientific notation: 1.234568e+04, Currency: 12345.68</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用标志符控制日期时间的显示格式</span></span><br><span class="line"><span class="type">Date</span> <span class="variable">now</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">System.out.printf(<span class="string">&quot;24-hour time: %tT, 12-hour time: %tr%n&quot;</span>, now, now);</span><br><span class="line"><span class="comment">// 输出：24-hour time: 14:30:00, 12-hour time: 02:30:00 PM</span></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.cheneyblog.com">Cheney</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.cheneyblog.com/posts/44856.html">https://www.cheneyblog.com/posts/44856.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.cheneyblog.com" target="_blank">宸汐缘</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java%E5%9F%BA%E7%A1%80/">Java基础</a></div><div class="post_share"><div class="social-share" data-image="https://www.cdn.cheneyblog.com//blog/202401151606424.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://www.cdn.cheneyblog.com/blog/202312171658035.jpg" target="_blank"><img class="post-qr-code-img" src="https://www.cdn.cheneyblog.com/blog/202312171658035.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://www.cdn.cheneyblog.com/blog/202312171659217.jpg" target="_blank"><img class="post-qr-code-img" src="https://www.cdn.cheneyblog.com/blog/202312171659217.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/42343.html" title="精通Java流程控制：玩转条件和循环，打造高效编程之路！"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202309111513412.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-11</div><div class="title">精通Java流程控制：玩转条件和循环，打造高效编程之路！</div></div></a></div><div><a href="/posts/37227.html" title="巧妙运用Java表达式：编程中的算术与逻辑之道"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202309121048366.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-12</div><div class="title">巧妙运用Java表达式：编程中的算术与逻辑之道</div></div></a></div><div><a href="/posts/50102.html" title="Java数组解析：探索数据存储与操作的利器"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202309121112059.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-12</div><div class="title">Java数组解析：探索数据存储与操作的利器</div></div></a></div><div><a href="/posts/42473.html" title="Java编程语言：优雅而强大的编程利器"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202309111600607.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-11</div><div class="title">Java编程语言：优雅而强大的编程利器</div></div></a></div><div><a href="/posts/4785.html" title="探索Java开发的专有名词：掌握专有术语，驾驭编程世界！"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202308291736431.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-29</div><div class="title">探索Java开发的专有名词：掌握专有术语，驾驭编程世界！</div></div></a></div><div><a href="/posts/55389.html" title="Java JDK：解锁编程之门，探索Java开发必备利器"><img class="cover" src="https://www.cdn.cheneyblog.com/blog/202308291736227.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-29</div><div class="title">Java JDK：解锁编程之门，探索Java开发必备利器</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Cheney</div><div class="author-info__description">中年程序猿的自我救赎，记录日常的技术整理和心得分享，涉及技术栈:SQL,Java,Python,Oracle,MySQL,大数据等</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">128</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/henry-chr"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:850318517@qq.com" target="_blank" title="Email"><i class="far fa-envelope"></i></a><a class="social-icon" href="https://gitee.com/henry-chr" target="_blank" title="Gitee"><i class="fab fa-github"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#String-format-%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">String.format 方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#System-out-printf-%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">System.out.printf 方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E7%AC%A6"><span class="toc-number">3.</span> <span class="toc-text">转换符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%BF%97%E7%AC%A6"><span class="toc-number">4.</span> <span class="toc-text">标志符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">5.</span> <span class="toc-text">示例</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024  <i id="heartbeat" class="fa fas fa-heartbeat"></i> Cheney</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script><div class="js-pjax"></div><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script data-pjax defer src="https://npm.elemecdn.com/tzy-blog/lib/js/theme/chocolate.js"></script><canvas id="universe"></canvas><script src="/js/script.js?1"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="1024,Java,Python,SQL,Oracle,MySql,Vue,Hexo,Linux,Shell,C++,Html,CSS" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
