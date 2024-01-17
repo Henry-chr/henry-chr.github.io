@@ -113,7 +113,7 @@
       
       <categories>
           
-          <category> Conda </category>
+          <category> Tools </category>
           
       </categories>
       
@@ -138,7 +138,7 @@
       
       <categories>
           
-          <category> Conda </category>
+          <category> Tools </category>
           
       </categories>
       
@@ -163,7 +163,7 @@
       
       <categories>
           
-          <category> Conda </category>
+          <category> Tools </category>
           
       </categories>
       
@@ -1490,7 +1490,7 @@
       
       <categories>
           
-          <category> Docker </category>
+          <category> Tools </category>
           
       </categories>
       
@@ -1515,7 +1515,7 @@
       
       <categories>
           
-          <category> Docker </category>
+          <category> Tools </category>
           
       </categories>
       
@@ -1540,7 +1540,7 @@
       
       <categories>
           
-          <category> Docker </category>
+          <category> Tools </category>
           
       </categories>
       
@@ -3188,7 +3188,7 @@
       
       <categories>
           
-          <category> Hexo </category>
+          <category> Tools </category>
           
       </categories>
       
@@ -3196,10 +3196,6 @@
         <tags>
             
             <tag> Hexo </tag>
-            
-            <tag> Git </tag>
-            
-            <tag> Node.js </tag>
             
         </tags>
       
