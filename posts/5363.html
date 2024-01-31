@@ -1,0 +1,728 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Matplotlib：让数据可视化变得更简单 | 宸汐缘</title><meta name="author" content="Cheney"><meta name="copyright" content="Cheney"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="什么是Matplotlib？Matplotlib是一个用于绘制高质量图形的Python库。无论你是要绘制简单的折线图、柱状图、散点图，还是复杂的3D图形、动画等，Matplotlib都能满足你的需求。该库的灵活性和丰富的功能使其成为了数据可视化的首选。 Matplotlib的特点Matplotlib具有许多令人惊叹的特点，这些特点使其在数据可视化领域广受欢迎：  简单易用：Matplotlib的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matplotlib：让数据可视化变得更简单">
+<meta property="og:url" content="https://www.cheneyblog.com/posts/5363.html">
+<meta property="og:site_name" content="宸汐缘">
+<meta property="og:description" content="什么是Matplotlib？Matplotlib是一个用于绘制高质量图形的Python库。无论你是要绘制简单的折线图、柱状图、散点图，还是复杂的3D图形、动画等，Matplotlib都能满足你的需求。该库的灵活性和丰富的功能使其成为了数据可视化的首选。 Matplotlib的特点Matplotlib具有许多令人惊叹的特点，这些特点使其在数据可视化领域广受欢迎：  简单易用：Matplotlib的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.cdn.cheneyblog.com//blog/202401190950219.webp">
+<meta property="article:published_time" content="2024-01-19T01:46:52.000Z">
+<meta property="article:modified_time" content="2024-01-31T07:14:56.705Z">
+<meta property="article:author" content="Cheney">
+<meta property="article:tag" content="数分">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.cdn.cheneyblog.com//blog/202401190950219.webp"><link rel="shortcut icon" href="https://www.cdn.cheneyblog.com/blog/202307211052086.png"><link rel="canonical" href="https://www.cheneyblog.com/posts/5363.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Matplotlib：让数据可视化变得更简单',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-31 15:14:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/progress_bar.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">126</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li><li><a class="site-page child" href="/Python"><i class="fa-fw fa fa-sitemap"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li><li><a class="site-page child" href="/AI"><i class="fa-fw fa-brands fa-airbnb"></i><span> AI</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/Tools"><i class="fa-fw fas fa-toolbox"></i><span> 杂谈</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://www.cdn.cheneyblog.com//blog/202401190950219.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="宸汐缘"><img class="site-icon" src="https://www.cdn.cheneyblog.com/blog/202307211053392.png"/><span class="site-name">宸汐缘</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-desktop"></i><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/HtmlCss"><i class="fa-fw fa fa-area-chart"></i><span> Html/Css</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-code"></i><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Java"><i class="fa-fw fas fa-stream"></i><span> Java</span></a></li><li><a class="site-page child" href="/Python"><i class="fa-fw fa fa-sitemap"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-database"></i><span> 数据库</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Oracle"><i class="fa-fw fa-sharp fa-solid fa-database"></i><span> Oracle</span></a></li><li><a class="site-page child" href="/categories/TDSQL"><i class="fa-fw fa-solid fa-server"></i><span> TDSQL</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-project-diagram"></i><span> 猿料百科</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Digitalize"><i class="fa-fw fas fa-percentage"></i><span> 数字化</span></a></li><li><a class="site-page child" href="/WebEcology"><i class="fa-fw fa-solid fa-globe"></i><span> Web生态</span></a></li><li><a class="site-page child" href="/AI"><i class="fa-fw fa-brands fa-airbnb"></i><span> AI</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/Tools"><i class="fa-fw fas fa-toolbox"></i><span> 杂谈</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Matplotlib：让数据可视化变得更简单</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-19T01:46:52.000Z" title="发表于 2024-01-19 09:46:52">2024-01-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-31T07:14:56.705Z" title="更新于 2024-01-31 15:14:56">2024-01-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/">Python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>17分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Matplotlib：让数据可视化变得更简单"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="https://matplotlib.org/stable/_static/logo_light.svg" alt="matplotlib-logos"></p>
+<h2 id="什么是Matplotlib？"><a href="#什么是Matplotlib？" class="headerlink" title="什么是Matplotlib？"></a>什么是Matplotlib？</h2><p>Matplotlib是一个用于绘制高质量图形的Python库。无论你是要绘制简单的折线图、柱状图、散点图，还是复杂的3D图形、动画等，Matplotlib都能满足你的需求。该库的灵活性和丰富的功能使其成为了数据可视化的首选。</p>
+<h2 id="Matplotlib的特点"><a href="#Matplotlib的特点" class="headerlink" title="Matplotlib的特点"></a>Matplotlib的特点</h2><p>Matplotlib具有许多令人惊叹的特点，这些特点使其在数据可视化领域广受欢迎：</p>
+<ul>
+<li><strong>简单易用</strong>：Matplotlib的API设计简单直观，几行代码即可生成漂亮的图形。</li>
+<li><strong>灵活性</strong>：Matplotlib提供了丰富的配置选项，可轻松自定义图形的各个方面，如线条样式、颜色、标注等。</li>
+<li><strong>多种图形类型</strong>：Matplotlib支持绘制各种类型的图形，包括折线图、散点图、柱状图、饼图、3D图等，满足你的各种可视化需求。</li>
+<li><strong>高质量输出</strong>：Matplotlib可以输出高质量的图形，支持多种输出格式，如PNG、SVG、PDF等。</li>
+<li><strong>丰富的扩展能力</strong>：Matplotlib可以与其他Python库如NumPy、Pandas等进行无缝集成，进一步扩展其功能和应用范围。</li>
+</ul>
+<h2 id="安装Matplotlib"><a href="#安装Matplotlib" class="headerlink" title="安装Matplotlib"></a>安装Matplotlib</h2><p>在开始之前，我们首先需要安装Matplotlib。如果你已经安装了Python，可以通过以下命令使用pip进行安装：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install matplotlib</span><br></pre></td></tr></table></figure>
+<p>如果你是使用Anaconda发行版，可以使用以下命令进行安装：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install matplotlib</span><br></pre></td></tr></table></figure>
+<h2 id="使用Matplotlib"><a href="#使用Matplotlib" class="headerlink" title="使用Matplotlib"></a>使用Matplotlib</h2><div class="tabs" id="test4"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test4-1">基础图表绘制与自定义</button></li><li class="tab"><button type="button" data-href="#test4-2">折线图</button></li><li class="tab"><button type="button" data-href="#test4-3">散点图</button></li><li class="tab"><button type="button" data-href="#test4-4">柱状图</button></li><li class="tab"><button type="button" data-href="#test4-5">饼图</button></li><li class="tab"><button type="button" data-href="#test4-6">直方图</button></li><li class="tab"><button type="button" data-href="#test4-7">多线图</button></li><li class="tab"><button type="button" data-href="#test4-8">多子图</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test4-1"><h3 id="基础图表"><a href="#基础图表" class="headerlink" title="基础图表"></a>基础图表</h3><p>下面是一个简单的例子来展示Matplotlib的基本用法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">x = <span class="built_in">range</span>(<span class="number">31</span>)  <span class="comment"># x坐标轴数据集</span></span><br><span class="line">y = [random.uniform(-<span class="number">10</span>, <span class="number">15</span>) <span class="keyword">for</span> i <span class="keyword">in</span> x]  <span class="comment"># y坐标轴数据集</span></span><br><span class="line"></span><br><span class="line">plt.figure()  <span class="comment"># 创建一个画布</span></span><br><span class="line"></span><br><span class="line">plt.plot(x, y)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.cdn.cheneyblog.com//blog/202401191016610.png" alt="基本图表"></p>
+<h3 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h3><ol>
+<li>标题</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.title(<span class="string">&#x27;Temperature variation chart&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>坐标轴标签：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.xlabel(<span class="string">&#x27;Time&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Temperature&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>图例</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(hour, tep, label=<span class="string">&#x27;Current temperature&#x27;</span>)</span><br><span class="line"><span class="comment"># plt.legend(loc=1) # 使用位置代码</span></span><br><span class="line">plt.legend(loc=<span class="string">&#x27;upper right&#x27;</span>)  <span class="comment"># 直接使用参数</span></span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>位置代码</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>best</td>
+<td>0</td>
+<td>自动选择最佳位置，默认值</td>
+</tr>
+<tr>
+<td>upper right</td>
+<td>1</td>
+<td>右上角</td>
+</tr>
+<tr>
+<td>upper left</td>
+<td>2</td>
+<td>左上角</td>
+</tr>
+<tr>
+<td>lower left</td>
+<td>3</td>
+<td>左下角</td>
+</tr>
+<tr>
+<td>lower right</td>
+<td>4</td>
+<td>右下角</td>
+</tr>
+<tr>
+<td>right</td>
+<td>5</td>
+<td>右侧中间</td>
+</tr>
+<tr>
+<td>center left</td>
+<td>6</td>
+<td>左侧中间</td>
+</tr>
+<tr>
+<td>center right</td>
+<td>7</td>
+<td>右侧中间</td>
+</tr>
+<tr>
+<td>lower center</td>
+<td>8</td>
+<td>底部中间</td>
+</tr>
+<tr>
+<td>upper center</td>
+<td>9</td>
+<td>顶部中间</td>
+</tr>
+<tr>
+<td>center</td>
+<td>10</td>
+<td>图中央</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>自定义线的样式、颜色和宽度</li>
+</ol>
+<ul>
+<li>颜色</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>颜色名称</th>
+<th>缩写</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>蓝色</td>
+<td>‘b’</td>
+<td>plt.plot(x, y, ‘b’)</td>
+</tr>
+<tr>
+<td>绿色</td>
+<td>‘g’</td>
+<td>plt.plot(x, y, ‘g’)</td>
+</tr>
+<tr>
+<td>红色</td>
+<td>‘r’</td>
+<td>plt.plot(x, y, ‘r’)</td>
+</tr>
+<tr>
+<td>青色</td>
+<td>‘c’</td>
+<td>plt.plot(x, y, ‘c’)</td>
+</tr>
+<tr>
+<td>品红</td>
+<td>‘m’</td>
+<td>plt.plot(x, y, ‘m’)</td>
+</tr>
+<tr>
+<td>黄色</td>
+<td>‘y’</td>
+<td>plt.plot(x, y, ‘y’)</td>
+</tr>
+<tr>
+<td>黑色</td>
+<td>‘k’</td>
+<td>plt.plot(x, y, ‘k’)</td>
+</tr>
+<tr>
+<td>白色</td>
+<td>‘w’</td>
+<td>plt.plot(x, y, ‘w’)</td>
+</tr>
+<tr>
+<td>自定义</td>
+<td></td>
+<td>plt.plot(x, y, color=’red’)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>线条样式</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>样式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>‘-‘</td>
+<td>实线</td>
+</tr>
+<tr>
+<td>‘—‘</td>
+<td>虚线</td>
+</tr>
+<tr>
+<td>‘-.’</td>
+<td>点划线</td>
+</tr>
+<tr>
+<td>‘:’</td>
+<td>点线</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>线条宽度</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>宽度</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.5</td>
+<td>细线条</td>
+</tr>
+<tr>
+<td>1</td>
+<td>中等线条</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>较粗线条</td>
+</tr>
+<tr>
+<td>2</td>
+<td>非常粗线条</td>
+</tr>
+<tr>
+<td>自定义</td>
+<td>数值越大线条越粗</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>使用这些参数，可以通过传递给plot函数的<code>color</code>、<code>linestyle</code>和<code>linewidth</code>参数来灵活地设置图表的样式。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(x, y, color=<span class="string">&#x27;green&#x27;</span>, linestyle=<span class="string">&#x27;--&#x27;</span>, linewidth=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>坐标轴刻度</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.xticks(hour[::<span class="number">4</span>])</span><br><span class="line">plt.yticks(<span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">0</span>, <span class="number">20</span>, <span class="number">2</span>)))</span><br></pre></td></tr></table></figure>
+<ol>
+<li>坐标点</li>
+</ol>
+<p><code>marker</code>参数决定了坐标点的形状，’o’表示圆圈，’s’表示方块，’^’表示向上的三角形，’v’表示向下的三角形</p>
+<p><code>markersize</code>参数用于控制坐标点的大小，可以是一个数字，表示坐标点的直径大小，也可以是一个数组，用于指定不同坐标点的大小。例如，<code>markersize=10</code>表示坐标点的直径为10个像素。</p>
+<p><code>markerfacecolor</code>参数用于设置坐标点的填充颜色，<code>markeredgecolor</code>参数用于设置坐标点的边缘颜色。你可以使用各种颜色的名称（如’red’、’blue’等），也可以使用RGB值（如(0.1, 0.2, 0.3)）来指定。如果想要坐标点没有填充颜色，可以将<code>markerfacecolor</code>设置为’none’。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(hour, tep, marker=<span class="string">&#x27;^&#x27;</span>, markersize=<span class="number">10</span>, markerfacecolor=<span class="string">&#x27;b&#x27;</span>, markeredgecolor=<span class="string">&#x27;g&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>网格线</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.grid(<span class="literal">True</span>, color=<span class="string">&#x27;b&#x27;</span>, linestyle=<span class="string">&#x27;--&#x27;</span>, linewidth=<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>保存图表</li>
+</ol>
+<p>Matplotlib支持保存图表为多种图片格式，包括PNG、JPEG、BMP等。您只需调用<code>savefig()</code>函数，并指定文件路径和文件类型，即可将图表保存到指定的位置。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">figure.savefig(<span class="string">&#x27;my_chart.png&#x27;</span>, dpi=<span class="number">300</span>) </span><br></pre></td></tr></table></figure>
+<p>这行代码将会将图表保存在当前工作目录下，命名为<code>my_chart.png</code>。参数<code>dpi</code>表示图像的分辨率，您可以根据需要进行调整。</p>
+<p><img src="https://www.cdn.cheneyblog.com//blog/202401191430360.png" alt="自定义图表"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-2"><h3 id="折线图的作用"><a href="#折线图的作用" class="headerlink" title="折线图的作用"></a>折线图的作用</h3><ol>
+<li><p><strong>显示趋势和变化</strong>：折线图非常适合用于显示数据随时间、顺序或其他连续变量而发生的变化。通过观察折线的走向，人们可以很容易地看出数据的趋势，包括上升、下降、平稳或周期性变化等。</p>
+</li>
+<li><p><strong>识别关联关系</strong>：折线图可以用来显示不同变量之间的关联关系。通过在同一张图上绘制多条折线，可以直观地比较不同变量之间的趋势，找出它们之间的相关性和关联规律。</p>
+</li>
+<li><p><strong>检测异常值</strong>：折线图在检测异常值方面非常有用。异常值通常会表现为折线图上的突变或偏离正常趋势，从而帮助分析人员快速识别并深入研究可能存在的异常情况。</p>
+</li>
+<li><p><strong>预测未来走势</strong>：基于历史数据的趋势，折线图可以用来进行未来走势的预测和预测。通过分析趋势线的走向和速度，人们可以尝试预测未来的数据变化。</p>
+</li>
+<li><p><strong>比较不同组的数据</strong>：折线图可以同时展示多组数据的趋势，帮助人们比较不同组的数据表现，从而更好地理解数据之间的差异和相似之处。</p>
+</li>
+</ol>
+<h3 id="折线图的实现"><a href="#折线图的实现" class="headerlink" title="折线图的实现"></a>折线图的实现</h3><p>步骤一：导入Matplotlib库和准备数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 准备数据</span></span><br><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]  <span class="comment"># x轴数据</span></span><br><span class="line">y = [<span class="number">10</span>, <span class="number">15</span>, <span class="number">13</span>, <span class="number">18</span>, <span class="number">16</span>]  <span class="comment"># y轴数据</span></span><br></pre></td></tr></table></figure>
+<p>步骤二：绘制折线图并配置样式</p>
+<p>使用<code>plot</code>函数绘制折线图，并配置样式。您可以根据需要设置线条的颜色、样式、宽度以及标记。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(x, y, color=<span class="string">&#x27;green&#x27;</span>, linestyle=<span class="string">&#x27;--&#x27;</span>, linewidth=<span class="number">2</span>, marker=<span class="string">&#x27;o&#x27;</span>, markersize=<span class="number">8</span>, label=<span class="string">&#x27;折线图示例&#x27;</span>)  </span><br></pre></td></tr></table></figure>
+<p>在上述代码中，<code>color</code>参数指定线条的颜色，<code>linestyle</code>参数指定线条的样式，<code>linewidth</code>参数指定线条的宽度，<code>marker</code>参数指定标记的样式，<code>markersize</code>指定标记的大小，<code>label</code>参数指定图例的标签。</p>
+<p>步骤三：添加标题和标签</p>
+<p>您可以为折线图添加标题和轴标签，增加图表的可读性。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.title(<span class="string">&#x27;折线图示例&#x27;</span>)  <span class="comment"># 添加标题</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;X轴标签&#x27;</span>)  <span class="comment"># 添加X轴标签</span></span><br><span class="line">plt.ylabel(<span class="string">&#x27;Y轴标签&#x27;</span>)  <span class="comment"># 添加Y轴标签</span></span><br></pre></td></tr></table></figure>
+<p>步骤四：显示图例</p>
+<p>如果您希望在图中添加图例，可以使用<code>legend</code>函数，例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.legend()  <span class="comment"># 显示图例</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://www.cdn.cheneyblog.com//blog/202401311118526.png" alt="Line Chart"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-3"><h3 id="散点图的作用"><a href="#散点图的作用" class="headerlink" title="散点图的作用"></a>散点图的作用</h3><ol>
+<li><p><strong>显示变量之间的关系</strong>：散点图可以有效地显示两个变量之间的关系。通过在图表中绘制数据点，人们可以观察到数据的分布情况，并更直观地认识到变量之间的相关性。</p>
+</li>
+<li><p><strong>发现趋势和模式</strong>：通过观察散点图中数据点的分布，人们可以发现数据中的趋势和模式。例如，当数据点呈现出一种线性的分布模式时，表明两个变量之间存在着线性关系。</p>
+</li>
+<li><p><strong>检测异常值</strong>：散点图可以帮助人们识别和检测数据中的异常值。异常值通常表现为离群的数据点，通过观察散点图，人们可以轻松地辨别出这些异常值，并进一步分析这些离群点的原因和影响。</p>
+</li>
+<li><p><strong>比较不同组的数据</strong>：散点图可以同时显示多个数据组，从而帮助比较不同组的数据。通过在同一张图上绘制不同的数据组的散点图，人们可以直观地了解和比较不同组之间的差异和相似之处。</p>
+</li>
+<li><p><strong>数据聚类和分类</strong>：散点图可以协助人们进行数据聚类和分类的工作。通过观察散点图中不同数据点的位置和分布，可以辅助进行数据点所属的类别和群组的划分，进而进行进一步的分析和研究。</p>
+</li>
+</ol>
+<h3 id="散点图的实现"><a href="#散点图的实现" class="headerlink" title="散点图的实现"></a>散点图的实现</h3><ol>
+<li>导入所需的库<br>首先，需要导入matplotlib.pyplot和numpy库：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<ol>
+<li>生成数据<br>使用numpy库生成一些示例数据（x和y坐标）：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">0</span>)</span><br><span class="line">x = np.random.randn(<span class="number">100</span>)</span><br><span class="line">y = np.random.randn(<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>绘制散点图<br>使用plt.scatter()函数绘制散点图，可以指定x和y坐标的值：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.scatter(x, y)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>样式配置<br>设置标题和坐标轴标签：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.title(<span class="string">&#x27;Scatter Plot Example&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;X-axis Label&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Y-axis Label&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>调整坐标轴范围：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.xlim(-<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">plt.ylim(-<span class="number">3</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p>调整点的大小和颜色：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置点的大小</span></span><br><span class="line">plt.scatter(x, y, s=<span class="number">50</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置点的颜色</span></span><br><span class="line">plt.scatter(x, y, c=<span class="string">&#x27;r&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>设置点的透明度：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.scatter(x, y, alpha=<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
+<p>设置点的形状：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.scatter(x, y, marker=<span class="string">&#x27;o&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>添加图例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.scatter(x, y, label=<span class="string">&#x27;Data Points&#x27;</span>)</span><br><span class="line">plt.legend()</span><br></pre></td></tr></table></figure>
+<ol>
+<li>显示图形<br>最后调用plt.show()函数显示绘制的散点图：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.cdn.cheneyblog.com//blog/202401311406190.png" alt="Scatter Plot"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-4"><h3 id="柱状图的作用"><a href="#柱状图的作用" class="headerlink" title="柱状图的作用"></a>柱状图的作用</h3><ol>
+<li><p><strong>比较不同类别间的数据</strong>：柱状图可以清晰地展示不同类别之间的数据差异。通过柱状图，人们可以直观地比较不同类别的数据大小、数量或比例，从而更好地理解数据之间的关系。</p>
+</li>
+<li><p><strong>突出数据的变化趋势</strong>：柱状图能够有效地突出数据的变化趋势，特别适用于展示随时间变化的数据或者不同条件下数据的对比情况。通过柱状图，人们可以清晰地观察到数据的波动和趋势变化。</p>
+</li>
+<li><p><strong>显示数据分布的离散程度</strong>：柱状图可以用来展示数据的离散程度，包括列出每个类别中的数据数量或者比例，帮助人们更好地理解数据的分布情况。</p>
+</li>
+<li><p><strong>揭示数据间的关联关系</strong>：当柱状图中包含多个组的数据时，可以通过柱状图清晰地展示不同组数据之间的关联关系，帮助人们理解数据之间的相互影响。</p>
+</li>
+<li><p><strong>支持决策制定</strong>：柱状图可以直观地向决策者展示数据，帮助他们更好地理解现状和趋势，从而做出更明智的决策。</p>
+</li>
+</ol>
+<h3 id="柱状图的实现"><a href="#柱状图的实现" class="headerlink" title="柱状图的实现"></a>柱状图的实现</h3><ol>
+<li>导入所需的库<br>首先，需要导入matplotlib.pyplot和numpy库：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<ol>
+<li>生成数据<br>使用numpy库生成一些示例数据（x坐标和对应的柱状图高度）：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;E&#x27;</span>])</span><br><span class="line">heights = np.array([<span class="number">10</span>, <span class="number">15</span>, <span class="number">7</span>, <span class="number">12</span>, <span class="number">9</span>])</span><br></pre></td></tr></table></figure>
+<ol>
+<li>绘制柱状图<br>使用plt.bar()函数绘制柱状图，可以指定x坐标和对应的高度：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.bar(x, heights)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>样式配置<br>设置标题和坐标轴标签：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.title(<span class="string">&#x27;Bar Chart Example&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Categories&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Values&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>调整柱状图颜色：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.bar(x, heights, color=<span class="string">&#x27;blue&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>调整柱状图的宽度：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.bar(x, heights, width=<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
+<p>设置柱状图边框显示：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.bar(x, heights, edgecolor=<span class="string">&#x27;black&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>设置柱状图透明度：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.bar(x, heights, alpha=<span class="number">0.7</span>)</span><br></pre></td></tr></table></figure>
+<p>添加柱状图数值标签：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i, v <span class="keyword">in</span> <span class="built_in">enumerate</span>(heights):</span><br><span class="line">    plt.text(i, v + <span class="number">0.5</span>, <span class="built_in">str</span>(v), ha=<span class="string">&#x27;center&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>在上面的示例中，我们使用enumerate()函数遍历柱子的高度值，并通过plt.text()函数在每根柱子的顶部（x, y + 0.2）位置添加了对应的数值标签。其中，水平对齐方式选择了’center’，使数值标签水平居中显示，使数值标签位于柱子顶部。</p>
+<p>plt.text()函数用于在图表上指定的位置添加文本标签，其语法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.text(x, y, text, ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>x, y：文本标签的横纵坐标位置</li>
+<li>text：要显示的文本内容</li>
+<li>ha：水平对齐方式，可选值包括{‘center’, ‘right’, ‘left’}</li>
+<li>va：垂直对齐方式，可选值包括{‘top’, ‘center’, ‘bottom’}</li>
+</ul>
+<ol>
+<li>显示图形<br>最后调用plt.show()函数显示绘制的柱状图：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.cdn.cheneyblog.com//blog/202401311417746.png" alt="Bar Chart"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-5"><h3 id="饼图的作用"><a href="#饼图的作用" class="headerlink" title="饼图的作用"></a>饼图的作用</h3><ol>
+<li><p><strong>展示比例和构成</strong>：饼图可以清晰地展示各个类别数据在整体中的比例和构成情况。通过饼图，人们可以直观地看到每个部分所占的比例，便于比较不同类别数据之间的相对大小。</p>
+</li>
+<li><p><strong>突出重点</strong>：饼图可以将数据的关键部分突出展示，帮助观察者快速理解哪些部分对整体有较大影响，以及各个部分之间的相互关系。</p>
+</li>
+<li><p><strong>显示数据分布</strong>：饼图可以用于展示数据的分布情况，特别适用于呈现具有明显主体比例和少数几个较小部分的数据构成。</p>
+</li>
+<li><p><strong>强调相对比例</strong>：饼图能够强调数据之间的相对比例，让观察者更容易理解不同类别数据之间的比例关系，从而更清晰地识别出主要的和次要的部分。</p>
+</li>
+<li><p><strong>形象化呈现数据</strong>：饼图通过形象化的方式呈现数据，易于理解和传达，适用于向非专业人士展示数据分布情况。</p>
+</li>
+</ol>
+<p>需要注意的是，饼图在展示过多类别或者数据比例差异不大的情况下，可能会导致解读困难，因此在实际应用中，人们需要根据具体情况选择合适的数据可视化方式。</p>
+<h3 id="饼图的实现"><a href="#饼图的实现" class="headerlink" title="饼图的实现"></a>饼图的实现</h3><ol>
+<li>导入所需的库<br>首先，需要导入matplotlib.pyplot和numpy库：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<ol>
+<li>生成数据<br>使用numpy库生成一些示例数据（每个部分的数值和标签）：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">labels = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>]</span><br><span class="line">sizes = [<span class="number">15</span>, <span class="number">30</span>, <span class="number">45</span>, <span class="number">10</span>]</span><br></pre></td></tr></table></figure>
+<ol>
+<li>绘制饼图<br>使用plt.pie()函数绘制饼图，可以指定每个部分的数值和标签：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.pie(sizes, labels=labels)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>样式配置<br>设置标题：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.title(<span class="string">&#x27;Pie Chart Example&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>调整饼图起始角度和旋转方向：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.pie(sizes, labels=labels, startangle=<span class="number">90</span>, counterclock=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>startangle：起始角度，指定饼图开始绘制的角度，默认为0（即从3点钟方向开始）。可以通过设置startangle来改变起始角度。</li>
+</ul>
+<p>突出显示某一部分：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">explode = (<span class="number">0</span>, <span class="number">0.1</span>, <span class="number">0</span>, <span class="number">0</span>)  <span class="comment"># 用于突出显示第二个部分</span></span><br><span class="line">plt.pie(sizes, labels=labels, explode=explode, autopct=<span class="string">&#x27;%1.1f%%&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>explode：用于突出显示某一部分，可以设置各部分的偏移量，以突出显示。偏移量越大，突出效果越明显。</li>
+<li>autopct：设置显示百分比的格式，可以显示在饼图上。</li>
+</ul>
+<p>添加阴影和颜色：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.pie(sizes, labels=labels, shadow=<span class="literal">True</span>, colors=[<span class="string">&#x27;gold&#x27;</span>, <span class="string">&#x27;yellowgreen&#x27;</span>, <span class="string">&#x27;lightcoral&#x27;</span>, <span class="string">&#x27;lightskyblue&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>shadow：添加阴影效果，默认为False。</li>
+<li>colors：设置饼图各部分的颜色，可以是颜色名称或十六进制颜色码。</li>
+</ul>
+<ol>
+<li>显示图形<br>最后调用plt.show()函数显示绘制的饼图：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.cdn.cheneyblog.com//blog/202401311429556.png" alt="Pie Chart"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-6"><h3 id="直方图的作用"><a href="#直方图的作用" class="headerlink" title="直方图的作用"></a>直方图的作用</h3><ol>
+<li><p><strong>展示数据分布</strong>：直方图能够清晰地展示数据的分布情况，帮助人们了解数据的集中程度、变异程度以及偏差程度。通过直方图，可以直观地观察数据的分布形态，包括数据的平均值、中位数、标准差等统计特征。</p>
+</li>
+<li><p><strong>观察数据频数分布</strong>：直方图能够将数据分组并展示每个组的频数，帮助人们理解数据在不同取值范围内的频率分布情况。这对于识别数据的分布特征以及发现数据中的规律和趋势非常有帮助。</p>
+</li>
+<li><p><strong>检测数据异常值</strong>：通过直方图，人们可以较为容易地识别出数据中的异常值，因为异常值通常会在整体分布中呈现出跳出正常范围的特征，通过直方图可以清晰地观察到这些异常值的存在。</p>
+</li>
+<li><p><strong>比较不同数据分布</strong>：直方图可以用于比较不同数据集之间的分布情况，帮助人们发现数据之间的相似性和差异性，以及进行横向对比和纵向对比。</p>
+</li>
+<li><p><strong>支持决策制定</strong>：通过直方图，决策者可以更加清晰地了解数据的分布情况和特征，从而做出更准确的决策。</p>
+</li>
+</ol>
+<h3 id="直方图的实现"><a href="#直方图的实现" class="headerlink" title="直方图的实现"></a>直方图的实现</h3><ol>
+<li>导入所需的库<br>首先，导入matplotlib.pyplot和numpy库：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<ol>
+<li>生成数据<br>使用numpy库生成一些示例数据：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = np.random.randn(<span class="number">1000</span>)  <span class="comment"># 生成1000个随机数据</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>绘制直方图<br>使用plt.hist()函数绘制直方图：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.hist(data)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>样式配置和参数详解</li>
+</ol>
+<ul>
+<li><p>bins：指定直方图的箱子数量或间隔，默认为10。可以根据数据分布情况调整箱子的数量，以获得更好的可视化效果。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.hist(data, bins=<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>color：设置直方图的颜色。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.hist(data, color=<span class="string">&#x27;steelblue&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>edgecolor：设置直方图边缘颜色。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.hist(data, edgecolor=<span class="string">&#x27;black&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>alpha：设置直方图的透明度，取值范围为0-1之间。值越小越透明。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.hist(data, alpha=<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>density：设置是否显示概率密度曲线，默认为False。如果设置为True，则直方图的高度表示概率密度而不是频数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.hist(data, density=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cumulative：设置是否显示累积直方图，默认为False。如果设置为True，则直方图将显示累积频数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.hist(data, cumulative=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>添加标签和标题<br>通过调用plt.xlabel()、plt.ylabel()和plt.title()函数，设置x轴、y轴标签和图表标题。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.xlabel(<span class="string">&#x27;Value&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Frequency&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Histogram Example&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>显示图形<br>最后调用plt.show()函数显示绘制的直方图：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.cdn.cheneyblog.com//blog/202401311452361.png" alt="Histogram"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-7"><p>首先，我们需要创建一些示例数据，例如两个数组，表示两条线的数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建示例数据</span></span><br><span class="line">x = np.arange(<span class="number">0</span>, <span class="number">10</span>, <span class="number">0.1</span>)  <span class="comment"># x轴数据</span></span><br><span class="line">y1 = np.sin(x)  <span class="comment"># 第一条线的y轴数据</span></span><br><span class="line">y2 = np.cos(x)  <span class="comment"># 第二条线的y轴数据</span></span><br></pre></td></tr></table></figure>
+<p>接下来，我们可以使用Matplotlib来绘制这些数据。这里我用的是最基本的方式，就是使用plt.plot()方法来绘制线图。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 绘制双线图</span></span><br><span class="line">plt.plot(x, y1, label=<span class="string">&#x27;sin(x)&#x27;</span>)  <span class="comment"># 绘制第一条线</span></span><br><span class="line">plt.plot(x, y2, label=<span class="string">&#x27;cos(x)&#x27;</span>)  <span class="comment"># 绘制第二条线</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加图例</span></span><br><span class="line">plt.legend()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加标题和坐标轴标签</span></span><br><span class="line">plt.title(<span class="string">&#x27;Sin and Cos Waves&#x27;</span>)  <span class="comment"># 添加标题</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;x&#x27;</span>)  <span class="comment"># x轴标签</span></span><br><span class="line">plt.ylabel(<span class="string">&#x27;y&#x27;</span>)  <span class="comment"># y轴标签</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示图形</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.cdn.cheneyblog.com//blog/202401311014673.png" alt="Sin and Cos Waves"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-8"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个2x2的子图</span></span><br><span class="line">fig, ax = plt.subplots(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在第一个子图中绘制折线图</span></span><br><span class="line">ax[<span class="number">0</span>, <span class="number">0</span>].plot([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>])</span><br><span class="line">ax[<span class="number">0</span>, <span class="number">0</span>].set_title(<span class="string">&#x27;折线图&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在第二个子图中绘制散点图</span></span><br><span class="line">ax[<span class="number">0</span>, <span class="number">1</span>].scatter([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>])</span><br><span class="line">ax[<span class="number">0</span>, <span class="number">1</span>].set_title(<span class="string">&#x27;散点图&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在第三个子图中绘制柱状图</span></span><br><span class="line">ax[<span class="number">1</span>, <span class="number">0</span>].bar([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>])</span><br><span class="line">ax[<span class="number">1</span>, <span class="number">0</span>].set_title(<span class="string">&#x27;柱状图&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在第四个子图中绘制饼图</span></span><br><span class="line">ax[<span class="number">1</span>, <span class="number">1</span>].pie([<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>], labels=[<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>])</span><br><span class="line">ax[<span class="number">1</span>, <span class="number">1</span>].set_title(<span class="string">&#x27;饼图&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调整子图之间的间距</span></span><br><span class="line">plt.tight_layout()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示图表</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，我们通过<code>plt.subplots()</code>函数创建了一个2x2的子图，返回的<code>fig</code>和<code>ax</code>对象分别代表了整个图形和子图。接着，我们可以在各个子图中使用<code>ax</code>对象来绘制不同类型的图表，例如折线图、散点图、柱状图和饼图。使用<code>set_title()</code>函数为每个子图设置标题，以使图表更具可读性。</p>
+<p><img src="https://www.cdn.cheneyblog.com//blog/202401311033305.png" alt="Multisubgraph"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="问题清单"><a href="#问题清单" class="headerlink" title="问题清单"></a>问题清单</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/matplotlib/matplotlib-label.html">图形中文显示问题</a></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.cheneyblog.com">Cheney</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.cheneyblog.com/posts/5363.html">https://www.cheneyblog.com/posts/5363.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.cheneyblog.com" target="_blank">宸汐缘</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%88%86/">数分</a></div><div class="post_share"><div class="social-share" data-image="https://www.cdn.cheneyblog.com//blog/202401190950219.webp" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://www.cdn.cheneyblog.com/blog/202401211314356.png" target="_blank"><img class="post-qr-code-img" src="https://www.cdn.cheneyblog.com/blog/202401211314356.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://www.cdn.cheneyblog.com/blog/202401211316511.png" target="_blank"><img class="post-qr-code-img" src="https://www.cdn.cheneyblog.com/blog/202401211316511.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://www.cdn.cheneyblog.com/blog/202307291649261.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Cheney</div><div class="author-info__description">中年程序猿的自我救赎，记录日常的技术整理和心得分享，涉及技术栈:SQL,Java,Python,Oracle,MySQL,大数据等</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">126</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Henry-chr/henry-chr.github.io"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:850318517@qq.com" target="_blank" title="Email"><i class="far fa-envelope"></i></a><a class="social-icon" href="https://github.com/Henry-chr/henry-chr.github.io" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></div></div><div class="card-widget tzy-right-widget" id="card-wechat"><div id="flip-wrapper"><div id="flip-content"><div class="face"></div><div class="back face"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFMatplotlib%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">什么是Matplotlib？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Matplotlib%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text">Matplotlib的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Matplotlib"><span class="toc-number">3.</span> <span class="toc-text">安装Matplotlib</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Matplotlib"><span class="toc-number">4.</span> <span class="toc-text">使用Matplotlib</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%9B%BE%E8%A1%A8"><span class="toc-number">4.1.</span> <span class="toc-text">基础图表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="toc-number">4.2.</span> <span class="toc-text">自定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E7%BA%BF%E5%9B%BE%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">4.3.</span> <span class="toc-text">折线图的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E7%BA%BF%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.4.</span> <span class="toc-text">折线图的实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%A3%E7%82%B9%E5%9B%BE%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">4.5.</span> <span class="toc-text">散点图的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%A3%E7%82%B9%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.6.</span> <span class="toc-text">散点图的实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">4.7.</span> <span class="toc-text">柱状图的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.8.</span> <span class="toc-text">柱状图的实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A5%BC%E5%9B%BE%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">4.9.</span> <span class="toc-text">饼图的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A5%BC%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.10.</span> <span class="toc-text">饼图的实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">4.11.</span> <span class="toc-text">直方图的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.12.</span> <span class="toc-text">直方图的实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95"><span class="toc-number">5.</span> <span class="toc-text">问题清单</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024  <i id="heartbeat" class="fa fas fa-heartbeat"></i> Cheney</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><p><a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;<a target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a> &nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，默认线路托管于Vercel"></a>&nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，联通线路托管于Coding"></a>&nbsp;<a target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://my-twikoo-seven-gamma.vercel.app/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://my-twikoo-seven-gamma.vercel.app/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.textContent = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/twikoo/1.4.18/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script data-pjax defer src="https://npm.elemecdn.com/tzy-blog/lib/js/theme/chocolate.js"></script><canvas id="universe"></canvas><script src="/js/custom.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="1024,Java,Python,SQL,Oracle,MySql,Vue,Hexo,Linux,Shell,C++,Html,CSS" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:24%;}.categoryBar-list{max-height: 380px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 320px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://www.cdn.cheneyblog.com//blog/202401171625630.webp);"> <a class="categoryBar-list-link" href="categories/AI/">AI</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">人工智能</span></li><li class="categoryBar-list-item" style="background:url(https://www.cdn.cheneyblog.com//blog/202401171639015.jpeg);"> <a class="categoryBar-list-link" href="categories/Digitalize/">Digitalize</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">数字化</span></li><li class="categoryBar-list-item" style="background:url(https://www.cdn.cheneyblog.com//blog/202401171643023.jpg);"> <a class="categoryBar-list-link" href="categories/HtmlCss/">HtmlCss</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">前端技术</span></li><li class="categoryBar-list-item" style="background:url(https://www.cdn.cheneyblog.com//blog/202401171734524.jpg);"> <a class="categoryBar-list-link" href="categories/TDSQL/">TDSQL</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">分布式数据库TDSQL</span></li><li class="categoryBar-list-item" style="background:url(https://www.cdn.cheneyblog.com//blog/202401171658771.webp);"> <a class="categoryBar-list-link" href="categories/WebEcology/">WebEcology</a><span class="categoryBar-list-count">17</span><span class="categoryBar-list-descr">Web科学</span></li><li class="categoryBar-list-item" style="background:url(https://www.cdn.cheneyblog.com//blog/202401171737563.jpg);"> <a class="categoryBar-list-link" href="categories/Java/">Java</a><span class="categoryBar-list-count">24</span><span class="categoryBar-list-descr">Java开发指南</span></li><li class="categoryBar-list-item" style="background:url(https://www.cdn.cheneyblog.com//blog/202401171739452.webp);"> <a class="categoryBar-list-link" href="categories/Oracle/">Oracle</a><span class="categoryBar-list-count">43</span><span class="categoryBar-list-descr">Oracle技术手册</span></li><li class="categoryBar-list-item" style="background:url(https://www.cdn.cheneyblog.com//blog/202401171613706.webp);"> <a class="categoryBar-list-link" href="categories/Python/">Python</a><span class="categoryBar-list-count">28</span><span class="categoryBar-list-descr">Python之旅</span></li><li class="categoryBar-list-item" style="background:url(https://www.cdn.cheneyblog.com//blog/202401171743136.webp);"> <a class="categoryBar-list-link" href="categories/Others/">Others</a><span class="categoryBar-list-count">8</span><span class="categoryBar-list-descr">杂谈</span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
